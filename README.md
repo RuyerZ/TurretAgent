@@ -1,4 +1,2 @@
 # Turret Agent
-
-## TODO
-- [ ] test branch protection
+[Prototype TODO List](https://github.com/RujiaZhang/TurretAgent/issues/2)
