@@ -8,23 +8,20 @@ public class TurretBehavior : MonoBehaviour
     public Rigidbody2D rb;
     public Weapon weapon;
 
-    Vector2 moveDirection;
-    private GameObject target;
+    public GameObject target;
 
     // Update is called once per frame
     void Update()
     {
-        
+        FixedUpdate();
     }
 
     private bool FixedUpdate()
     {
         if (target != null) {
             Vector2 targetDirection = target.transform.position - transform.position;
-            float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
-            Quaternion targetRotation = Quaternion.Euler(0, 0, angle);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * moveSpeed);
-            return angle <= 1;
+            float targetangle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, targetangle);
         }
         return false;
     }
