@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AimController : MonoBehaviour
 {
-    Vector2 mousePoistion;
     public Weapon weapon;
 
     // Update is called once per frame
@@ -15,13 +14,10 @@ public class AimController : MonoBehaviour
             weapon.Fire();
         }
 
-        mousePoistion = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        PlayerController p = gameObject.GetComponentInParent<PlayerController>();
 
-        Vector2 pos = transform.position;
-        Vector2 aimDirection = mousePoistion - pos;
-        
-        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
-        //transform.Rotate(transform.parent.position, 0, aimAngle);
+        float aimAngle = p.GetAimAngle();
+
         transform.rotation = Quaternion.Euler(0, 0, aimAngle);
     }
 }

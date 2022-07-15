@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
 
     Vector2 moveDirection;
+    Vector2 mousePoistion;
+
+    private float aimAngle = 0f;
 
     // Update is called once per frame
     void Update()
@@ -19,8 +22,15 @@ public class PlayerController : MonoBehaviour
 
         moveDirection = new Vector2(moveX, moveY).normalized;
 
-        animator.SetFloat("Horizontal", moveDirection.x);
-        animator.SetFloat("Vertical", moveDirection.y);
+        mousePoistion = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        Vector2 pos = transform.position;
+        Vector2 aimDirection = mousePoistion - pos;
+        
+        aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+
+        animator.SetFloat("Horizontal", aimDirection.x);
+        animator.SetFloat("Vertical", aimDirection.y);
         animator.SetFloat("Speed", moveDirection.sqrMagnitude);
     }
 
@@ -28,5 +38,10 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+    }
+
+    public float GetAimAngle()
+    {
+        return aimAngle;
     }
 }
