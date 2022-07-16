@@ -36,6 +36,7 @@ public class PathSystem : MonoBehaviour
         }
         public float PathDistance { get { return mPointDists[mPointDists.Length - 1]; } }
         public int Length { get { return mLength; } }
+        public Vector3 StartPosition { get { return mWayPoints[0]; } }
         public Vector3 GetPositionFromDistance(float dist)
         {
             if (dist < 0.0f)
@@ -68,10 +69,6 @@ public class PathSystem : MonoBehaviour
     void Start()
     {
         InitPathDict();
-        for (float i = 0.0f; i < 8.0f; i += 0.1f)
-        {
-            Debug.Log(GetPositionFromPath("path1", i));
-        }
     }
 
     // Update is called once per frame

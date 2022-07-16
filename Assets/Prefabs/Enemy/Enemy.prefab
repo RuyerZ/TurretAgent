@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5554333038292430359, guid: e533f0f5ae28cef468125a30dbc9d9e3, type: 3}
   maxHP: 5
-  pathSpeed: 0.1
+  pathSpeed: 1
   pathName: path1
 --- !u!114 &5859427057273110238
 MonoBehaviour:
