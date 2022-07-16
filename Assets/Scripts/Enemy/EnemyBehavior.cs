@@ -8,8 +8,8 @@ public class EnemyBehavior : MonoBehaviour
     public int maxHP = 5;
     public float pathSpeed = 1.0f;
 
-    private PathSystem pathSystem;
-    private string pathName;
+    public PathSystem pathSystem;
+    public string pathName;
     public void SetPath(PathSystem p, string n) { pathSystem = p; pathName = n; }
 
     private int currentHP;
