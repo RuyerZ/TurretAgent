@@ -8,16 +8,17 @@ public class EnemyBehavior : MonoBehaviour
     public int maxHP = 5;
     public float pathSpeed = 1.0f;
 
-    private PathSystem pathSystem;
-    private string pathName;
-    public void SetPath(PathSystem p, string n) { pathSystem = p; pathName = n; }
-
+    private PathSystem pathSystem = null;
+    public string pathName;
+    public void SetPath(string n) {pathName = n;}
     private int currentHP;
     private float pathDistance;
     private float fireForce = 20.0f;
     // Start is called before the first frame update
     void Start()
     {
+        pathSystem = GameManager.sTheGlobalBehavior.mPathSystem;
+        GameManager.sTheGlobalBehavior.mEnemyManager.AddEnemy(gameObject);
         Debug.Assert(pathSystem != null);
         Debug.Assert(bulletPrefab != null);
         Debug.Assert(maxHP > 0);
@@ -58,6 +59,7 @@ public class EnemyBehavior : MonoBehaviour
 
     public void DestroySelf()
     {
-        Destroy(transform.gameObject);
+        GameManager.sTheGlobalBehavior.mEnemyManager.RemoveEnemy(gameObject);
+        Destroy(gameObject);
     }
 }
