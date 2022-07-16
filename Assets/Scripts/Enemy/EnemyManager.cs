@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class EnemyManager {
-    private HashSet<GameObject> mEnemies;
+    public HashSet<GameObject> mEnemies;
     public EnemyManager() {
         mEnemies = new HashSet<GameObject>();
     }
@@ -17,11 +17,11 @@ public class EnemyManager {
     public void RemoveAllEnemies() {
         mEnemies.Clear();
     }
-    public GameObject GetClosestEnemy() {
+    public GameObject GetClosestEnemy(Vector3 position) {
         GameObject closest = null;
         float closestDistance = float.MaxValue;
         foreach (GameObject enemy in mEnemies) {
-            float distance = (enemy.transform.position - GameManager.sTheGlobalBehavior.mHero.transform.position).magnitude;
+            float distance = (enemy.transform.position - position).magnitude;
             if (distance < closestDistance) {
                 closest = enemy;
                 closestDistance = distance;
