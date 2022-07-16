@@ -46,6 +46,7 @@ public class PathSystem : MonoBehaviour
             int index = FindSegmentIndex(dist, 0, mLength);
             return mWayPoints[index] + (dist - mPointDists[index]) / (mPointDists[index + 1] - mPointDists[index]) * (mWayPoints[index + 1] - mWayPoints[index]);
         }
+        public bool IsPathEnd(float dist) { return (dist >= PathDistance); }
         private int FindSegmentIndex(float dist, int start, int end)
         {
             Debug.Assert(end >= start);
@@ -100,9 +101,11 @@ public class PathSystem : MonoBehaviour
         }
     }
 
+    public bool PathExists(string pathname) { return mPathDict.ContainsKey(pathname); }
+
     public Vector3 GetPositionFromPath(string pathname, float dist)
     {
-        Debug.Assert(mPathDict.ContainsKey(pathname));
+        Debug.Assert(PathExists(pathname));
         return mPathDict[pathname].GetPositionFromDistance(dist);
     }
 }
