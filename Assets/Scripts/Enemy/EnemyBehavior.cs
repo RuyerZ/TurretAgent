@@ -10,7 +10,7 @@ public class EnemyBehavior : MonoBehaviour
 
     private PathSystem pathSystem = null;
     public string pathName;
-    public void SetPath(string n) {pathName = n;}
+    public void SetPath(string n) { pathName = n; }
     private int currentHP;
     private float pathDistance;
     private float fireForce = 20.0f;
@@ -36,7 +36,7 @@ public class EnemyBehavior : MonoBehaviour
     private void Fire()
     {
         GameObject b = Instantiate(bulletPrefab, transform.position, transform.rotation);
-        b.GetComponent<Rigidbody2D>().AddForce(transform.up, ForceMode2D.Impulse);
+        b.GetComponent<Rigidbody2D>().AddForce(transform.up * fireForce, ForceMode2D.Impulse);
     }
 
     private void UpdatePosition()
