@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7103212cfda703147805d35159ac53e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3404933435676110052, guid: 74495fd3c5dafc44f9d617d826d50fa3, type: 3}
+  bulletPrefab: {fileID: 5020514952522715695, guid: dbe31f41acd00e14280dfd62df2b3814, type: 3}
   firePoint: {fileID: 564441738}
   fireForce: 20
 --- !u!212 &1324933736
@@ -479,8 +479,6 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 1594881934}
   weapon: {fileID: 1324933735}
-  moveDirection: {x: 0, y: 0}
-  mousePoistion: {x: 0, y: 0}
 --- !u!1 &2015892887
 GameObject:
   m_ObjectHideFlags: 0
