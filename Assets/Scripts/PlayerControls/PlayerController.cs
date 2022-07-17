@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-
     public Rigidbody2D rb;
     public Animator animator;
     static private PlayerManager manager= null;
@@ -41,6 +39,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Horizontal", aimDirection.x);
         animator.SetFloat("Vertical", aimDirection.y);
         animator.SetFloat("Speed", moveDirection.sqrMagnitude);
+        //animator.SetBool("isCarrying",manager.GetIsCarrying);
     }
 
     private void handleActionInput()
@@ -69,11 +68,15 @@ public class PlayerController : MonoBehaviour
         {
             manager.SetActiveItem(4);
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            manager.ToggleIsCarry();
+        }
     }
     //for movement
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        rb.velocity = new Vector2(moveDirection.x * manager.GetMoveSpeed(), moveDirection.y * manager.GetMoveSpeed());
     }
 
     public float GetAimAngle()

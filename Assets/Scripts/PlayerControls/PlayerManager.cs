@@ -6,6 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
     private bool isCarrying = false;
     private bool isRepairing = false;
+    private float moveSpeed = 5f;
     //to be updated
     private List<string> barItems = new List<string>() {
         "Pistol", "Rifle", "Empty", "Empty", "Empty"
@@ -16,6 +17,7 @@ public class PlayerManager : MonoBehaviour
     public UIHotkeyBar bar;
     public PlayerController controller; 
     public Weapon weapon;
+    public TurretCarried turret;
 
     void Awake()
     {
@@ -40,6 +42,30 @@ public class PlayerManager : MonoBehaviour
     }
     public void Fire()
     {
+        if (isCarrying || isRepairing) return;
         weapon.Fire();
     }
+    public void ToggleIsCarry()
+    {
+        Vector3 toTurret = turret.transform.position - controller.transform.position;
+        float distSqr = toTurret.sqrMagnitude;
+
+        if (distSqr > 1f) {
+            Debug.Log("too far");
+            return;
+        }
+
+        if (isCarrying) {
+            weapon.SetShowWeapon(true);
+            turret.SetIsCarried(false);
+        }
+        else {
+            weapon.SetShowWeapon(false);
+            turret.SetIsCarried(true);
+        }
+        isCarrying = !isCarrying;
+    }
+    public float GetMoveSpeed() { return moveSpeed; }
+    public bool GetIsCarrying() { return isCarrying; }
+    public bool GetIsRepairing() { return isRepairing; }
 }
