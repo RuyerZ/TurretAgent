@@ -167,7 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7006fad2000423c47a8d6948ef700ff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phases: []
+  phases:
+  - enemies: []
 --- !u!1001 &231646152
 PrefabInstance:
   m_ObjectHideFlags: 0
