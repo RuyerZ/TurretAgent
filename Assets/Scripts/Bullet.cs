@@ -2,8 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullets : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
+    public float _Force = 20f;
+
+    private void Awake()
+    {
+        
+    }
+
     void Update()
     {
         // 1. Find the main camera and get the CameraSupport component
@@ -22,12 +29,22 @@ public class Bullets : MonoBehaviour
         }
     }
 
+    public void Fire()
+    {
+        GetComponentInChildren<Rigidbody2D>().AddForce(transform.up * _Force, ForceMode2D.Impulse);
+    }
+
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        if (collision.GetComponentInParent<EnemyBehavior>())
+        {
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.tag == "dummy")
+        {
+            Destroy(gameObject);
+        }
     }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        Destroy(gameObject);
-    }
+
 }
