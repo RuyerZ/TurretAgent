@@ -56,7 +56,7 @@ public class EnemyManager : MonoBehaviour
         }
         return closest;
     }
-    private void Start()
+    private void Awake()
     {
         mEnemies = new HashSet<GameObject>();
         numPhaseInfo = phases.Length;
