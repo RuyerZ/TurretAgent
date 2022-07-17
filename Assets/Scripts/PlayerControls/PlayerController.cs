@@ -8,12 +8,15 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D rb;
     public Animator animator;
+    static private PlayerManager manager= null;
+    public void setPlayerManager(PlayerManager m) {
+        manager = m;
+    }
 
     Vector2 moveDirection;
     Vector2 mousePoistion;
 
     private float aimAngle = 0f;    //aimAngle is passed down to AimController
-    private bool isCarrying = false;
 
     // Update is called once per frame
     void Update()
@@ -21,6 +24,8 @@ public class PlayerController : MonoBehaviour
         //movement input
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
+        //action input
+        handleActionInput();
 
         moveDirection = new Vector2(moveX, moveY).normalized;
 
@@ -38,6 +43,33 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Speed", moveDirection.sqrMagnitude);
     }
 
+    private void handleActionInput()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            manager.Fire();
+        }   
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            manager.SetActiveItem(0);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            manager.SetActiveItem(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            manager.SetActiveItem(2);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            manager.SetActiveItem(3);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            manager.SetActiveItem(4);
+        }
+    }
     //for movement
     private void FixedUpdate()
     {
@@ -48,4 +80,5 @@ public class PlayerController : MonoBehaviour
     {
         return aimAngle;
     }
+
 }
