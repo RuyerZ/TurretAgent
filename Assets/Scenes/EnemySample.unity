@@ -215,8 +215,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a58627d4b49f3634ea0dab37ea135e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  mBulletPrefab: {fileID: 5020514952522715695, guid: dbe31f41acd00e14280dfd62df2b3814, type: 3}
+  target: {fileID: 794017718}
+  mBulletPrefab: {fileID: 1724401812100139901, guid: dbe31f41acd00e14280dfd62df2b3814, type: 3}
   mShootCooldown: 0.3
 --- !u!212 &289408313
 SpriteRenderer:
@@ -404,6 +404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mHero: {fileID: 0}
   mPathSystem: {fileID: 2126625031}
+  mEnemyManager: {fileID: 0}
 --- !u!1001 &481194221
 PrefabInstance:
   m_ObjectHideFlags: 0
