@@ -56,7 +56,14 @@ public class EnemyBehavior : MonoBehaviour
             DestroySelf();
         }
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Hit();
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Hit();
+    }
     public void DestroySelf()
     {
         GameManager.sTheGlobalBehavior.mEnemyManager.RemoveEnemy(gameObject);
