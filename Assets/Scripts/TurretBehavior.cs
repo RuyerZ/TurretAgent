@@ -7,6 +7,8 @@ public class TurretBehavior : MonoBehaviour
     public GameObject target;
     public GameObject mBulletPrefab;
     public float mShootCooldown;
+    public float mShootRange;
+    public float mShootForce;
     private float LastShotTime;
     // Update is called once per frame
     void Update()
@@ -24,6 +26,10 @@ public class TurretBehavior : MonoBehaviour
             return false;
         }
         Vector2 targetDirection = target.transform.position - transform.position;
+        if (targetDirection.magnitude > mShootRange) {
+            target = null;
+            return false;
+        }
         float targetangle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg - 90f;
         Rotate(targetangle);
         return true;
@@ -32,6 +38,10 @@ public class TurretBehavior : MonoBehaviour
         if (target == null) {
             target = GameManager.sTheGlobalBehavior.mEnemyManager.GetClosestEnemy(transform.position);
             if (target == null) return false;
+            if ((target.transform.position-transform.position).magnitude > mShootRange) {
+                target = null;
+                return false;
+            }
             return true;
         }
         return false;
@@ -42,8 +52,8 @@ public class TurretBehavior : MonoBehaviour
     private void FireUpdate() {
         if (target == null) return;
         if (Time.time - LastShotTime < mShootCooldown) return;
-        GameObject bullet = Instantiate(mBulletPrefab, transform.position + transform.up * 0.1f, transform.rotation);
-        bullet.GetComponent<Rigidbody2D>().AddForce(transform.up * 20f, ForceMode2D.Impulse);
+        GameObject bullet = Instantiate(mBulletPrefab, transform.position, transform.rotation);
+        bullet.GetComponent<Rigidbody2D>().AddForce(transform.up * mShootForce, ForceMode2D.Impulse);
         LastShotTime = Time.time;
     }
 }
