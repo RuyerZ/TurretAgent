@@ -10,9 +10,11 @@ public class GameManager : MonoBehaviour {
     public PathSystem mPathSystem = null;
     public EnemyManager mEnemyManager = null;
     
+
     // Start is called before the first frame update
-    void Start() {
+    void Awake() {
         GameManager.sTheGlobalBehavior = this;  // Singleton pattern
+        mEnemyManager = new EnemyManager();
         //Debug.Assert(mHero != null);
         //Debug.Assert(mEnemyManager != null);
         //Debug.Assert(mPathSystem != null);
