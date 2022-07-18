@@ -105,10 +105,14 @@ public class EnemyManager : MonoBehaviour
         {
             mCurrentTime += Time.smoothDeltaTime*1f; // Speed 1x up
         }
-        while (mCurrentSequenceIndex < mSequence.Count && mSequence[mCurrentSequenceIndex].time < mCurrentTime)
+        if (mCurrentSequenceIndex < mSequence.Count && mSequence[mCurrentSequenceIndex].time < mCurrentTime)
         {
             Spawn(mSequence[mCurrentSequenceIndex].code, mSequence[mCurrentSequenceIndex].pathName);
             mCurrentSequenceIndex++;
+        }
+        if (mCurrentSequenceIndex == mSequence.Count && mEnemies.Count == 0)
+        {
+            GameManager.sTheGlobalBehavior.GameWin();
         }
     }
 }
