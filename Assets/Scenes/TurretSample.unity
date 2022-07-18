@@ -243,6 +243,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2296200465848818679, guid: 1ef4295ea5211a94ea4151b77869982f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296200465848818679, guid: 1ef4295ea5211a94ea4151b77869982f, type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
@@ -304,6 +308,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5775048993590621707, guid: 1ef4295ea5211a94ea4151b77869982f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965399815105383022, guid: 1ef4295ea5211a94ea4151b77869982f, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6965399815105383022, guid: 1ef4295ea5211a94ea4151b77869982f, type: 3}
@@ -716,7 +724,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4668005713711428529, guid: 326de360f1509aa45be0b16bff92366c, type: 3}
   m_PrefabInstance: {fileID: 1170593604}
   m_PrefabAsset: {fileID: 0}
-
 --- !u!1 &2126625030
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,6 +847,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9015699204102001415, guid: 24eabf3667691d14ea9db097be6aea2b, type: 3}
+      propertyPath: _BulletPre
+      value: 
+      objectReference: {fileID: 2166000638287311909, guid: dbe31f41acd00e14280dfd62df2b3814, type: 3}
+    - target: {fileID: 9015699204102001416, guid: 24eabf3667691d14ea9db097be6aea2b, type: 3}
+      propertyPath: mBulletPrefab
+      value: 
+      objectReference: {fileID: 1724401812100139901, guid: dbe31f41acd00e14280dfd62df2b3814, type: 3}
     - target: {fileID: 9015699204102001417, guid: 24eabf3667691d14ea9db097be6aea2b, type: 3}
       propertyPath: m_RootOrder
       value: 2

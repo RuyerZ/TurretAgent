@@ -14,7 +14,6 @@ public class Turret : MonoBehaviour
     private float _AttackIntervalReset;
 
     private Transform _Target;
-    private EnemyBehavior _Enemy;
 
     private void Awake()
     {
@@ -44,7 +43,6 @@ public class Turret : MonoBehaviour
             if (Vector3.Distance(_Target.position, _Gun.position) >= _AttackRadius) //+ _Enemy.GetRadius())
             {
                 _Target = null;
-                _Enemy = null;
             }
         }
     }
