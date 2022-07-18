@@ -22,6 +22,7 @@ public class PathBehavior : MonoBehaviour {
         GameManager.sTheGlobalBehavior.mEnemyManager.AddEnemy(gameObject);
         Debug.Assert(pathSystem != null);
         pathDistance = 0.0f;
+        UpdatePosition();
     }
     public void Update()
     {

@@ -8,26 +8,27 @@ public class EnemyManager : MonoBehaviour
     public HashSet<GameObject> mEnemies;
     /* Spawn Parts */
     [System.Serializable]
-    public struct EnemyInfo
+    public struct EnemyPrefab
     {
-        public GameObject enemyPrefab;
-        public string pathName;
-        public int totalSpawn;
-        public float cooldownTime;
+        public char code;
+        public GameObject prefab;
     }
+
     [System.Serializable]
     public struct PhaseInfo
     {
-        public EnemyInfo[] enemies;
+        public string enemyCode;
+        public string pathName;
+        public float intervalTime;
+        public float startTime;
     }
+
+    public EnemyPrefab[] enemyPrefabs;
     public PhaseInfo[] phases;
 
-    private float[] lastSpawnTime = null;
-    private int[] numSpawn = null;
-    private EnemyInfo[] enemyToSpawn = null;
-    private bool spawning = false;
-    private int numPhaseInfo;
-    private int numEnemyInfo;
+    private Dictionary<char, GameObject> enemyPrefabDict;
+
+    private float mCurrentTime;
 
     public void AddEnemy(GameObject enemy)
     {
@@ -59,61 +60,55 @@ public class EnemyManager : MonoBehaviour
     private void Awake()
     {
         mEnemies = new HashSet<GameObject>();
-        numPhaseInfo = phases.Length;
-        // test spawning
-        StartPhase(1);
     }
-    private void Update()
-    {
-        if (spawning) Spawn();
+    struct SequenceItem {
+        public char code;
+        public string pathName;
+        public float time;
     }
-    public void StartPhase(int index)
+    private List<SequenceItem> mSequence;
+    private int mCurrentSequenceIndex;
+    private void Start()
     {
-        Debug.Assert(index >= 0 && index < numPhaseInfo);
+        enemyPrefabDict = new Dictionary<char, GameObject>();
 
-        enemyToSpawn = phases[index].enemies;
-        numEnemyInfo = enemyToSpawn.Length;
-
-        if (numEnemyInfo > 0)
+        for (int i = 0; i < enemyPrefabs.Length; i++)
         {
-            lastSpawnTime = new float[numEnemyInfo];
-            numSpawn = new int[numEnemyInfo];
-            float current = Time.time;
-            for (int i = 0; i < numEnemyInfo; i++)
+            if (!enemyPrefabDict.ContainsKey(enemyPrefabs[i].code))
             {
-                lastSpawnTime[i] = current;
-                numSpawn[i] = 0;
+                enemyPrefabDict.Add(enemyPrefabs[i].code, enemyPrefabs[i].prefab);
             }
-
-            spawning = true;
         }
-    }
-    private void Spawn()
-    {
-        Debug.Assert(numSpawn != null && lastSpawnTime != null);
-
-        spawning = false;
-
-        for (int i = 0; i < enemyToSpawn.Length; i++)
+        mSequence = new List<SequenceItem>();
+        mCurrentSequenceIndex = 0;
+        for (int i = 0; i < phases.Length; i++)
         {
-            // check number
-            if (numSpawn[i] < enemyToSpawn[i].totalSpawn)
+            for (int j = 0;j<phases[i].enemyCode.Length;j++)
             {
-                spawning = true;
-                // check cooldown
-                float current = Time.time;
-                if (current - lastSpawnTime[i] >= enemyToSpawn[i].cooldownTime * Time.smoothDeltaTime)
-                {
-                    Debug.Log(current);
-                    GameObject e = Instantiate(enemyToSpawn[i].enemyPrefab);
-                    PathBehavior eb = e.GetComponent<PathBehavior>();
-                    Debug.Assert(eb != null);
-                    eb.pathName = enemyToSpawn[i].pathName;
-
-                    lastSpawnTime[i] = current;
-                    numSpawn[i]++;
-                }
+                SequenceItem item = new SequenceItem();
+                item.code = phases[i].enemyCode[j];
+                item.time = phases[i].startTime + j * phases[i].intervalTime;
+                item.pathName = phases[i].pathName;
+                mSequence.Add(item);
             }
+        }
+        mSequence.Sort((a, b) => a.time.CompareTo(b.time));
+        mCurrentTime = 0;
+    }
+    private void Spawn(char code,string pathName) {
+        GameObject enemy = Instantiate(enemyPrefabDict[code]);
+        enemy.GetComponent<PathBehavior>().pathName = pathName;
+    }
+    private void Update() {
+        mCurrentTime += Time.smoothDeltaTime;
+        if (mEnemies.Count == 0)
+        {
+            mCurrentTime += Time.smoothDeltaTime*1f; // Speed 1x up
+        }
+        while (mCurrentSequenceIndex < mSequence.Count && mSequence[mCurrentSequenceIndex].time < mCurrentTime)
+        {
+            Spawn(mSequence[mCurrentSequenceIndex].code, mSequence[mCurrentSequenceIndex].pathName);
+            mCurrentSequenceIndex++;
         }
     }
 }
