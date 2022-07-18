@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 2793824667668106333}
   - component: {fileID: -3305176552020867945}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyFast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6455272098bbf24ba607c0265081724, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mSpeed: 0.004
+  mSpeed: 0.01
   mCost: 1
 --- !u!114 &-3305176552020867945
 MonoBehaviour:

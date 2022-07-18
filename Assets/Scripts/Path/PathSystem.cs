@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +15,7 @@ public class PathSystem : MonoBehaviour
         private Vector3[] mWayPoints;
         private float[] mPointDists;
         private int mLength;
+
         public Path(Vector3[] points)
         {
             // Get the waypoints
@@ -34,8 +34,10 @@ public class PathSystem : MonoBehaviour
             }
             mPointDists[mLength - 1] = fTotalDist;
         }
+
         public float PathDistance { get { return mPointDists[mPointDists.Length - 1]; } }
         public int Length { get { return mLength; } }
+
         public Vector3 GetPositionFromDistance(float dist)
         {
             if (dist < 0.0f)
@@ -46,7 +48,12 @@ public class PathSystem : MonoBehaviour
             int index = FindSegmentIndex(dist, 0, mLength);
             return mWayPoints[index] + (dist - mPointDists[index]) / (mPointDists[index + 1] - mPointDists[index]) * (mWayPoints[index + 1] - mWayPoints[index]);
         }
-        public bool IsPathEnd(float dist) { return (dist >= PathDistance); }
+
+        public bool IsPathEnd(float dist)
+        {
+            return (dist >= PathDistance);
+        }
+
         private int FindSegmentIndex(float dist, int start, int end)
         {
             Debug.Assert(end >= start);
@@ -65,19 +72,15 @@ public class PathSystem : MonoBehaviour
     private Dictionary<string, Path> mPathDict;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         InitPathDict();
-        for (float i = 0.0f; i < 8.0f; i += 0.1f)
-        {
-            Debug.Log(GetPositionFromPath("path1", i));
-        }
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+
     }
 
     private void InitPathDict()
@@ -101,11 +104,20 @@ public class PathSystem : MonoBehaviour
         }
     }
 
-    public bool PathExists(string pathname) { return mPathDict.ContainsKey(pathname); }
+    public bool PathExist(string pathname)
+    {
+        return mPathDict.ContainsKey(pathname);
+    }
+
+    public bool IsPathEnd(string pathname, float dist)
+    {
+        Debug.Assert(PathExist(pathname));
+        return mPathDict[pathname].IsPathEnd(dist);
+    }
 
     public Vector3 GetPositionFromPath(string pathname, float dist)
     {
-        Debug.Assert(PathExists(pathname));
+        Debug.Assert(PathExist(pathname));
         return mPathDict[pathname].GetPositionFromDistance(dist);
     }
 }

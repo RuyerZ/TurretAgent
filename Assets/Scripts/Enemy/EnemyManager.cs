@@ -106,9 +106,11 @@ public class EnemyManager : MonoBehaviour
                 {
                     Debug.Log(current);
                     GameObject e = Instantiate(enemyToSpawn[i].enemyPrefab);
-                    EnemyBehavior eb = e.GetComponent<EnemyBehavior>();
-                    Debug.Assert(eb != null);
-                    eb.SetPath(enemyToSpawn[i].pathName);
+
+                    // Set path
+                    PathBehavior pb = e.GetComponent<PathBehavior>();
+                    Debug.Assert(pb != null);
+                    pb.SetPath(enemyToSpawn[i].pathName);
 
                     lastSpawnTime[i] = current;
                     numSpawn[i]++;
