@@ -8,26 +8,36 @@ public class EnemyManager : MonoBehaviour
     public HashSet<GameObject> mEnemies;
     /* Spawn Parts */
     [System.Serializable]
-    public struct EnemyInfo
+    public struct EnemyPrefab
     {
-        public GameObject enemyPrefab;
-        public string pathName;
-        public int totalSpawn;
-        public float cooldownTime;
+        public char code;
+        public GameObject prefab;
     }
+
     [System.Serializable]
     public struct PhaseInfo
     {
-        public EnemyInfo[] enemies;
+        public string enemyCode;
+        public string pathName;
+        public float intervalTime;
+        public float startTime;
     }
+
+    public EnemyPrefab[] enemyPrefabs;
     public PhaseInfo[] phases;
 
-    private float[] lastSpawnTime = null;
-    private int[] numSpawn = null;
-    private EnemyInfo[] enemyToSpawn = null;
+    private Dictionary<char, GameObject> enemyPrefabDict;
+
+    private float lastSpawnTime;
+    private int indexSpawn;
+    private int indexPhase;
+
+    private GameObject[] enemyToSpawn;
+    private string pathName;
+    private float intervalTime;
+    private float phaseTimer;
     private bool spawning = false;
-    private int numPhaseInfo;
-    private int numEnemyInfo;
+    private bool levelEnd = false;
 
     public void AddEnemy(GameObject enemy)
     {
@@ -59,61 +69,91 @@ public class EnemyManager : MonoBehaviour
     private void Awake()
     {
         mEnemies = new HashSet<GameObject>();
-        numPhaseInfo = phases.Length;
-        // test spawning
-        StartPhase(1);
+    }
+    private void Start()
+    {
+        enemyPrefabDict = new Dictionary<char, GameObject>();
+
+        for (int i = 0; i < enemyPrefabs.Length; i++)
+        {
+            if (!enemyPrefabDict.ContainsKey(enemyPrefabs[i].code))
+            {
+                enemyPrefabDict.Add(enemyPrefabs[i].code, enemyPrefabs[i].prefab);
+            }
+        }
+
+        indexPhase = 0;
+        phaseTimer = 0.0f;
     }
     private void Update()
     {
-        if (spawning) Spawn();
-    }
-    public void StartPhase(int index)
-    {
-        Debug.Assert(index >= 0 && index < numPhaseInfo);
-
-        enemyToSpawn = phases[index].enemies;
-        numEnemyInfo = enemyToSpawn.Length;
-
-        if (numEnemyInfo > 0)
+        if (indexPhase >= phases.Length)
         {
-            lastSpawnTime = new float[numEnemyInfo];
-            numSpawn = new int[numEnemyInfo];
-            float current = Time.time;
-            for (int i = 0; i < numEnemyInfo; i++)
+            if (!levelEnd)
             {
-                lastSpawnTime[i] = current;
-                numSpawn[i] = 0;
+                Debug.Log("End");
+                levelEnd = true;
+            }
+        }
+        else
+        {
+            if (phaseTimer >= phases[indexPhase].startTime && !spawning)
+            {
+                Debug.Log("Phase:" + indexPhase.ToString());
+                StartPhase();
             }
 
-            spawning = true;
+            if (spawning)
+            {
+                Spawn();
+            }
+            else
+            {
+                if (mEnemies.Count <= 0)
+                {
+                    // Accerate the next wave
+                    phaseTimer += Time.deltaTime;
+                }
+            }
+            phaseTimer += Time.deltaTime;
         }
+    }
+    public void StartPhase()
+    {
+        string codes = phases[indexPhase].enemyCode;
+        enemyToSpawn = new GameObject[codes.Length];
+        for (int i = 0; i < codes.Length; i++)
+        {
+            if (enemyPrefabDict.ContainsKey(codes[i]))
+            {
+                enemyToSpawn[i] = enemyPrefabDict[codes[i]];
+            }
+            else enemyToSpawn[i] = null;
+        }
+
+        pathName = phases[indexPhase].pathName;
+        intervalTime = phases[indexPhase].intervalTime;
+        spawning = true;
+        indexSpawn = 0;
+        lastSpawnTime = Time.time;
     }
     private void Spawn()
     {
-        Debug.Assert(numSpawn != null && lastSpawnTime != null);
-
-        spawning = false;
-
-        for (int i = 0; i < enemyToSpawn.Length; i++)
+        if (indexSpawn >= enemyToSpawn.Length)
         {
-            // check number
-            if (numSpawn[i] < enemyToSpawn[i].totalSpawn)
-            {
-                spawning = true;
-                // check cooldown
-                float current = Time.time;
-                if (current - lastSpawnTime[i] >= enemyToSpawn[i].cooldownTime * Time.smoothDeltaTime)
-                {
-                    Debug.Log(current);
-                    GameObject e = Instantiate(enemyToSpawn[i].enemyPrefab);
-                    PathBehavior eb = e.GetComponent<PathBehavior>();
-                    Debug.Assert(eb != null);
-                    eb.pathName = enemyToSpawn[i].pathName;
+            spawning = false;
+            indexPhase++;
+            return;
+        }
 
-                    lastSpawnTime[i] = current;
-                    numSpawn[i]++;
-                }
-            }
+        if (Time.time - lastSpawnTime >= intervalTime)
+        {
+            GameObject e = Instantiate(enemyToSpawn[indexSpawn]);
+            PathBehavior pb = e.GetComponent<PathBehavior>();
+            Debug.Assert(pb != null);
+            pb.pathName = pathName;
+            indexSpawn++;
+            lastSpawnTime = Time.time;
         }
     }
 }
