@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    public Bullet _BulletPre;
+    public FriendBulletBehavior _BulletPre;
     public Transform _Gun;
     public Transform _Muzzle;
     public Transform _RadiusItem;
@@ -33,12 +33,15 @@ public class Turret : MonoBehaviour
     {
         if (_Target == null)
         {
-            _Target = GameManager.sTheGlobalBehavior.mEnemyManager.GetClosestEnemy(_Gun.position).transform;
-            _Enemy = _Target.GetComponentInParent<EnemyBehavior>();
+            GameObject t = GameManager.sTheGlobalBehavior.mEnemyManager.GetClosestEnemy(_Gun.position);
+            if (t != null) {
+                _Target = t.transform;
+            }
+            //_Enemy = _Target.GetComponentInParent<EnemyBehavior>();
         }
         if (_Target != null)
         {
-            if (Vector3.Distance(_Target.position, _Gun.position) >= _AttackRadius + _Enemy.GetRadius())
+            if (Vector3.Distance(_Target.position, _Gun.position) >= _AttackRadius) //+ _Enemy.GetRadius())
             {
                 _Target = null;
                 _Enemy = null;

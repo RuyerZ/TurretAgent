@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5316380363694978964}
-  - component: {fileID: 1637950462116343250}
   - component: {fileID: 6844131118955958725}
   - component: {fileID: -3312112676077961058}
   - component: {fileID: 1017079270267134693}
+  - component: {fileID: 2371533233397772053}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -35,19 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1637950462116343250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5554333038292430359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9f2747d204552e4a9581a4843456fb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _Force: 20
 --- !u!212 &6844131118955958725
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -137,3 +124,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &2371533233397772053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5554333038292430359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a94b62a26d7fd94fbc6ce6307b694a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 1
+  fireforce: 20
