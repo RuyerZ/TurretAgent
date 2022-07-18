@@ -11,6 +11,7 @@ public class Weapon : MonoBehaviour
 
     void Awake()
     {
+        //temp
         SetWeapon("Pistol");
     }
 
@@ -61,6 +62,11 @@ public class Weapon : MonoBehaviour
                 break;
         }
     }
+
+    public void SetShowWeapon(bool f)
+    {
+        gameObject.GetComponent<Renderer>().enabled = f;
+    }
     
     //store all the weapon types
     public abstract class WeaponType
@@ -69,6 +75,8 @@ public class Weapon : MonoBehaviour
         protected string bulletType = "Bullet";
         protected float fireForce = 20f;
         protected float cooldownDuration = 1.0f;
+        protected Vector2 selfPos = new Vector2(0f,0.27f);
+        protected Vector2 FPPos = new Vector2(-0.042f,0.172f);
         protected float timeStamp;
         
         public void Fire(Transform fp) {
@@ -97,6 +105,7 @@ public class Weapon : MonoBehaviour
             bulletType = "Bullet";
             fireForce = 25f;
             cooldownDuration = 0.2f;
+            FPPos = new Vector2(-0.042f,0.172f);
         }
     }
 
