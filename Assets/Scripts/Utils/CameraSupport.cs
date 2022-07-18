@@ -37,7 +37,10 @@ public class CameraSupport : MonoBehaviour
         UpdateWorldWindowBound();
     }
 
-    public Bounds GetWorldBound() { return mWorldBound; }
+    public Bounds GetWorldBound()
+    {
+        return mWorldBound;
+    }
 
     #region bound support
 
@@ -63,7 +66,7 @@ public class CameraSupport : MonoBehaviour
     // Because we are not using the Z-values 
     private bool BoundsIntersectInXY(Bounds b1, Bounds b2)
     {
-        return (b1.min.x < b2.max.x) && (b1.max.x > b2.min.x) &&  
+        return (b1.min.x < b2.max.x) && (b1.max.x > b2.min.x) &&
                (b1.min.y < b2.max.y) && (b1.max.y > b2.min.y);
     }
 
@@ -91,7 +94,7 @@ public class CameraSupport : MonoBehaviour
             // not testing Z anymore!! if ((objBound.min.z < mWorldBound.min.z) || (objBound.max.z > mWorldBound.max.z))
 
             if (status == WorldBoundStatus.Outside)  // intersects and no bounds touch ==> Inside!
-                status = WorldBoundStatus.Inside;  
+                status = WorldBoundStatus.Inside;
         }
 
         return status;

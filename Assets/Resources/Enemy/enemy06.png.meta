@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fa74116740664bf4e8f6103114238583
+guid: 0c6ff203ac0c0c44abb579452e09daee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -100,29 +100,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shotgun_1_0
+      name: enemy06_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 73
-        width: 48
-        height: 9
+        x: 6
+        y: 193
+        width: 52
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8bdb497ef001684494a52c3f0cd5d40
-      internalID: 27286524
+      spriteID: f59912456fa83514786b9823de9ca03f
+      internalID: 17430723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shotgun_1_1
+      name: enemy06_1
       rect:
         serializedVersion: 2
-        x: 53
-        y: 70
-        width: 42
-        height: 12
+        x: 70
+        y: 192
+        width: 52
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26cd1191168d4dc4a992d5ec247bcc28
-      internalID: 267020483
+      spriteID: e7124491ebe25bb4382d806d26c5dd49
+      internalID: 677449949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shotgun_1_2
+      name: enemy06_2
       rect:
         serializedVersion: 2
-        x: 4
-        y: 64
-        width: 28
-        height: 8
+        x: 134
+        y: 193
+        width: 52
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6736c74de5110840bb64bed2b5ee4e6
-      internalID: -1149159236
+      spriteID: d77975cfe4e81eb459833ad8c6183325
+      internalID: 2044384202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shotgun_1_3
+      name: enemy06_3
       rect:
         serializedVersion: 2
-        x: 51
-        y: 58
-        width: 44
-        height: 11
+        x: 198
+        y: 192
+        width: 52
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8b28e9fbeb6be443be93caf123b362c
-      internalID: 1341900762
+      spriteID: 6a42e298b3205ee40977644c4e9b58ef
+      internalID: 295309353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shotgun_1_4
+      name: enemy06_4
       rect:
         serializedVersion: 2
-        x: 4
-        y: 46
-        width: 32
-        height: 16
+        x: 7
+        y: 129
+        width: 50
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 029c291262f56fa4082cca3869f175f6
-      internalID: 678586720
+      spriteID: fbe4dab82fc7bff488b7df7cfbf6dc09
+      internalID: -1788635074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shotgun_1_5
+      name: enemy06_5
       rect:
         serializedVersion: 2
-        x: 65
-        y: 43
-        width: 30
-        height: 14
+        x: 70
+        y: 129
+        width: 50
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 922bccc45bc6d8f47831aa9b906935ed
-      internalID: 1962139506
+      spriteID: 68285bee91c2eab4fa242c96a7de6d59
+      internalID: -2049956210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shotgun_1_6
+      name: enemy06_6
       rect:
         serializedVersion: 2
-        x: 4
-        y: 33
-        width: 40
-        height: 12
+        x: 135
+        y: 129
+        width: 50
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1687e343d0369c744bbcc852bbe5c1d2
-      internalID: -2089705729
+      spriteID: a2e48c15f068d9640a49fcb892fb1699
+      internalID: 1103282172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shotgun_1_7
+      name: enemy06_7
       rect:
         serializedVersion: 2
-        x: 45
-        y: 30
-        width: 37
-        height: 12
+        x: 198
+        y: 129
+        width: 50
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,20 +265,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63442e249c4728041979704b509dc354
-      internalID: 1749023063
+      spriteID: 54e250bb8ce6c3c4fb373ad3ec582635
+      internalID: -847847092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shotgun_1_8
+      name: enemy06_8
       rect:
         serializedVersion: 2
-        x: 4
-        y: 21
-        width: 37
-        height: 11
+        x: 7
+        y: 65
+        width: 50
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,20 +286,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6f9653291e1c9f41a6fe3d098fb0cf2
-      internalID: 1539731849
+      spriteID: 353f28ddc30d9744fb0cbcbda5e899ce
+      internalID: -562882006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shotgun_1_9
+      name: enemy06_9
       rect:
         serializedVersion: 2
-        x: 45
-        y: 17
-        width: 40
-        height: 12
+        x: 72
+        y: 65
+        width: 50
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,20 +307,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7937cf91275f73d449c5f9ce32f8e588
-      internalID: 407283198
+      spriteID: 80c9ec41bbe9ca849b6b60598c56693e
+      internalID: 534849278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shotgun_1_10
+      name: enemy06_10
       rect:
         serializedVersion: 2
-        x: 4
-        y: 13
-        width: 25
-        height: 7
+        x: 135
+        y: 65
+        width: 50
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,20 +328,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9292b5a4cc69de94dad6de758213b56a
-      internalID: 469649568
+      spriteID: a790c6906908696499f991d00f23b538
+      internalID: -273622503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shotgun_1_11
+      name: enemy06_11
       rect:
         serializedVersion: 2
-        x: 41
-        y: 3
-        width: 43
-        height: 13
+        x: 200
+        y: 65
+        width: 50
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,8 +349,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 690008053c5ccd5439441e414a44ec28
-      internalID: 2020295686
+      spriteID: 6a8f3e7a60195424cbfec95b7642b937
+      internalID: -799863805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy06_12
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1
+        width: 52
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e982f30ce82734fa0b9dbd73b681e1
+      internalID: 987020303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy06_13
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 2
+        width: 52
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa20700691fb1244d8aa2719eee050f0
+      internalID: -326439971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy06_14
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1
+        width: 52
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5dc3a66e19fc349a38c00dd7998b12
+      internalID: -354571744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy06_15
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 2
+        width: 52
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ba8e4554d5af54db2af8e3c14b1b4a
+      internalID: 1949226634
       vertices: []
       indices: 
       edges: []
@@ -378,18 +450,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      shotgun_1_6: -2089705729
-      shotgun_1_1: 267020483
-      shotgun_1_5: 1962139506
-      shotgun_1_3: 1341900762
-      shotgun_1_4: 678586720
-      shotgun_1_10: 469649568
-      shotgun_1_7: 1749023063
-      shotgun_1_9: 407283198
-      shotgun_1_0: 27286524
-      shotgun_1_8: 1539731849
-      shotgun_1_11: 2020295686
-      shotgun_1_2: -1149159236
+      enemy06_11: -799863805
+      enemy06_10: -273622503
+      enemy06_13: -326439971
+      enemy06_9: 534849278
+      enemy06_7: -847847092
+      enemy06_2: 2044384202
+      enemy06_5: -2049956210
+      enemy06_6: 1103282172
+      enemy06_3: 295309353
+      enemy06_0: 17430723
+      enemy06_1: 677449949
+      enemy06_12: 987020303
+      enemy06_8: -562882006
+      enemy06_14: -354571744
+      enemy06_4: -1788635074
+      enemy06_15: 1949226634
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
