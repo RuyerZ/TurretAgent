@@ -80,6 +80,7 @@ public class EnemyManager : MonoBehaviour
             }
         }
         mSequence = new List<SequenceItem>();
+        mCurrentSequenceIndex = 0;
         for (int i = 0; i < phases.Length; i++)
         {
             for (int j = 0;j<phases[i].enemyCode.Length;j++)
