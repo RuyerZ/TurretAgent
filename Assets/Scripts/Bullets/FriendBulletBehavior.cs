@@ -1,0 +1,1 @@
+public class FriendBulletBehavior : BaseBullet {}

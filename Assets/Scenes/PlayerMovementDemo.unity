@@ -1105,6 +1105,7 @@ MonoBehaviour:
   mHero: {fileID: 1594881937}
   mPathSystem: {fileID: 0}
   mEnemyManager: {fileID: 0}
+  mBaseHP: 100
 --- !u!1 &812632639
 GameObject:
   m_ObjectHideFlags: 0

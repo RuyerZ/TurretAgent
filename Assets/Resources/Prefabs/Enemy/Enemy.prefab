@@ -138,8 +138,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5775048993590621707}
   - component: {fileID: 4537157223337589161}
-  - component: {fileID: 3111371348825058970}
-  - component: {fileID: 5859427057273110238}
+  - component: {fileID: 7163432370797292007}
+  - component: {fileID: 3101218937242912319}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -183,7 +183,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3111371348825058970
+--- !u!114 &7163432370797292007
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,15 +192,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5775048993590621706}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5fc4989363b4984481d27c60661e1fe, type: 3}
+  m_Script: {fileID: 11500000, guid: faf67a5331fc4b84ca2f207c27b5f012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5554333038292430359, guid: e533f0f5ae28cef468125a30dbc9d9e3, type: 3}
-  maxHP: 5
-  pathSpeed: 1
   pathName: path1
-  _RadiusC: {fileID: 2296200465848818679}
---- !u!114 &5859427057273110238
+  pathSpeed: 1
+  baseDamage: 1
+--- !u!114 &3101218937242912319
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -209,6 +207,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5775048993590621706}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51c6339d2e6bee64eaa14131d9a48e04, type: 3}
+  m_Script: {fileID: 11500000, guid: fca1990b49de3cc49bcb724534367ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHP: 5
