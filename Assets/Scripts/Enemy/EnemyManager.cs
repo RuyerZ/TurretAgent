@@ -28,16 +28,7 @@ public class EnemyManager : MonoBehaviour
 
     private Dictionary<char, GameObject> enemyPrefabDict;
 
-    private float lastSpawnTime;
-    private int indexSpawn;
-    private int indexPhase;
-
-    private GameObject[] enemyToSpawn;
-    private string pathName;
-    private float intervalTime;
-    private float phaseTimer;
-    private bool spawning = false;
-    private bool levelEnd = false;
+    private float mCurrentTime;
 
     public void AddEnemy(GameObject enemy)
     {
@@ -70,6 +61,13 @@ public class EnemyManager : MonoBehaviour
     {
         mEnemies = new HashSet<GameObject>();
     }
+    struct SequenceItem {
+        public char code;
+        public string pathName;
+        public float time;
+    }
+    private List<SequenceItem> mSequence;
+    private int mCurrentSequenceIndex;
     private void Start()
     {
         enemyPrefabDict = new Dictionary<char, GameObject>();
@@ -81,79 +79,35 @@ public class EnemyManager : MonoBehaviour
                 enemyPrefabDict.Add(enemyPrefabs[i].code, enemyPrefabs[i].prefab);
             }
         }
-
-        indexPhase = 0;
-        phaseTimer = 0.0f;
+        mSequence = new List<SequenceItem>();
+        for (int i = 0; i < phases.Length; i++)
+        {
+            for (int j = 0;j<phases[i].enemyCode.Length;j++)
+            {
+                SequenceItem item = new SequenceItem();
+                item.code = phases[i].enemyCode[j];
+                item.time = phases[i].startTime + j * phases[i].intervalTime;
+                item.pathName = phases[i].pathName;
+                mSequence.Add(item);
+            }
+        }
+        mSequence.Sort((a, b) => a.time.CompareTo(b.time));
+        mCurrentTime = 0;
     }
-    private void Update()
-    {
-        if (indexPhase >= phases.Length)
-        {
-            if (!levelEnd)
-            {
-                Debug.Log("End");
-                levelEnd = true;
-            }
-        }
-        else
-        {
-            if (phaseTimer >= phases[indexPhase].startTime && !spawning)
-            {
-                Debug.Log("Phase:" + indexPhase.ToString());
-                StartPhase();
-            }
-
-            if (spawning)
-            {
-                Spawn();
-            }
-            else
-            {
-                if (mEnemies.Count <= 0)
-                {
-                    // Accerate the next wave
-                    phaseTimer += Time.deltaTime;
-                }
-            }
-            phaseTimer += Time.deltaTime;
-        }
+    private void Spawn(char code,string pathName) {
+        GameObject enemy = Instantiate(enemyPrefabDict[code]);
+        enemy.GetComponent<PathBehavior>().pathName = pathName;
     }
-    public void StartPhase()
-    {
-        string codes = phases[indexPhase].enemyCode;
-        enemyToSpawn = new GameObject[codes.Length];
-        for (int i = 0; i < codes.Length; i++)
+    private void Update() {
+        mCurrentTime += Time.smoothDeltaTime;
+        if (mEnemies.Count == 0)
         {
-            if (enemyPrefabDict.ContainsKey(codes[i]))
-            {
-                enemyToSpawn[i] = enemyPrefabDict[codes[i]];
-            }
-            else enemyToSpawn[i] = null;
+            mCurrentTime += Time.smoothDeltaTime*1f; // Speed 1x up
         }
-
-        pathName = phases[indexPhase].pathName;
-        intervalTime = phases[indexPhase].intervalTime;
-        spawning = true;
-        indexSpawn = 0;
-        lastSpawnTime = Time.time;
-    }
-    private void Spawn()
-    {
-        if (indexSpawn >= enemyToSpawn.Length)
+        while (mCurrentSequenceIndex < mSequence.Count && mSequence[mCurrentSequenceIndex].time < mCurrentTime)
         {
-            spawning = false;
-            indexPhase++;
-            return;
-        }
-
-        if (Time.time - lastSpawnTime >= intervalTime)
-        {
-            GameObject e = Instantiate(enemyToSpawn[indexSpawn]);
-            PathBehavior pb = e.GetComponent<PathBehavior>();
-            Debug.Assert(pb != null);
-            pb.pathName = pathName;
-            indexSpawn++;
-            lastSpawnTime = Time.time;
+            Spawn(mSequence[mCurrentSequenceIndex].code, mSequence[mCurrentSequenceIndex].pathName);
+            mCurrentSequenceIndex++;
         }
     }
 }
