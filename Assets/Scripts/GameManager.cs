@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour {
     public void GameFail() {
         Debug.Log("GameFail");
     }
+    public void GameWin() {
+        Debug.Log("GameWin");
+    }
     public void ReduceBaseHP(float dmg) {
         mBaseHP -= dmg;
         if (mBaseHP <= 0) {
