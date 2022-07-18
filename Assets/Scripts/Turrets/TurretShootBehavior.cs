@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Turret : MonoBehaviour
+public class TurretShootBehavior : MonoBehaviour
 {
     public FriendBulletBehavior _BulletPre;
     public Transform _Gun;
