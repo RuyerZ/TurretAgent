@@ -56,7 +56,7 @@ public class EnemyManager : MonoBehaviour
         }
         return closest;
     }
-    private void Start()
+    private void Awake()
     {
         mEnemies = new HashSet<GameObject>();
         numPhaseInfo = phases.Length;
@@ -106,9 +106,9 @@ public class EnemyManager : MonoBehaviour
                 {
                     Debug.Log(current);
                     GameObject e = Instantiate(enemyToSpawn[i].enemyPrefab);
-                    EnemyBehavior eb = e.GetComponent<EnemyBehavior>();
+                    PathBehavior eb = e.GetComponent<PathBehavior>();
                     Debug.Assert(eb != null);
-                    eb.SetPath(enemyToSpawn[i].pathName);
+                    eb.pathName = enemyToSpawn[i].pathName;
 
                     lastSpawnTime[i] = current;
                     numSpawn[i]++;

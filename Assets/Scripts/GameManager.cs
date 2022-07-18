@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
     public PathSystem mPathSystem = null;
     public EnemyManager mEnemyManager = null;
     
+    public float mBaseHP = 100f;
 
     // Start is called before the first frame update
     void Awake() {
@@ -21,5 +22,14 @@ public class GameManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+    }
+    public void GameFail() {
+        Debug.Log("GameFail");
+    }
+    public void ReduceBaseHP(float dmg) {
+        mBaseHP -= dmg;
+        if (mBaseHP <= 0) {
+            GameFail();
+        }
     }
 }

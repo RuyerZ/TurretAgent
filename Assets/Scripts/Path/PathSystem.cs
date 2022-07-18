@@ -68,10 +68,10 @@ public class PathSystem : MonoBehaviour
     void Start()
     {
         InitPathDict();
-        for (float i = 0.0f; i < 8.0f; i += 0.1f)
+        /*for (float i = 0.0f; i < 8.0f; i += 0.1f)
         {
             Debug.Log(GetPositionFromPath("path1", i));
-        }
+        }*/
     }
 
     // Update is called once per frame

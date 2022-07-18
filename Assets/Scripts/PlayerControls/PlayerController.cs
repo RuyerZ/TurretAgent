@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-
     public Rigidbody2D rb;
     public Animator animator;
+    static private PlayerManager manager= null;
+    public void setPlayerManager(PlayerManager m) {
+        manager = m;
+    }
 
     Vector2 moveDirection;
     Vector2 mousePoistion;
 
     private float aimAngle = 0f;    //aimAngle is passed down to AimController
-    private bool isCarrying = false;
 
     // Update is called once per frame
     void Update()
@@ -21,6 +22,8 @@ public class PlayerController : MonoBehaviour
         //movement input
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
+        //action input
+        handleActionInput();
 
         moveDirection = new Vector2(moveX, moveY).normalized;
 
@@ -36,16 +39,49 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Horizontal", aimDirection.x);
         animator.SetFloat("Vertical", aimDirection.y);
         animator.SetFloat("Speed", moveDirection.sqrMagnitude);
+        //animator.SetBool("isCarrying",manager.GetIsCarrying);
     }
 
+    private void handleActionInput()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            manager.Fire();
+        }   
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            manager.SetActiveItem(0);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            manager.SetActiveItem(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            manager.SetActiveItem(2);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            manager.SetActiveItem(3);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            manager.SetActiveItem(4);
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            manager.ToggleIsCarry();
+        }
+    }
     //for movement
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        rb.velocity = new Vector2(moveDirection.x * manager.GetMoveSpeed(), moveDirection.y * manager.GetMoveSpeed());
     }
 
     public float GetAimAngle()
     {
         return aimAngle;
     }
+
 }
