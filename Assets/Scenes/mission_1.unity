@@ -570,7 +570,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 911059807}
-  - {fileID: 1157634487}
+  - {fileID: 625510426}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1505,6 +1505,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572246664}
   m_CullTransparentMesh: 1
+--- !u!4 &625510426 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4274320739296880121, guid: cdc834c1f2cf0524d9ff0f82a8105ccb, type: 3}
+  m_PrefabInstance: {fileID: 854289718}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &625510427 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1287727203578856918, guid: cdc834c1f2cf0524d9ff0f82a8105ccb, type: 3}
+  m_PrefabInstance: {fileID: 854289718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b726a7f7118e004b91d522d93c5dd1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &629102614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,7 +1569,7 @@ MonoBehaviour:
   mPathSystem: {fileID: 1092904907}
   mEnemyManager: {fileID: 1098913618}
   mMaxBaseHP: 10
-  mHPBar: {fileID: 1287727203578856918, guid: cdc834c1f2cf0524d9ff0f82a8105ccb, type: 3}
+  mHPBar: {fileID: 625510427}
 --- !u!1 &661929297
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,13 +1784,17 @@ Transform:
   m_Father: {fileID: 1092904906}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &885685430
+--- !u!1001 &854289718
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 264561121}
     m_Modifications:
+    - target: {fileID: 50498390037023513, guid: cdc834c1f2cf0524d9ff0f82a8105ccb, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4274320739296880121, guid: cdc834c1f2cf0524d9ff0f82a8105ccb, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1789,11 +1809,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4274320739296880121, guid: cdc834c1f2cf0524d9ff0f82a8105ccb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -326
+      value: -315
       objectReference: {fileID: 0}
     - target: {fileID: 4274320739296880121, guid: cdc834c1f2cf0524d9ff0f82a8105ccb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 167
+      value: 168
       objectReference: {fileID: 0}
     - target: {fileID: 4274320739296880121, guid: cdc834c1f2cf0524d9ff0f82a8105ccb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2278,11 +2298,6 @@ MonoBehaviour:
     pathName: path2
     intervalTime: 1
     startTime: 30
---- !u!4 &1157634487 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4274320739296880121, guid: cdc834c1f2cf0524d9ff0f82a8105ccb, type: 3}
-  m_PrefabInstance: {fileID: 885685430}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1163579249
 GameObject:
   m_ObjectHideFlags: 0

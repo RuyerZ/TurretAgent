@@ -12,7 +12,6 @@ public class HPBar : MonoBehaviour
     void Start()
     {
         Debug.Assert(mBarImage != null);
-
         mRate = 1.0f;
     }
 
@@ -27,6 +26,7 @@ public class HPBar : MonoBehaviour
     public void Set(float x)
     {
         mRate = Mathf.Clamp(x, 0.0f, 1.0f);
+        
         Debug.Log(mRate);
     }
 }
