@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerItemBehavior : MonoBehaviour
 {
     public UIHotkeyBar bar;
+    private bool activated = true;
     
     [SerializeField]
     private List<ItemBase> barItems = new List<ItemBase>() {
@@ -26,7 +27,7 @@ public class PlayerItemBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        handleInput();
+        if (activated) handleInput();
     }
 
     private void handleInput()
@@ -82,10 +83,12 @@ public class PlayerItemBehavior : MonoBehaviour
     public void Activate()
     {
         barItems[activeIndex].Activate();
+        activated = true;
     }
     public void Deactivate()
     {
         barItems[activeIndex].Deactivate();
+        activated = false;
     }
     
 }
