@@ -13,6 +13,12 @@ public class EnemyHPBehavior : MonoBehaviour {
         if (o.GetComponent<FriendBulletBehavior>() != null) {
             FriendBulletBehavior f = o.GetComponent<FriendBulletBehavior>();
             currentHP -= f.getDmg(gameObject);
+
+            // Update HP Bar
+            HPBar hp = GetComponentInChildren<HPBar>();
+            if (hp != null)
+                hp.Set(currentHP / maxHP);
+
             if (currentHP <= 0) 
                 f.onKill(gameObject);
             f.onHit(gameObject);
