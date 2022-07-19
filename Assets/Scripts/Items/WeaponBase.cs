@@ -9,7 +9,7 @@ public class WeaponBase : ItemBase
     public float cooldownDuration = 0.25f;
     float timeStamp = 0;
     
-    override public void Fire() 
+    public override void Fire() 
     {
         if (Time.time < timeStamp) return;
 
