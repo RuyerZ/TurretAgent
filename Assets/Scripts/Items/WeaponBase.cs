@@ -11,6 +11,7 @@ public class WeaponBase : ItemBase
     
     public override void Fire() 
     {
+
         if (Time.time < timeStamp) return;
 
         Instantiate(Bullet, firePoint.position, firePoint.rotation).Fire();

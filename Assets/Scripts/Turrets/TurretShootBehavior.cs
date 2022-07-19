@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TurretShootBehavior : MonoBehaviour
 {
+    public AudioSource shootAudio;
     public FriendBulletBehavior _BulletPre;
     public Transform _Gun;
     public Transform _Muzzle;
@@ -20,6 +21,11 @@ public class TurretShootBehavior : MonoBehaviour
         _AttackIntervalReset = _AttackInterval;
     }
 
+    private void Start()
+    {
+        shootAudio = GetComponent<AudioSource>();
+    }
+
     private void Update()
     {
         TargetUpdate();
@@ -33,7 +39,8 @@ public class TurretShootBehavior : MonoBehaviour
         if (_Target == null)
         {
             GameObject t = GameManager.sTheGlobalBehavior.mEnemyManager.GetClosestEnemy(_Gun.position);
-            if (t != null) {
+            if (t != null)
+            {
                 _Target = t.transform;
             }
             //_Enemy = _Target.GetComponentInParent<EnemyBehavior>();
@@ -49,7 +56,10 @@ public class TurretShootBehavior : MonoBehaviour
 
     private void GunRotationUpdate()
     {
-        if (_Target == null) { return; }
+        if (_Target == null)
+        {
+            return;
+        }
 
         Vector2 targetDirection = _Target.position - _Gun.position;
         float targetangle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg - 90f;
@@ -59,11 +69,15 @@ public class TurretShootBehavior : MonoBehaviour
 
     private void AttackUpdate()
     {
-        if (_AttackInterval > 0) { _AttackInterval -= Time.deltaTime; }
+        if (_AttackInterval > 0)
+        {
+            _AttackInterval -= Time.deltaTime;
+        }
         else
         {
             if (_Target != null)
             {
+                shootAudio.Play();
                 Instantiate(_BulletPre, _Muzzle.position, _Muzzle.rotation).Fire();
                 _AttackInterval = _AttackIntervalReset;
             }
@@ -72,7 +86,7 @@ public class TurretShootBehavior : MonoBehaviour
 
     private void RadiusUpdate()
     {
-        if (_RadiusItem.localScale != _AttackRadius * Vector3.one) 
+        if (_RadiusItem.localScale != _AttackRadius * Vector3.one)
         {
             _RadiusItem.localScale = _AttackRadius * Vector3.one;
         }
