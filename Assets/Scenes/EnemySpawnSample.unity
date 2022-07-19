@@ -587,6 +587,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2287037542495131637, guid: 24eabf3667691d14ea9db097be6aea2b, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287037542495131637, guid: 24eabf3667691d14ea9db097be6aea2b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287037542495131637, guid: 24eabf3667691d14ea9db097be6aea2b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.94
+      objectReference: {fileID: 0}
     - target: {fileID: 9015699204102001415, guid: 24eabf3667691d14ea9db097be6aea2b, type: 3}
       propertyPath: _BulletPre
       value: 

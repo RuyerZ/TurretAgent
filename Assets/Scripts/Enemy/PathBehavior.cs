@@ -38,6 +38,7 @@ public class PathBehavior : MonoBehaviour {
         position.z = position.y;
         if (transform.position == position) {
             GameManager.sTheGlobalBehavior.mEnemyManager.RemoveEnemy(gameObject);
+            GameManager.sTheGlobalBehavior.ReduceBaseHP(baseDamage);
             Destroy(gameObject);
             return;
         }
