@@ -46,5 +46,5 @@ public abstract class ItemBase : MonoBehaviour, ItemInterface
         transform.localScale = scale;
         transform.position = pos;
     }
-    abstract public void Fire();
+    public virtual void Fire() {}
 }

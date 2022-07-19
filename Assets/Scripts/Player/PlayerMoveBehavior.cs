@@ -7,7 +7,8 @@ public class PlayerMoveBehavior : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public Transform anchor;
-    public float moveSpeed = 5f;
+    public float moveSpeed = 3f;
+    public bool isRepairing = false;
 
     Vector2 moveDirection;
     Vector2 mousePoistion;
@@ -22,6 +23,12 @@ public class PlayerMoveBehavior : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
 
         moveDirection = new Vector2(moveX, moveY).normalized;
+
+        //check if repairing
+        if (isRepairing)
+        {
+            return;
+        }
 
         //get aimAngle for weapon
         mousePoistion = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -49,6 +56,10 @@ public class PlayerMoveBehavior : MonoBehaviour
     public float GetAimAngle()
     {
         return aimAngle;
+    }
+    public float GetSpeed()
+    {
+        return moveDirection.magnitude;
     }
 
 }

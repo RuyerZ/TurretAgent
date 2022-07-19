@@ -15,6 +15,7 @@ public class PlayerItemBehavior : MonoBehaviour
     void Awake()
     {
         SetActiveItem(activeIndex);
+        
     }
     // Update is called once per frame
     void Update()

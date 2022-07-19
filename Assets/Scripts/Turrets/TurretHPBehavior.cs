@@ -23,6 +23,10 @@ public class TurretHPBehavior : MonoBehaviour {
             gameObject.GetComponent<TurretShootBehavior>().enabled = true;
         }
     }
+    public float GetCurrentHP()
+    {
+        return currentHP;
+    }
     void CollisionCheck(GameObject other) {
         if (other.GetComponent<EnemyBulletBehavior>() != null) {
             EnemyBulletBehavior t = other.GetComponent<EnemyBulletBehavior>();
