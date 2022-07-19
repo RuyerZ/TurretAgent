@@ -35,6 +35,7 @@ public class PathBehavior : MonoBehaviour {
         //Debug.Assert(pathName != null && pathSystem.PathExists(pathName));
         pathDistance += pathSpeed * Time.smoothDeltaTime;
         Vector3 position = pathSystem.GetPositionFromPath(pathName, pathDistance);
+        position.z = position.y;
         if (transform.position == position) {
             GameManager.sTheGlobalBehavior.mEnemyManager.RemoveEnemy(gameObject);
             Destroy(gameObject);
