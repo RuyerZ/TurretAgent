@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour {
     }
     // Update is called once per frame
     void Update() {
+        
     }
     private bool isGameEnd = false;
     public void GameFail() {
@@ -38,7 +39,7 @@ public class GameManager : MonoBehaviour {
     public void GameWin() {
         if (!isGameEnd) {
             isGameEnd = true;
-            LoseUI.SetActive(true);
+            WinUI.SetActive(true);
         }
     }
     public void ReduceBaseHP(float dmg) {

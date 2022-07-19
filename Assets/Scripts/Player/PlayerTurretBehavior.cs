@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerTurretBehavior : MonoBehaviour
 {
     private bool isCarried = false;
-    private const float radius = 0.2f;
-    private const float pickUpRadius = 0.4f;
+    private const float radius = 0.8f;
+    private const float pickUpRadius = 0.8f;
     public GameObject turret;
 
     // Update is called once per frame
@@ -22,10 +22,12 @@ public class PlayerTurretBehavior : MonoBehaviour
                 handleMoveTurret();
             }
         }
+        Vector2 playerPosition = transform.position;
+
         if (isCarried) {
             Vector2 mousePoistion = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 playerPosition = transform.position;
-            playerPosition.y += 0.2f;
+            
+            //playerPosition.y += 1f;
 
             Vector2 playerToMouseDir = (mousePoistion - playerPosition).normalized;
 
@@ -39,7 +41,17 @@ public class PlayerTurretBehavior : MonoBehaviour
 
             turret.transform.position = pos;
 
+        } 
+        
+        playerPosition = transform.position;
+        Vector2 turretPosition = turret.transform.position;
+
+        if (Vector2.Distance(playerPosition,turretPosition) <= pickUpRadius && !isCarried) {
+            turret.transform.Find("glow").gameObject.SetActive(true);
+        } else {
+            turret.transform.Find("glow").gameObject.SetActive(false);
         }
+        
     }
     void handleCarryTurret()
     {

@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class LevelScene : MonoBehaviour
 {
+    public AudioSource confirmAudio;
+
     [SerializeField]
     private int _MakeLevel = 1;
 
@@ -36,9 +38,10 @@ public class LevelScene : MonoBehaviour
         }
     }
 
-    //  ¹Ø¿¨°´Å¥
+    //  ï¿½Ø¿ï¿½ï¿½ï¿½Å¥
     public void OnLevelBtn(int index)
     {
+        confirmAudio.Play();
         //Debug.Log(_ScenePrefixName + index);
         SceneManager.LoadScene(_ScenePrefixName + index);
     }

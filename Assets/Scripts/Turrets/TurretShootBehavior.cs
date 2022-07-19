@@ -21,11 +21,6 @@ public class TurretShootBehavior : MonoBehaviour
         _AttackIntervalReset = _AttackInterval;
     }
 
-    private void Start()
-    {
-        shootAudio = GetComponent<AudioSource>();
-    }
-
     private void Update()
     {
         TargetUpdate();

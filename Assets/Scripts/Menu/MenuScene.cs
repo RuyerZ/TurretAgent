@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MenuScene : MonoBehaviour
 {
+    public AudioSource confirmAudio;
 
     //  开始按钮
     public void OnPlayBtn()
     {
+        confirmAudio.Play();
         SceneManager.LoadScene("LevelScene");
     }
 
