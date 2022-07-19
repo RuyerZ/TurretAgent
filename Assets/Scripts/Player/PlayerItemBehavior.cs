@@ -76,7 +76,7 @@ public class PlayerItemBehavior : MonoBehaviour
         
         activeIndex = i;
     }
-    private void SetItem(ItemBase item, int index)
+    public void SetItem(ItemBase item, int index)
     {
         barItems[index] = item;
     }
