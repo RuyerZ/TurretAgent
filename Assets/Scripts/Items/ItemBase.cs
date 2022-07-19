@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 interface ItemInterface
 {
     bool Activate(); // 切换到这个道具时的函数入口，返回结果为是否切换成功
     bool Deactivate(); // 从这个道具切换走时的函数入口，返回结果为是否切换成功（如果是炮台放在不合法位置可能切换失败）
     void Fire();
+    Sprite getIcon();
 }
 
 public abstract class ItemBase : MonoBehaviour, ItemInterface
 {
     public int itemCount = 0;
     public Transform firePoint;
+    public Sprite icon;
 
     public bool Activate()
     {
@@ -23,6 +26,10 @@ public abstract class ItemBase : MonoBehaviour, ItemInterface
     {
         gameObject.SetActive(false);
         return true;
+    }
+    public Sprite getIcon()
+    {
+        return icon;
     }
     void Update()
     {

@@ -15,7 +15,13 @@ public class PlayerItemBehavior : MonoBehaviour
     void Awake()
     {
         SetActiveItem(activeIndex);
-        
+        for (int i = 0; i < barItems.Count; i++) {
+            if (barItems[i] != null) {
+                bar.SetItemIcon(i, barItems[i].getIcon());
+            } else {
+                bar.SetItemIcon(i, null);
+            }
+        }
     }
     // Update is called once per frame
     void Update()
