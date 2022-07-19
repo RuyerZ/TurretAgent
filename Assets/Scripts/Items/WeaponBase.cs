@@ -8,9 +8,11 @@ public class WeaponBase : ItemBase
     public FriendBulletBehavior Bullet;
     public float cooldownDuration = 0.25f;
     float timeStamp = 0;
-    
+
+
     public override void Fire() 
     {
+
         if (Time.time < timeStamp) return;
 
         Instantiate(Bullet, firePoint.position, firePoint.rotation).Fire();
