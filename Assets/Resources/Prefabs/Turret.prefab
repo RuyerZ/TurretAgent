@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 9015699204102001415}
   - component: {fileID: 6107787620878664398}
   - component: {fileID: 8772323415083903032}
+  - component: {fileID: 2606479373048613695}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -337,6 +338,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2606479373048613695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9015699204102001418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 654e8763a9c72f04a996d5ae7e42d279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9015699205127807915
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,7 +462,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &9015699205209216022
@@ -483,6 +496,8 @@ Transform:
   - {fileID: 2929155575491194823}
   - {fileID: 9015699205127807914}
   - {fileID: 9015699205146946315}
+  - {fileID: 9015699205246204959}
+  - {fileID: 9015699205338238937}
   m_Father: {fileID: 9015699203742882351}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -33.639}
@@ -516,7 +531,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9015699205209216021}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &9015699205246204958
 SpriteRenderer:
@@ -600,7 +615,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9015699205209216021}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: -90}
 --- !u!212 &9015699205338238936
 SpriteRenderer:
