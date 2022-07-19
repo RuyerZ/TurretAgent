@@ -16,7 +16,7 @@ public class PlayerTurretBehavior : MonoBehaviour
             handleCarryTurret();
         }
         else if (isCarried) {
-            if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButton(0)) {
+            if (Input.GetKeyDown(KeyCode.E)) {
                 handleDropTurret();
             } else {
                 handleMoveTurret();
@@ -54,15 +54,20 @@ public class PlayerTurretBehavior : MonoBehaviour
         turret.GetComponent<TurretShootBehavior>().enabled = false;
         gameObject.GetComponent<PlayerItemBehavior>().Deactivate();
         isCarried = true;
+        turret.GetComponent<TurretMoveBehavior>().SetIsCarried(true);
     }
     void handleDropTurret()
     {
         //CHECK DROP VALIDITY
+        bool valid = turret.GetComponent<TurretMoveBehavior>().GetIsValid();
+
+        if (!valid) return;
 
         turret.GetComponent<TurretShootBehavior>().enabled = true;
         gameObject.GetComponent<PlayerItemBehavior>().Activate();
         
         isCarried = false;
+        turret.GetComponent<TurretMoveBehavior>().SetIsCarried(false);
     }
     void handleMoveTurret()
     {

@@ -7,9 +7,8 @@ public class WeaponBase : ItemBase
 {
     public FriendBulletBehavior Bullet;
     public float cooldownDuration = 0.25f;
-    float timeStamp = 0;
-
-
+    private float timeStamp = 0;
+    
     public override void Fire() 
     {
 
