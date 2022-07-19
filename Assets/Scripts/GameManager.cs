@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour {
     public EnemyManager mEnemyManager = null;
     public float mMaxBaseHP = 10f;
     public HPBar mHPBar = null;
+    public GameObject WinUI = null;
+    public GameObject LoseUI = null;
     private float mBaseHP;
 
     // Start is called before the first frame update
@@ -26,11 +28,18 @@ public class GameManager : MonoBehaviour {
     // Update is called once per frame
     void Update() {
     }
+    private bool isGameEnd = false;
     public void GameFail() {
-        Debug.Log("GameFail");
+        if (!isGameEnd) {
+            isGameEnd = true;
+            LoseUI.SetActive(true);
+        }
     }
     public void GameWin() {
-        //Debug.Log("GameWin");
+        if (!isGameEnd) {
+            isGameEnd = true;
+            LoseUI.SetActive(true);
+        }
     }
     public void ReduceBaseHP(float dmg) {
         Debug.Log("Base Hurt");
