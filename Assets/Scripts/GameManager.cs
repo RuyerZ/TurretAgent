@@ -40,4 +40,12 @@ public class GameManager : MonoBehaviour {
         }
         mHPBar.Set(mBaseHP/mMaxBaseHP);
     }
+    public void Pause() {
+        Time.timeScale = 0;
+        mHero.gameObject.SetActive(false);
+    }
+    public void Resume() {
+        Time.timeScale = 1;
+        mHero.gameObject.SetActive(true);
+    }
 }
