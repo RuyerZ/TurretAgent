@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
     public PlayerMoveBehavior mHero = null;  // must set in the editor
     public PathSystem mPathSystem = null;
     public EnemyManager mEnemyManager = null;
+    public FriendManager mFriendManager = new FriendManager();
     public float mMaxBaseHP = 10f;
     public HPBar mHPBar = null;
     public GameObject WinUI = null;
