@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RepairTool : ItemBase
 {
-    public TurretHPBehavior turretHP;
+    private TurretHPBehavior turretHP;
     public GameObject player;
     public float repairRate = 1f;
     public float repairTime = 0.5f;
@@ -22,6 +22,7 @@ public class RepairTool : ItemBase
     {
         moveBehavior = player.GetComponent<PlayerMoveBehavior>();
         turretBehavior = player.GetComponent<PlayerTurretBehavior>();
+        turretHP = GameManager.sTheGlobalBehavior.mFriendManager.GetClosestTurret(transform.position).GetComponent<TurretHPBehavior>();
         Debug.Assert(moveBehavior);
         Debug.Assert(turretBehavior);
         //temp
@@ -29,6 +30,8 @@ public class RepairTool : ItemBase
     }
     void Update()
     {
+        turretHP = GameManager.sTheGlobalBehavior.mFriendManager.GetClosestTurret(transform.position).GetComponent<TurretHPBehavior>();
+
         if (moveBehavior.GetSpeed() > 0.01f && isRepairing) {
             StopRepair();
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);

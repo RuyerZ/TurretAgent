@@ -7,11 +7,17 @@ public class PlayerTurretBehavior : MonoBehaviour
     private bool isCarried = false;
     private const float radius = 0.8f;
     private const float pickUpRadius = 0.8f;
-    public GameObject turret;
+    private GameObject turret;
 
+    void Start()
+    {
+        turret = GameManager.sTheGlobalBehavior.mFriendManager.GetClosestTurret(transform.position);
+    }
     // Update is called once per frame
     void Update()
     {
+        turret = GameManager.sTheGlobalBehavior.mFriendManager.GetClosestTurret(transform.position);
+
         if (!isCarried && Input.GetKeyDown(KeyCode.E)) {
             handleCarryTurret();
         }
