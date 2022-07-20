@@ -33,6 +33,7 @@ public class PathBehavior : MonoBehaviour {
     {
         //Debug.Assert(pathSystem != null);
         //Debug.Assert(pathName != null && pathSystem.PathExists(pathName));
+        if ( Time.smoothDeltaTime == 0 ) return;
         pathDistance += pathSpeed * Time.smoothDeltaTime;
         Vector3 position = pathSystem.GetPositionFromPath(pathName, pathDistance);
         position.z = position.y;
