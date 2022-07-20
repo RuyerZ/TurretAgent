@@ -1859,6 +1859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -2532,23 +2533,29 @@ MonoBehaviour:
     prefab: {fileID: 5775048993590621706, guid: 1ef4295ea5211a94ea4151b77869982f, type: 3}
   - code: 98
     prefab: {fileID: 8719160117969813799, guid: 209ae971fbc2b1d46825e963072ae0e8, type: 3}
+  - code: 99
+    prefab: {fileID: 8719160117969813799, guid: 99380a47ca3593d4c9ecdffcc4bec015, type: 3}
   phases:
-  - enemyCode: aaaaababab
+  - enemyCode: c
     pathName: path1
     intervalTime: 1
     startTime: 10
-  - enemyCode: bbbbb
+  - enemyCode: aaaaababab
     pathName: path1
     intervalTime: 5
     startTime: 20
-  - enemyCode: abababababab
+  - enemyCode: bbbbb
     pathName: path1
     intervalTime: 2
     startTime: 30
+  - enemyCode: abababababab
+    pathName: path1
+    intervalTime: 2
+    startTime: 40
   - enemyCode: aaaaa
     pathName: path2
     intervalTime: 2
-    startTime: 40
+    startTime: 50
 --- !u!1 &1107417766
 GameObject:
   m_ObjectHideFlags: 0
