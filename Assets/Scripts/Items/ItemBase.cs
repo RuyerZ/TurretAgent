@@ -9,6 +9,7 @@ interface ItemInterface
     bool Deactivate(); // 从这个道具切换走时的函数入口，返回结果为是否切换成功（如果是炮台放在不合法位置可能切换失败）
     void Fire();
     Sprite getIcon();
+    int getItemCount();
 }
 
 public abstract class ItemBase : MonoBehaviour, ItemInterface
@@ -53,5 +54,6 @@ public abstract class ItemBase : MonoBehaviour, ItemInterface
         transform.localScale = scale;
         transform.position = pos;
     }
+    public int getItemCount() { return itemCount;}
     public virtual void Fire() {}
 }

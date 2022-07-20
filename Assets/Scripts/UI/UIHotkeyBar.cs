@@ -12,9 +12,9 @@ public class UIHotkeyBar : MonoBehaviour
         if (icon == null) icon = emptySprite;
         transform.Find("slot"+index).Find("Icon").GetComponent<Image>().sprite = icon;
     }
-    public void SetItemCount(int index, int count)
+    public void SetItemCount(int index, string count)
     {
-
+        transform.Find("slot"+index).Find("itemCount").GetComponent<Text>().text = count;
     }
     public void Activate(int index) 
     {
@@ -26,10 +26,4 @@ public class UIHotkeyBar : MonoBehaviour
         Transform border = transform.Find("slot"+index).Find("border");
         border.GetComponent<Image>().enabled = false;
     }
-    //TO BE IMPLEMENTED
-    public void StartCooldDown(float time, int index)
-    {
-
-    }
-
 }

@@ -14,9 +14,11 @@ public class WeaponBase : ItemBase
     {
 
         if (Time.time < timeStamp) return;
+        if (itemCount == 0) return;
 
         shootAudio.Play();
         Instantiate(Bullet, firePoint.position, firePoint.rotation).Fire();
+        if (itemCount > 0) itemCount--;
 
         timeStamp = Time.time + cooldownDuration;
     }

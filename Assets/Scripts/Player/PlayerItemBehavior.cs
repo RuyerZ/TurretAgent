@@ -17,16 +17,16 @@ public class PlayerItemBehavior : MonoBehaviour
     {
         SetActiveItem(activeIndex);
         for (int i = 0; i < barItems.Count; i++) {
-            if (barItems[i] != null) {
-                bar.SetItemIcon(i, barItems[i].getIcon());
-            } else {
-                bar.SetItemIcon(i, null);
-            }
+            SetItemIconUI(i);
+            SetItemCountUI(i);
         }
     }
     // Update is called once per frame
     void Update()
     {
+        for (int i = 0; i < barItems.Count; i++) {
+            SetItemCountUI(i);
+        }
         if (activated) handleInput();
     }
 
@@ -90,5 +90,26 @@ public class PlayerItemBehavior : MonoBehaviour
         barItems[activeIndex].Deactivate();
         activated = false;
     }
-    
+    private void SetItemIconUI(int index)
+    {
+        ItemBase item = barItems[index];
+        if (item != null) {
+            bar.SetItemIcon(index, item.getIcon());
+        } else {
+            bar.SetItemIcon(index, null);
+        }
+        
+    }
+    private void SetItemCountUI(int index)
+    {
+        ItemBase item = barItems[index];
+        string c = "";
+
+        if (item != null) {
+            int count = item.getItemCount();
+            if (count >= 0) c = count.ToString();
+            else c = "∞";
+        } 
+        bar.SetItemCount(index, c);
+    }
 }
