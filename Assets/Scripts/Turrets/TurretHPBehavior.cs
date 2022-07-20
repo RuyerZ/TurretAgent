@@ -7,11 +7,13 @@ public class TurretHPBehavior : MonoBehaviour {
     private float currentHP;
     void Start() {
         currentHP = maxHP;
+        GameManager.sTheGlobalBehavior.mFriendManager.AddTurret(gameObject);
     }
     public void TakeDamage(float damage) {
         currentHP -= damage;
         if (currentHP <= 0) {
             gameObject.GetComponent<TurretShootBehavior>().enabled = false;
+            GameManager.sTheGlobalBehavior.mFriendManager.RemoveTurret(gameObject);
         }
     }
     public void Repair(float repair) {
@@ -21,6 +23,7 @@ public class TurretHPBehavior : MonoBehaviour {
         }
         if (currentHP > 0) {
             gameObject.GetComponent<TurretShootBehavior>().enabled = true;
+            GameManager.sTheGlobalBehavior.mFriendManager.AddTurret(gameObject);
         }
     }
     public float GetCurrentHP()
