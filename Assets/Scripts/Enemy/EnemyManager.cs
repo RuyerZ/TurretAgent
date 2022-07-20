@@ -110,6 +110,7 @@ public class EnemyManager : MonoBehaviour
             Spawn(mSequence[mCurrentSequenceIndex].code, mSequence[mCurrentSequenceIndex].pathName);
             mCurrentSequenceIndex++;
         }
+        
         if (mCurrentSequenceIndex == mSequence.Count && mEnemies.Count == 0)
         {
             GameManager.sTheGlobalBehavior.GameWin();
