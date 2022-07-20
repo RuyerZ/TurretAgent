@@ -7,6 +7,9 @@ public class TurretMoveBehavior : MonoBehaviour
     bool valid = true;
     bool isCarried = false;
 
+    public AudioSource pickUpAudio;
+    public AudioSource dropAudio;
+
     void SetInvalid() 
     {
         if (!valid) return;
@@ -53,8 +56,10 @@ public class TurretMoveBehavior : MonoBehaviour
     {
         if (flag) {
             SetColor(new Color(0f,1f,0f,0.7f));
+            pickUpAudio.Play();
         } else {
             SetColor(new Color(1f,1f,1f,1f));
+            dropAudio.Play();
         }
 
         isCarried = flag;

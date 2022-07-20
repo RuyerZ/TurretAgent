@@ -14,6 +14,13 @@ public class GameManager : MonoBehaviour {
     public GameObject WinUI = null;
     public GameObject LoseUI = null;
     private float mBaseHP;
+    private bool isPaused = false;
+
+    //temp
+    private int XP = 0;
+    private int turretLevel = 1;
+    private int upgradesLeft = 0;
+    private int XPToLevelUp = 5;
 
     // Start is called before the first frame update
     void Awake() {
@@ -27,6 +34,10 @@ public class GameManager : MonoBehaviour {
     }
     // Update is called once per frame
     void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            if (isPaused) Resume();
+            else Pause();
+        }
     }
     private bool isGameEnd = false;
     public void GameFail() {
@@ -38,7 +49,7 @@ public class GameManager : MonoBehaviour {
     public void GameWin() {
         if (!isGameEnd) {
             isGameEnd = true;
-            LoseUI.SetActive(true);
+            WinUI.SetActive(true);
         }
     }
     public void ReduceBaseHP(float dmg) {
@@ -50,11 +61,48 @@ public class GameManager : MonoBehaviour {
         mHPBar.Set(mBaseHP/mMaxBaseHP);
     }
     public void Pause() {
+        isPaused = true;
         Time.timeScale = 0;
         mHero.gameObject.SetActive(false);
+        mPathSystem.gameObject.SetActive(false);
+        mEnemyManager.gameObject.SetActive(false);
     }
     public void Resume() {
+        isPaused = false;
         Time.timeScale = 1;
         mHero.gameObject.SetActive(true);
+        mPathSystem.gameObject.SetActive(true);
+        mEnemyManager.gameObject.SetActive(true);
+    }
+    public void AddXP(int xp)
+    {
+        for (int i = 0; i < xp; i++)
+        {
+            XP++;
+            if (XP == XPToLevelUp) {
+                XP = 0;
+                levelUp();
+            }
+        }
+    }
+    private void levelUp() {
+        upgradesLeft++;
+        turretLevel++;
+    }
+    public int GetXP() {
+        return XP;
+    }
+    public int GetXPToLevelUp() {
+        return XPToLevelUp;
+    }
+    public int GetUpgradesLeft() {
+        return upgradesLeft;
+    }
+    public bool UseUpgrade() {
+        if (upgradesLeft> 0) {
+            upgradesLeft--;
+            return true;
+        }
+        return false;
     }
 }

@@ -114,7 +114,7 @@ Transform:
   m_GameObject: {fileID: 5775048993590621706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1811296658160548842}
@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2371533233397772053, guid: e533f0f5ae28cef468125a30dbc9d9e3, type: 3}
+  shootAudio: {fileID: 0}
   mShootCooldown: 1
   mShootFromRadius: 0.7
 --- !u!61 &6149742329043854454
