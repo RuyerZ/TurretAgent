@@ -258,6 +258,93 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emptySprite: {fileID: 21300000, guid: 2c046549b3257714b90904af3e6b8904, type: 3}
+--- !u!1 &42794330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 42794331}
+  - component: {fileID: 42794332}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &42794331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42794330}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 519420032}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &42794332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42794330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10cdb45f428cbba419a307a9f8ec180c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefabs:
+  - code: 97
+    prefab: {fileID: 5775048993590621706, guid: 1ef4295ea5211a94ea4151b77869982f, type: 3}
+  - code: 98
+    prefab: {fileID: 8719160117969813799, guid: 209ae971fbc2b1d46825e963072ae0e8, type: 3}
+  - code: 99
+    prefab: {fileID: 8719160117969813799, guid: 99380a47ca3593d4c9ecdffcc4bec015, type: 3}
+  - code: 100
+    prefab: {fileID: 492743805561107979, guid: 9a81ddfe1a44cc541b81e72e07aba8dd, type: 3}
+  phases:
+  - enemyCode: aaaaabaaaaabaaaaabaaaaa
+    pathName: path1
+    intervalTime: 1
+    startTime: 10
+  - enemyCode: aabbaabbaabbaabb
+    pathName: path1
+    intervalTime: 1.5
+    startTime: 40
+  - enemyCode: aaacaaacaaaca
+    pathName: path1
+    intervalTime: 1
+    startTime: 80
+  - enemyCode: ddddd
+    pathName: path1
+    intervalTime: 3
+    startTime: 120
+  - enemyCode: aabbccaacc
+    pathName: path1
+    intervalTime: 1.5
+    startTime: 150
+  - enemyCode: aaaaa
+    pathName: path2
+    intervalTime: 1
+    startTime: 150
+  phases_loop:
+  - enemyCode: aaabbccbbccaabaaabbccbbccaab
+    pathName: path1
+    intervalTime: 1.5
+    startTime: 0
+  - enemyCode: aaabbaab
+    pathName: path2
+    intervalTime: 2
+    startTime: 0
 --- !u!1 &60596435
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,6 +873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: base
       objectReference: {fileID: 0}
+    - target: {fileID: 3548500086869452612, guid: baec526802fb0b949adea80719b3fdc8, type: 3}
+      propertyPath: maxHP
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 9196476567869468063, guid: baec526802fb0b949adea80719b3fdc8, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1270,6 +1361,7 @@ Transform:
   m_Children:
   - {fileID: 629102615}
   - {fileID: 1092904906}
+  - {fileID: 42794331}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1561,7 +1653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mHero: {fileID: 1561813782}
   mPathSystem: {fileID: 1092904907}
-  mMaxBaseHP: 10
+  mMaxBaseHP: 300
   mHPBar: {fileID: 625510427}
   WinUI: {fileID: 594481008}
   LoseUI: {fileID: 680930771}
@@ -3950,6 +4042,10 @@ PrefabInstance:
       propertyPath: turret
       value: 
       objectReference: {fileID: 2023397699}
+    - target: {fileID: 2116251060, guid: e68e50fd55472cc4484843464683ae36, type: 3}
+      propertyPath: cooldownDuration
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4226471582209010074, guid: e68e50fd55472cc4484843464683ae36, type: 3}
       propertyPath: m_RootOrder
       value: 3

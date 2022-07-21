@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurretShootUpgrageBehavior : TurretUpgradeBase {
-    TurretShootBehavior _Turret;
+public class RadiusTurretUpgrageBehavior : TurretUpgradeBase {
+    RadiusTurretBehavior _Turret;
     int level = 0;
     void Start() {
-        _Turret = GetComponent<TurretShootBehavior>();
+        _Turret = GetComponent<RadiusTurretBehavior>();
         Debug.Assert(_Turret != null);
     }
     public override List<(string, float)> GetUpgrades() {
-        float cost = 10f + 5f * level;
+        float cost = 30f + 10f * level;
         return new List<(string, float)>() {
             ("Damage", cost),
             ("Cooldown", cost),
@@ -20,7 +20,7 @@ public class TurretShootUpgrageBehavior : TurretUpgradeBase {
     public override bool Upgrade(int index) {
         switch (index) {
             case 0:
-                _Turret._BulletPre.dmg += 1;
+                _Turret._AttackDamage += 0.5f;
                 break;
             case 1:
                 _Turret._AttackInterval *= 0.8f;

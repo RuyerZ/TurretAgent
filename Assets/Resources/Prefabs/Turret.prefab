@@ -583,7 +583,7 @@ MonoBehaviour:
   _Muzzle: {fileID: 9015699205127807914}
   _RadiusItem: {fileID: 9015699205146946315}
   _AttackRadius: 4
-  _AttackInterval: 0.3
+  _AttackInterval: 1
 --- !u!114 &6107787620878664398
 MonoBehaviour:
   m_ObjectHideFlags: 0
