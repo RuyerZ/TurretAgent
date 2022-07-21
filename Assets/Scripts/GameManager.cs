@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour {
     // Start is called before the first frame update
     void Awake() {
         GameManager.sTheGlobalBehavior = this;  // Singleton pattern
+        Time.timeScale = 1;
         //Debug.Assert(mHero != null);
         //Debug.Assert(mEnemyManager != null);
         //Debug.Assert(mPathSystem != null);

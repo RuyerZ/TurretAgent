@@ -108,4 +108,9 @@ public class PathSystem : MonoBehaviour
         Debug.Assert(PathExists(pathname));
         return mPathDict[pathname].GetPositionFromDistance(dist);
     }
+
+    public bool IsPathEnd(string pathname, float dist)
+    {
+        return PathExists(pathname) && mPathDict[pathname].IsPathEnd(dist);
+    }
 }

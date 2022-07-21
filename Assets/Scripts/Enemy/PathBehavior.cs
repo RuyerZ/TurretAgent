@@ -36,8 +36,8 @@ public class PathBehavior : MonoBehaviour {
         if ( Time.smoothDeltaTime == 0 ) return;
         pathDistance += pathSpeed * Time.smoothDeltaTime;
         Vector3 position = pathSystem.GetPositionFromPath(pathName, pathDistance);
-        position.z = position.y;
-        if (transform.position == position) {
+        position.z = 0;
+        if (pathSystem.IsPathEnd(pathName, pathDistance)) {
             GameManager.sTheGlobalBehavior.mEnemyManager.RemoveEnemy(gameObject);
             GameManager.sTheGlobalBehavior.ReduceBaseHP(baseDamage);
             Destroy(gameObject);
@@ -47,7 +47,7 @@ public class PathBehavior : MonoBehaviour {
     }
     private void UpdateAnim()
     {
-        if (_Anim == null) { return; }
+        if (_Anim == null || GameManager.sTheGlobalBehavior.isPaused) { return; }
         AnimState state = AnimState.Idle;
 
         if (transform.position == _LastPoint) { state = AnimState.Idle; }
