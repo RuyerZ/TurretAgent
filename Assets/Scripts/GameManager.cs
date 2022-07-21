@@ -17,11 +17,7 @@ public class GameManager : MonoBehaviour {
     private float mBaseHP;
     public bool isPaused = false;
 
-    //temp
-    private int XP = 0;
-    private int turretLevel = 1;
-    private int upgradesLeft = 0;
-    private int XPToLevelUp = 5;
+    private float Gold = 0;
 
     // Start is called before the first frame update
     void Awake() {
@@ -72,32 +68,20 @@ public class GameManager : MonoBehaviour {
         mHero.gameObject.SetActive(true);
         mPathSystem.gameObject.SetActive(true);
     }
-    public void AddXP(int xp)
+    public void AddGold(float gold) 
     {
-        XP+=xp;
-        if (XP >= XPToLevelUp)
-        {
-            XP -= XPToLevelUp;
-            upgradesLeft++;
-            XPToLevelUp += 5;
-        }
+        Gold += gold;
     }
-    private void levelUp() {
-        upgradesLeft++;
-        turretLevel++;
+    public void SetGold(float gold) 
+    {
+        Gold = gold;
     }
-    public int GetXP() {
-        return XP;
+    public float GetGold() {
+        return Gold;
     }
-    public int GetXPToLevelUp() {
-        return XPToLevelUp;
-    }
-    public int GetUpgradesLeft() {
-        return upgradesLeft;
-    }
-    public bool UseUpgrade() {
-        if (upgradesLeft> 0) {
-            upgradesLeft--;
+    public bool Buy(float gold) {
+        if (Gold >= gold) {
+            Gold -= gold;
             return true;
         }
         return false;

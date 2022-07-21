@@ -26,7 +26,6 @@ public class ClassicalEnemySpawner : MonoBehaviour {
     public PhaseInfo[] phases;
 
     private Dictionary<char, GameObject> enemyPrefabDict;
-    private List<GameObject> enemiesInRadius = new List<GameObject>();
 
     private float mCurrentTime;
     struct SequenceItem {

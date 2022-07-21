@@ -17,7 +17,7 @@ public class UpgradeUI : MonoBehaviour {
     void Start() {
     }
     void Update() {
-        int upgradesLeft = GameManager.sTheGlobalBehavior.GetUpgradesLeft();
+        float upgradesLeft = GameManager.sTheGlobalBehavior.GetGold();
         
         if (upgradesLeft > 0) {
             cover.gameObject.SetActive(false);
@@ -30,7 +30,7 @@ public class UpgradeUI : MonoBehaviour {
     }
     public bool GenericBtn() {
         if (!isEnabled) return false;
-        if (!GameManager.sTheGlobalBehavior.UseUpgrade()) return false;
+        if (!GameManager.sTheGlobalBehavior.Buy(5)) return false;
         btnSound.Play();
         return true;
     }
