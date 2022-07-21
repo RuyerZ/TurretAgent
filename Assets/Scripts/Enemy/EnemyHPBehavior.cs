@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyHPBehavior : MonoBehaviour {
     public float maxHP = 5.0f;
+    public float Gold = 1f;
+    public bool DefeatToWin = false;
     private float currentHP;
     void Start() {
         currentHP = maxHP;
@@ -24,7 +26,10 @@ public class EnemyHPBehavior : MonoBehaviour {
             f.onHit(gameObject);
             if (currentHP <= 0) {
                 GameManager.sTheGlobalBehavior.mEnemyManager.RemoveEnemy(gameObject);
-                GameManager.sTheGlobalBehavior.AddGold(1);
+                GameManager.sTheGlobalBehavior.AddGold(Gold);
+                if (DefeatToWin) {
+                    GameManager.sTheGlobalBehavior.GameWin();
+                }
                 Destroy(gameObject);
             }
         }
@@ -45,7 +50,10 @@ public class EnemyHPBehavior : MonoBehaviour {
 
         if (currentHP <= 0) {
             GameManager.sTheGlobalBehavior.mEnemyManager.RemoveEnemy(gameObject);
-            GameManager.sTheGlobalBehavior.AddGold(1);
+            GameManager.sTheGlobalBehavior.AddGold(Gold);
+            if (DefeatToWin) {
+                GameManager.sTheGlobalBehavior.GameWin();
+            }
             Destroy(gameObject);
         }
     }
