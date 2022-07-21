@@ -19,7 +19,8 @@ public class RadiusTurretBehavior : MonoBehaviour
         if (_AttackIntervalReset <= 0)
         {
             _AttackIntervalReset = _AttackInterval;
-            shootAudio.Play();
+            if (shootAudio != null)
+                shootAudio.Play();
             List<GameObject> enemies = GameManager.sTheGlobalBehavior.mEnemyManager.GetEnemiesInRadius(transform.position ,_AttackRadius);
             foreach (GameObject enemy in enemies)
             {

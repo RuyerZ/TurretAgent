@@ -596,7 +596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bff17c1ced6c0fe419d0cfcb01d457d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
+  maxHP: 1000
 --- !u!82 &8772323415083903032
 AudioSource:
   m_ObjectHideFlags: 0
