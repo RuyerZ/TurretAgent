@@ -1641,6 +1641,7 @@ MonoBehaviour:
   mHPBar: {fileID: 625510427}
   WinUI: {fileID: 923032163}
   LoseUI: {fileID: 1459383924}
+  UpgradeUI: {fileID: 0}
   isPaused: 0
 --- !u!1 &661929297
 GameObject:

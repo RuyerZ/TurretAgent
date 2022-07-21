@@ -213,6 +213,7 @@ MonoBehaviour:
   Anim: {fileID: 1090671161581397025}
   Coll: {fileID: 8078248047318606466}
   explodeAudio: {fileID: 249914085617817260}
+  rigid: {fileID: 5504014792860743555}
 --- !u!95 &1090671161581397025
 Animator:
   serializedVersion: 4
@@ -223,7 +224,7 @@ Animator:
   m_GameObject: {fileID: 1724401812100139901}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 576dd4cd5764bda42be207d581d8d751, type: 2}
+  m_Controller: {fileID: 9100000, guid: e5f40fdf4f89b204fbb8677c6650c286, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -243,7 +244,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f0bba60dd1813bd40af826dbaa99b983, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d4aee29185389894b9cc0d8873904a49, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -339,7 +340,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

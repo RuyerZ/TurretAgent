@@ -14,6 +14,8 @@ public class RocketBehavior : MonoBehaviour
     public Collider2D Coll;
     public AudioSource explodeAudio;
 
+    public Rigidbody2D rigid;
+
     void Start()
     {
         Anim = GetComponent<Animator>();
@@ -46,8 +48,22 @@ public class RocketBehavior : MonoBehaviour
         GetComponentInChildren<Rigidbody2D>().AddForce(dir * fireforce, ForceMode2D.Impulse);
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponentInParent<EnemyHPBehavior>() != null)
+        {
+            onHit();
+        }
+    }
+
     public void onHit()
     {
+        if (!Coll.enabled)
+        {
+            return;
+        }
+        rigid.simulated = false;
 
         //explosion
         Vector2 center = transform.position;
@@ -64,15 +80,13 @@ public class RocketBehavior : MonoBehaviour
         }
 
         Coll.enabled = false;
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
         Anim.SetTrigger("explode");
-
-
+        explodeAudio.Play();
     }
 
     void destroyRocket()
     {
-        explodeAudio.Play();
         Destroy(gameObject);
     }
 
