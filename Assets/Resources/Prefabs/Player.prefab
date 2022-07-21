@@ -686,6 +686,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afd301783bf92744eb26607584a0ffbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _TwinkleCount: 2
+  _BeHitColor: {r: 1, g: 0, b: 0, a: 1}
+  _SR: {fileID: 4226471582209010055}
 --- !u!1 &4226471582441693654
 GameObject:
   m_ObjectHideFlags: 0

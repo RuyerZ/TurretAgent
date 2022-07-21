@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enemy_grape
+  m_Controller: {fileID: 9100000, guid: 1e96868c6287a204c8cbd8f219296cfe, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 63429c787df2b3a4d9e7db2a2b60ba03, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7cfcf269c5f8d0d44a63910875775b23, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9f5c00a5fefcdb34191647202d1ea611, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5e486c897400e354f820c1ef69dd99e3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a0b8d55531b5e774fa18d730a3a9a587, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b063193b9ada7b54e809b27551b98a5c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 429487a21f0f99844b1031c1071d0a4b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f213cf5170464a34092d81ff43765241, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 921d3ede180ca6a49b6b817ed788447c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 403c5cda3b80b844a8e94ef6a3383fd6, type: 2}

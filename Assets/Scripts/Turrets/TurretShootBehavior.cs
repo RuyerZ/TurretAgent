@@ -73,10 +73,22 @@ public class TurretShootBehavior : MonoBehaviour
             if (_Target != null)
             {
                 shootAudio.Play();
-                Instantiate(_BulletPre, _Muzzle.position, _Muzzle.rotation).Fire();
                 _AttackInterval = _AttackIntervalReset;
+
+                GetBullet().Fire();
+                OnFireBullet();
             }
         }
+    }
+
+    //  发射子弹
+    protected virtual void OnFireBullet() { }
+
+    //  获取子弹
+    protected FriendBulletBehavior GetBullet()
+    {
+        FriendBulletBehavior bullet = Instantiate(_BulletPre, _Muzzle.position, _Muzzle.rotation);
+        return bullet;
     }
 
     private void RadiusUpdate()
