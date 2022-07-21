@@ -1664,7 +1664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mHero: {fileID: 1561813782}
   mPathSystem: {fileID: 1092904907}
-  mMaxBaseHP: 300
+  mMaxBaseHP: 30
   mHPBar: {fileID: 625510427}
   WinUI: {fileID: 594481008}
   LoseUI: {fileID: 680930771}
@@ -2054,15 +2054,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4274320739296880121, guid: cdc834c1f2cf0524d9ff0f82a8105ccb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 200
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4274320739296880121, guid: cdc834c1f2cf0524d9ff0f82a8105ccb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 150
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 4274320739296880121, guid: cdc834c1f2cf0524d9ff0f82a8105ccb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -739
+      value: -642
       objectReference: {fileID: 0}
     - target: {fileID: 4274320739296880121, guid: cdc834c1f2cf0524d9ff0f82a8105ccb, type: 3}
       propertyPath: m_LocalPosition.y
