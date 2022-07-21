@@ -21,11 +21,11 @@ public class BaseBullet : MonoBehaviour, BulletInterface
     {
         return dmg;
     }
-    public void onHit(GameObject o)
+    public virtual void onHit(GameObject o)
     {
         Destroy(gameObject);
     }
-    public void onKill(GameObject o) {} // Preserve for increase EXP
+    public virtual void onKill(GameObject o) {} // Preserve for increase EXP
     public void Update()
     {
         // 1. Find the main camera and get the CameraSupport component

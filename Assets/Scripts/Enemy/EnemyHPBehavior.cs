@@ -35,4 +35,18 @@ public class EnemyHPBehavior : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D other) {
         CollisionCheck(other.gameObject);
     }
+    public void DamageEnemy(float dmg)
+    {
+        currentHP -= dmg;
+        // Update HP Bar
+        HPBar hp = GetComponentInChildren<HPBar>();
+        if (hp != null)
+            hp.Set(currentHP / maxHP);
+
+        if (currentHP <= 0) {
+            GameManager.sTheGlobalBehavior.mEnemyManager.RemoveEnemy(gameObject);
+            GameManager.sTheGlobalBehavior.AddXP(1);
+            Destroy(gameObject);
+        }
+    }
 }
