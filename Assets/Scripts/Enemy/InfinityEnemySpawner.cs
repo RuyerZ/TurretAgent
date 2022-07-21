@@ -90,17 +90,22 @@ public class InfinityEnemySpawner : MonoBehaviour
         {
             mCurrentTime += Time.smoothDeltaTime * 1f; // Speed 1x up
         }
-        if (!isSequenceLoop && mCurrentSequenceIndex < mSequence.Count && mSequence[mCurrentSequenceIndex].time < mCurrentTime)
+        if (!isSequenceLoop)
         {
-            Spawn(mSequence[mCurrentSequenceIndex].code, mSequence[mCurrentSequenceIndex].pathName);
-            mCurrentSequenceIndex++;
-            if (mCurrentSequenceIndex >= mSequence.Count)
+            if (mCurrentSequenceIndex < mSequence.Count && mSequence[mCurrentSequenceIndex].time < mCurrentTime)
             {
-                isSequenceLoop = true;
-                mCurrentSequenceIndex = 0;
-                mCurrentTime = 0;
+                Spawn(mSequence[mCurrentSequenceIndex].code, mSequence[mCurrentSequenceIndex].pathName);
+                mCurrentSequenceIndex++;
+                if (mCurrentSequenceIndex >= mSequence.Count)
+                {
+                    isSequenceLoop = true;
+                    mCurrentSequenceIndex = 0;
+                    mCurrentTime = 0;
+                }
             }
-        } else if (mSequence_loop.Count > 0) {
+        }
+        else if (mSequence_loop.Count > 0)
+        {
             if (mCurrentTime > mSequence_loop[mCurrentSequenceIndex].time)
             {
                 Spawn(mSequence_loop[mCurrentSequenceIndex].code, mSequence_loop[mCurrentSequenceIndex].pathName);

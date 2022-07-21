@@ -137,4 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 1
-  fireforce: 20
+  fireforce: 15
