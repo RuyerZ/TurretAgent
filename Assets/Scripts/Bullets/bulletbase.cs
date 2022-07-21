@@ -13,7 +13,7 @@ public class BaseBullet : MonoBehaviour, BulletInterface
 {
     public float dmg = 1f;
     public float fireforce = 20f;
-    public void Fire()
+    public virtual void Fire()
     {
         GetComponentInChildren<Rigidbody2D>().AddForce(transform.up * fireforce, ForceMode2D.Impulse);
     }

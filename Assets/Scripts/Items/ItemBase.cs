@@ -34,27 +34,26 @@ public abstract class ItemBase : MonoBehaviour, ItemInterface
     }
     void Update()
     {
-        //COMMENTED TO TEST， MIGHT NOT BE NEEDED
 
-        // //sprite manipulation for visuals
-        // float angle = transform.parent.rotation.eulerAngles.z;
-        // Vector3 scale = transform.localScale;
-        // Vector3 pos = transform.position;
-        // //flip sprite
-        // if (0f <= angle && angle <= 180f && transform.localScale.x > 0f) {
-        //      scale.x *= -1;
-        // }
-        // if (180f < angle && angle <= 360f && transform.localScale.x < 0f) {
-        //      scale.x *= -1;
-        // }
-        // //move layer
+        //sprite manipulation for visuals
+        float angle = transform.parent.rotation.eulerAngles.z;
+        Vector3 scale = transform.localScale;
+        Vector3 pos = transform.position;
+        //flip sprite
+        if (0f <= angle && angle <= 180f && transform.localScale.x > 0f) {
+             scale.x *= -1;
+        }
+        if (180f < angle && angle <= 360f && transform.localScale.x < 0f) {
+             scale.x *= -1;
+        }
+        //move layer
         // if (0f <= angle && angle < 90f || 270f < angle && angle <= 360f) {
         //     pos.z = 0.001f;
         // } else {
         //     pos.z = -0.001f;
         // }
-        // transform.localScale = scale;
-        // transform.position = pos;
+        transform.localScale = scale;
+        //transform.position = pos;
     }
     public int getItemCount() { return itemCount;}
     public virtual void Fire() {}

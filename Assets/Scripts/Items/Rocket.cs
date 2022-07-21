@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //infinite ammo weapons
-public class WeaponBase : ItemBase
+public class Rocket : ItemBase
 {
-    public FriendBulletBehavior Bullet;
+    public RocketBehavior Bullet;
     public AudioSource shootAudio;
-    public float cooldownDuration = 0.25f;
+    public float cooldownDuration = 0.7f;
     private float timeStamp = 0;
 
     public override void Fire() 

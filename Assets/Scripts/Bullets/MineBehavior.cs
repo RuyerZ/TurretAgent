@@ -5,7 +5,6 @@ using UnityEngine;
 public class MineBehavior : FriendBulletBehavior
 {
     public float explosionRadius = 3f;
-    public AudioSource explodeSound;
 
     public override void onHit(GameObject o)
     {
@@ -19,18 +18,13 @@ public class MineBehavior : FriendBulletBehavior
         foreach (GameObject enemy in enemies)
         {
             if (GameObject.ReferenceEquals(o, enemy)) {
-                Debug.Log("continued");
                 continue;
             }
             EnemyHPBehavior enemyBehavior = enemy.GetComponent<EnemyHPBehavior>();
             if ( enemyBehavior != null) {
                 enemyBehavior.DamageEnemy(dmg);
-                Debug.Log("damaged");
             }
         }
-        if (explodeSound != null)
-            explodeSound.Play();
-
         Destroy(gameObject);
     }
 }
