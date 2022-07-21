@@ -71,8 +71,12 @@ public class PlayerTurretBehavior : MonoBehaviour
             Debug.Log("too far!");
             return;
         }
-
-        turret.GetComponent<TurretShootBehavior>().enabled = false;
+        TurretShootBehavior t1 = turret.GetComponent<TurretShootBehavior>();
+        if (t1!=null)
+            t1.enabled = false;
+        RadiusTurretBehavior t2 = turret.GetComponent<RadiusTurretBehavior>();
+        if (t2!=null)
+            t2.enabled = false;
         gameObject.GetComponent<PlayerItemBehavior>().Deactivate();
         isCarried = true;
         turret.GetComponent<TurretMoveBehavior>().SetIsCarried(true);
@@ -84,7 +88,12 @@ public class PlayerTurretBehavior : MonoBehaviour
 
         if (!valid) return;
 
-        turret.GetComponent<TurretShootBehavior>().enabled = true;
+        TurretShootBehavior t1 = turret.GetComponent<TurretShootBehavior>();
+        if (t1!=null)
+            t1.enabled = true;
+        RadiusTurretBehavior t2 = turret.GetComponent<RadiusTurretBehavior>();
+        if (t2!=null)
+            t2.enabled = true;
         gameObject.GetComponent<PlayerItemBehavior>().Activate();
         
         isCarried = false;

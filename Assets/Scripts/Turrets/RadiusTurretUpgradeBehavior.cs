@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RadiusTurretUpgrageBehavior : TurretUpgradeBase {
+public class RadiusTurretUpgradeBehavior : TurretUpgradeBase {
     RadiusTurretBehavior _Turret;
     int level = 0;
     void Start() {
