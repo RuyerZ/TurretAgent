@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour {
     private float mBaseHP;
     public bool isPaused = false;
 
-    private float Gold = 9990;
+    private float Gold = 0;
 
     // Start is called before the first frame update
     void Awake() {
