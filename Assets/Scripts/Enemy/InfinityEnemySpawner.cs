@@ -22,6 +22,7 @@ public class InfinityEnemySpawner : MonoBehaviour
 
     public EnemyPrefab[] enemyPrefabs;
     public PhaseInfo[] phases;
+    public PhaseInfo[] phases_loop;
 
     private Dictionary<char, GameObject> enemyPrefabDict;
 
@@ -33,6 +34,7 @@ public class InfinityEnemySpawner : MonoBehaviour
         public float time;
     }
     private List<SequenceItem> mSequence;
+    private List<SequenceItem> mSequence_loop;
     private int mCurrentSequenceIndex;
     private void Start()
     {
@@ -59,6 +61,20 @@ public class InfinityEnemySpawner : MonoBehaviour
             }
         }
         mSequence.Sort((a, b) => a.time.CompareTo(b.time));
+
+        mSequence_loop = new List<SequenceItem>();
+        for (int i = 0; i < phases_loop.Length; i++)
+        {
+            for (int j = 0; j < phases_loop[i].enemyCode.Length; j++)
+            {
+                SequenceItem item = new SequenceItem();
+                item.code = phases_loop[i].enemyCode[j];
+                item.time = phases_loop[i].startTime + j * phases_loop[i].intervalTime;
+                item.pathName = phases_loop[i].pathName;
+                mSequence_loop.Add(item);
+            }
+        }
+        mSequence_loop.Sort((a, b) => a.time.CompareTo(b.time));
         mCurrentTime = 0;
     }
     private void Spawn(char code, string pathName)
@@ -66,6 +82,7 @@ public class InfinityEnemySpawner : MonoBehaviour
         GameObject enemy = Instantiate(enemyPrefabDict[code]);
         enemy.GetComponent<PathBehavior>().pathName = pathName;
     }
+    private bool isSequenceLoop = false;
     private void Update()
     {
         mCurrentTime += Time.smoothDeltaTime;
@@ -73,14 +90,26 @@ public class InfinityEnemySpawner : MonoBehaviour
         {
             mCurrentTime += Time.smoothDeltaTime * 1f; // Speed 1x up
         }
-        if (mCurrentSequenceIndex < mSequence.Count && mSequence[mCurrentSequenceIndex].time < mCurrentTime)
+        if (!isSequenceLoop && mCurrentSequenceIndex < mSequence.Count && mSequence[mCurrentSequenceIndex].time < mCurrentTime)
         {
             Spawn(mSequence[mCurrentSequenceIndex].code, mSequence[mCurrentSequenceIndex].pathName);
             mCurrentSequenceIndex++;
             if (mCurrentSequenceIndex >= mSequence.Count)
             {
-                mCurrentTime = 0;
+                isSequenceLoop = true;
                 mCurrentSequenceIndex = 0;
+                mCurrentTime = 0;
+            }
+        } else if (mSequence_loop.Count > 0) {
+            if (mCurrentTime > mSequence_loop[mCurrentSequenceIndex].time)
+            {
+                Spawn(mSequence_loop[mCurrentSequenceIndex].code, mSequence_loop[mCurrentSequenceIndex].pathName);
+                mCurrentSequenceIndex++;
+                if (mCurrentSequenceIndex >= mSequence_loop.Count)
+                {
+                    mCurrentSequenceIndex = 0;
+                    mCurrentTime = 0;
+                }
             }
         }
     }
