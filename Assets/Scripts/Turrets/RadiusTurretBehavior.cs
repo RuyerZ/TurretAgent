@@ -9,7 +9,7 @@ public class RadiusTurretBehavior : MonoBehaviour
     public float _AttackRadius = 4f;
     public float _AttackDamage = 1f;
     public float _AttackInterval = 5f;
-    private float _AttackIntervalReset;
+    public float _AttackIntervalReset;
     public void Start() {
         _AttackIntervalReset = _AttackInterval;
     }

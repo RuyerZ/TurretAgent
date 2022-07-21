@@ -11,8 +11,9 @@ public class TurretShootBehavior : MonoBehaviour
     public Transform _RadiusItem;
 
     public float _AttackRadius;
+    public float _AttackDamage = 1f;
     public float _AttackInterval = 0.3f;
-    private float _AttackIntervalReset;
+    public float _AttackIntervalReset;
 
     private Transform _Target;
 
@@ -88,6 +89,7 @@ public class TurretShootBehavior : MonoBehaviour
     protected FriendBulletBehavior GetBullet()
     {
         FriendBulletBehavior bullet = Instantiate(_BulletPre, _Muzzle.position, _Muzzle.rotation);
+        bullet.dmg = _AttackDamage;
         return bullet;
     }
 

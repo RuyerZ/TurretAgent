@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour {
     public HPBar mHPBar = null;
     public GameObject WinUI = null;
     public GameObject LoseUI = null;
+    public GameObject UpgradeUI = null;
     private float mBaseHP;
     public bool isPaused = false;
 

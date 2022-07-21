@@ -18,6 +18,9 @@ public class PlayerTurretBehavior : MonoBehaviour
     {
         turret = GameManager.sTheGlobalBehavior.mFriendManager.GetClosestTurret(transform.position);
 
+        if (!isCarried && Input.GetKeyDown(KeyCode.F)) {
+            handleUpgradeTurret();
+        }
         if (!isCarried && Input.GetKeyDown(KeyCode.E)) {
             handleCarryTurret();
         }
@@ -110,5 +113,12 @@ public class PlayerTurretBehavior : MonoBehaviour
         }
 
         turret.transform.position = pos;
+    }
+    void handleUpgradeTurret()
+    {
+        GameManager.sTheGlobalBehavior.Pause();
+        GameManager.sTheGlobalBehavior.UpgradeUI.GetComponent<UpgradeUI>().SetTurret(turret);
+        GameManager.sTheGlobalBehavior.UpgradeUI.SetActive(true);
+        
     }
 }
