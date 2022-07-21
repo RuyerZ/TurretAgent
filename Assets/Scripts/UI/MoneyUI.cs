@@ -14,6 +14,6 @@ public class MoneyUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.GetComponentInChildren<Text>().text = "$" + GameManager.sTheGlobalBehavior.GetGold().ToString("#.#");
+        gameObject.GetComponentInChildren<Text>().text = "$" + GameManager.sTheGlobalBehavior.GetGold().ToString();
     }
 }
