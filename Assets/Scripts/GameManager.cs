@@ -8,14 +8,14 @@ public class GameManager : MonoBehaviour {
 
     public PlayerMoveBehavior mHero = null;  // must set in the editor
     public PathSystem mPathSystem = null;
-    public EnemyManager mEnemyManager = null;
+    public EnemyManager mEnemyManager = new EnemyManager();
     public FriendManager mFriendManager = new FriendManager();
     public float mMaxBaseHP = 10f;
     public HPBar mHPBar = null;
     public GameObject WinUI = null;
     public GameObject LoseUI = null;
     private float mBaseHP;
-    private bool isPaused = false;
+    public bool isPaused = false;
 
     //temp
     private int XP = 0;
@@ -54,7 +54,6 @@ public class GameManager : MonoBehaviour {
         }
     }
     public void ReduceBaseHP(float dmg) {
-        Debug.Log("Base Hurt");
         mBaseHP -= dmg;
         if (mBaseHP <= 0) {
             GameFail();
@@ -66,24 +65,21 @@ public class GameManager : MonoBehaviour {
         Time.timeScale = 0;
         mHero.gameObject.SetActive(false);
         mPathSystem.gameObject.SetActive(false);
-        mEnemyManager.gameObject.SetActive(false);
     }
     public void Resume() {
         isPaused = false;
         Time.timeScale = 1;
         mHero.gameObject.SetActive(true);
         mPathSystem.gameObject.SetActive(true);
-        mEnemyManager.gameObject.SetActive(true);
     }
     public void AddXP(int xp)
     {
-        for (int i = 0; i < xp; i++)
+        XP+=xp;
+        if (XP >= XPToLevelUp)
         {
-            XP++;
-            if (XP == XPToLevelUp) {
-                XP = 0;
-                levelUp();
-            }
+            XP -= XPToLevelUp;
+            upgradesLeft++;
+            XPToLevelUp += 5;
         }
     }
     private void levelUp() {
