@@ -372,7 +372,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -566, y: -165}
+  m_AnchoredPosition: {x: -565.99994, y: -165}
   m_SizeDelta: {x: -1872.0001, y: -1062}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &324301857
@@ -412,7 +412,7 @@ MonoBehaviour:
 
     E: PICK UP/DOWN TURRETS
 
-    LEFT MOUSE: SHOOT
+    LEFT MOUSE: SHOOT/AIM
 
     OR
     USE ITEMS'
