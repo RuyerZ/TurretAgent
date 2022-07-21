@@ -24,7 +24,7 @@ public class EnemyHPBehavior : MonoBehaviour {
             f.onHit(gameObject);
             if (currentHP <= 0) {
                 GameManager.sTheGlobalBehavior.mEnemyManager.RemoveEnemy(gameObject);
-                GameManager.sTheGlobalBehavior.AddXP(1);
+                GameManager.sTheGlobalBehavior.AddGold(1);
                 Destroy(gameObject);
             }
         }
@@ -45,7 +45,7 @@ public class EnemyHPBehavior : MonoBehaviour {
 
         if (currentHP <= 0) {
             GameManager.sTheGlobalBehavior.mEnemyManager.RemoveEnemy(gameObject);
-            GameManager.sTheGlobalBehavior.AddXP(1);
+            GameManager.sTheGlobalBehavior.AddGold(1);
             Destroy(gameObject);
         }
     }
