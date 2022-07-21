@@ -18,6 +18,8 @@ public class Mine : ItemBase
 
         r.enabled = (itemCount != 0);
 
+        transform.rotation = Quaternion.Euler(0f, 0f, -90f);
+
     }
 
     public override void Fire() 
