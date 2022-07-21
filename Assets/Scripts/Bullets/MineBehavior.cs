@@ -45,7 +45,6 @@ public class MineBehavior : FriendBulletBehavior
 
     }
 
-
     void destroyMine()
     {
         Destroy(gameObject);
