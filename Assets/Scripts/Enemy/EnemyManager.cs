@@ -27,6 +27,7 @@ public class EnemyManager : MonoBehaviour
     public PhaseInfo[] phases;
 
     private Dictionary<char, GameObject> enemyPrefabDict;
+    private List<GameObject> enemiesInRadius = new List<GameObject>();
 
     private float mCurrentTime;
 
@@ -56,6 +57,20 @@ public class EnemyManager : MonoBehaviour
             }
         }
         return closest;
+    }
+    public List<GameObject> GetEnemiesInRadius(Vector2 center, float radius)
+    {
+        enemiesInRadius.Clear();
+        foreach (GameObject enemy in mEnemies)
+        {
+            Vector2 enemyPos = enemy.transform.position;
+            float distance = (enemyPos - center).magnitude;
+            if (distance < radius)
+            {
+                enemiesInRadius.Add(enemy);
+            }
+        }
+        return enemiesInRadius;
     }
     private void Awake()
     {
