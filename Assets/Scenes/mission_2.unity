@@ -1249,9 +1249,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1377445775, guid: 24eabf3667691d14ea9db097be6aea2b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1377445777, guid: 24eabf3667691d14ea9db097be6aea2b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2287037542495131637, guid: 24eabf3667691d14ea9db097be6aea2b, type: 3}
       propertyPath: m_Pivot.x
@@ -1715,6 +1719,10 @@ PrefabInstance:
       propertyPath: shootAudio
       value: 
       objectReference: {fileID: 1577156240}
+    - target: {fileID: 6613054297463120924, guid: 00c8d059e47628f479560bfd98707d90, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f1df18819abd5c44b3c1ead56bd52b0, type: 3}
     - target: {fileID: 6799976606621835812, guid: 00c8d059e47628f479560bfd98707d90, type: 3}
       propertyPath: m_LocalScale.y
       value: 3
