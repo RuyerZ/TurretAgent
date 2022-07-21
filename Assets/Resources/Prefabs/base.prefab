@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9196476567869468063}
   - component: {fileID: 8865430552853211643}
   - component: {fileID: 3548500086869452612}
+  - component: {fileID: 8003352256008613368}
   m_Layer: 0
   m_Name: base
   m_TagString: Untagged
@@ -99,6 +100,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 150
+  Gold: 0
+  DefeatToWin: 1
+--- !u!61 &8003352256008613368
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705624274191058194}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.48, y: 0.48}
+    newSize: {x: 0.48, y: 0.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.48, y: 0.48}
+  m_EdgeRadius: 0
 --- !u!1001 &5417347081491031643
 PrefabInstance:
   m_ObjectHideFlags: 0

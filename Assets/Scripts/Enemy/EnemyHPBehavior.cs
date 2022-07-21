@@ -10,6 +10,9 @@ public class EnemyHPBehavior : MonoBehaviour {
     void Start() {
         currentHP = maxHP;
         Debug.Assert(gameObject.GetComponent<BoxCollider2D>() != null);
+        if (GetComponent<PathBehavior>() == null) {
+            GameManager.sTheGlobalBehavior.mEnemyManager.AddEnemy(gameObject);
+        }
     }
     void CollisionCheck(GameObject o) {
         if (o.GetComponent<FriendBulletBehavior>() != null) {
