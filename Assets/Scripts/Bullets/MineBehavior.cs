@@ -29,14 +29,12 @@ public class MineBehavior : FriendBulletBehavior
         {
             if (GameObject.ReferenceEquals(o, enemy))
             {
-                Debug.Log("continued");
                 continue;
             }
             EnemyHPBehavior enemyBehavior = enemy.GetComponent<EnemyHPBehavior>();
             if (enemyBehavior != null)
             {
                 enemyBehavior.DamageEnemy(dmg);
-                Debug.Log("damaged");
             }
         }
         if (explodeSound != null)
