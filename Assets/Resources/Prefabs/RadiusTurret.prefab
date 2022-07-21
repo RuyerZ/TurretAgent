@@ -365,6 +365,7 @@ MonoBehaviour:
   _AttackRadius: 4
   _AttackDamage: 1
   _AttackInterval: 5
+  _AttackIntervalReset: 0
 --- !u!114 &1810154703072365400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99a68468cc1199e4fa135eaffae856a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turretName: Radius Tower 1
 --- !u!61 &1491871473426742005
 BoxCollider2D:
   m_ObjectHideFlags: 0

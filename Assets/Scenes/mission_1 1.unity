@@ -1279,24 +1279,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e68e50fd55472cc4484843464683ae36, type: 3}
---- !u!1 &2023397699 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9015699204102001418, guid: 24eabf3667691d14ea9db097be6aea2b, type: 3}
-  m_PrefabInstance: {fileID: 1799377533}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2023397707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023397699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3af720420d5f64f4fbb2d6765bf9aea1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turretName: Basic Tower 1
 --- !u!1001 &3082323790480566169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1404,17 +1386,5 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1429637832}
-    - target: {fileID: 4115897265866737932, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4467162946309406649, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4552939858299899538, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}

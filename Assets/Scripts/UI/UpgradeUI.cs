@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UpgradeUI : MonoBehaviour {
-    private TurretShootUpgrageBehavior turretUpgradeBehavior;
+    private TurretUpgradeBase turretUpgradeBehavior;
     private List<(string, float)> upgrades = null;
     public AudioSource btnSound;
 
@@ -28,7 +28,7 @@ public class UpgradeUI : MonoBehaviour {
     }
     public void SetTurret(GameObject t) {
         Debug.Assert(t);
-        turretUpgradeBehavior = t.GetComponent<TurretShootUpgrageBehavior>();
+        turretUpgradeBehavior = t.GetComponent<TurretUpgradeBase>();
     }
     private void UpdateUI() {
         if (turretUpgradeBehavior == null) return;
