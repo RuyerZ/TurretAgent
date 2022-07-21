@@ -116,7 +116,6 @@ GameObject:
   - component: {fileID: 7844124020463568190}
   - component: {fileID: 1356112643}
   - component: {fileID: 4338878665328878581}
-
   m_Layer: 0
   m_Name: Mine
   m_TagString: Untagged
@@ -278,7 +277,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d4aee29185389894b9cc0d8873904a49, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
