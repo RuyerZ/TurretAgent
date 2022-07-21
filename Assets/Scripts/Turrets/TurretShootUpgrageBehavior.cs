@@ -12,9 +12,9 @@ public class TurretShootUpgrageBehavior : TurretUpgradeBase {
     public override List<(string, float)> GetUpgrades() {
         float cost = 100f + 50f * level;
         return new List<(string, float)>() {
-            ("Damage", cost),
-            ("Cooldown", cost),
-            ("Range", cost),
+            ("Damage: " + _Turret._BulletPre.dmg.ToString("N1"), cost),
+            ("CD: " + _Turret._AttackInterval.ToString("N1"), cost),
+            ("Range"+ _Turret._AttackInterval.ToString("N1"),cost),
         };
     }
     public override bool Upgrade(int index) {
