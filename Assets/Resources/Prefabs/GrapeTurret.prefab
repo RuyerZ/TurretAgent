@@ -374,14 +374,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842750807129262960}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.1, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9015699205209216021}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &1025793749745801671
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -422,8 +422,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 745325bc73a6c914da8aaca8601eecec, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: d034ff0c6d2866f43a055d5c0bc187f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -507,8 +507,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: -2058895925, guid: 4d9d59aafa521c24e8f1c0672b3415d8, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 2ed6dd85781276a4fbd08463418838a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -528,14 +528,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2287037542495131637}
-  - component: {fileID: 9015699204102001415}
+  - component: {fileID: 5683610141792073262}
   - component: {fileID: 6107787620878664398}
   - component: {fileID: 8772323415083903032}
   - component: {fileID: 2606479373048613695}
   - component: {fileID: 2023397709}
   - component: {fileID: 5796322186226171661}
   m_Layer: 0
-  m_Name: Turret
+  m_Name: GrapeTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -565,7 +565,7 @@ RectTransform:
   m_AnchoredPosition: {x: -0.755, y: 0.041}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &9015699204102001415
+--- !u!114 &5683610141792073262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -574,16 +574,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 9015699204102001418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e028d48c092b2354b91a15892317fd71, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f88595c9c6c6ed4cb68479ef367843e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shootAudio: {fileID: 8772323415083903032}
-  _BulletPre: {fileID: 2166000638287311909, guid: dbe31f41acd00e14280dfd62df2b3814, type: 3}
+  _BulletPre: {fileID: 2166000638287311909, guid: 33013ccfa36cb364bbfee1b6ed897de9, type: 3}
   _Gun: {fileID: 9015699205209216021}
   _Muzzle: {fileID: 9015699205127807914}
   _RadiusItem: {fileID: 9015699205146946315}
   _AttackRadius: 4
   _AttackInterval: 0.3
+  offsetAngle: 20
 --- !u!114 &6107787620878664398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -892,8 +893,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9015699205209216022}
-  m_LocalRotation: {x: -0, y: -0.000000007450581, z: -0.2893547, w: 0.957222}
-  m_LocalPosition: {x: 0, y: 0.20700002, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.36656958, w: 0.93039066}
+  m_LocalPosition: {x: 0.011, y: 0.122, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -904,7 +905,7 @@ Transform:
   - {fileID: 9015699205338238937}
   m_Father: {fileID: 9015699203742882351}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -33.639}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -43.008}
 --- !u!1 &9015699205246204928
 GameObject:
   m_ObjectHideFlags: 0
