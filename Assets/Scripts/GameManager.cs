@@ -40,12 +40,14 @@ public class GameManager : MonoBehaviour {
     public void GameFail() {
         if (!isGameEnd) {
             isGameEnd = true;
+            Pause();
             LoseUI.SetActive(true);
         }
     }
     public void GameWin() {
         if (!isGameEnd) {
             isGameEnd = true;
+            Pause();
             WinUI.SetActive(true);
         }
     }
