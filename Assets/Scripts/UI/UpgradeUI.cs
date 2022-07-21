@@ -17,21 +17,31 @@ public class UpgradeUI : MonoBehaviour {
         upgrades = null;
     }
     void Update() {
-
+        if (Input.GetKeyDown(KeyCode.F)) {
+            CloseUI();
+        }
+        UpdateUI();
+    }
+    public void CloseUI() {
+        GameManager.sTheGlobalBehavior.Resume();
+        gameObject.SetActive(false);
     }
     public void SetTurret(GameObject t) {
         Debug.Assert(t);
         turretUpgradeBehavior = t.GetComponent<TurretShootUpgrageBehavior>();
+    }
+    private void UpdateUI() {
+        if (turretUpgradeBehavior == null) return;
         upgrades = turretUpgradeBehavior.GetUpgrades();
 
         for (int i = 0; i < upgrades.Count; i++) {
             Transform upgradeUI = transform.Find("upgrade"+i);
+            //Debug.Log(upgrades[i].Item1);
             upgradeUI.Find("UpgradeText").GetComponent<Text>().text = upgrades[i].Item1;
-            upgradeUI.Find("UpgradeButton").GetComponentInChildren<Text>().text = "$" + upgrades[i].Item2.ToString("D");
+            upgradeUI.Find("UpgradeButton").GetComponentInChildren<Text>().text = "$" + upgrades[i].Item2.ToString("#.#");
         }
 
         transform.Find("Title").GetComponent<Text>().text = turretUpgradeBehavior.GetTurretName();
-
     }
     public bool Upgrade(int index) {
         if (turretUpgradeBehavior == null) return false;

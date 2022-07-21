@@ -12,7 +12,7 @@ public class TurretShootBehavior : MonoBehaviour
 
     public float _AttackRadius;
     public float _AttackInterval = 0.3f;
-    private float _AttackIntervalReset;
+    public float _AttackIntervalReset;
 
     private Transform _Target;
 
