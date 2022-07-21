@@ -41,6 +41,7 @@ public class MineBehavior : FriendBulletBehavior
             explodeSound.Play();
 
         Coll.enabled = false;
+        gameObject.SetActive(false);
         Anim.SetTrigger("explode");
 
     }
