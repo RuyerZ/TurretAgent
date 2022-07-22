@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
     public GameObject WinUI = null;
     public GameObject LoseUI = null;
     public GameObject UpgradeUI = null;
+    public GameObject PauseUI = null;
     private float mBaseHP;
     public bool isPaused = false;
 
@@ -34,8 +35,14 @@ public class GameManager : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) {
-            if (isPaused) Resume();
-            else Pause();
+            if (isPaused) {
+                PauseUI.SetActive(false);
+                Resume();
+            }
+            else {
+                PauseUI.SetActive(true);
+                Pause();
+            }
         }
     }
     private bool isGameEnd = false;
