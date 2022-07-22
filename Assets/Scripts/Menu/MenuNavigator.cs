@@ -29,4 +29,8 @@ public class MenuNavigator : MonoBehaviour
         confirmAudio.Play();
         SceneManager.LoadScene("MenuScene");
     }
+    public void CloseUI(GameObject o) {
+        GameManager.sTheGlobalBehavior.Resume();
+        o.SetActive(false);
+    }
 }
