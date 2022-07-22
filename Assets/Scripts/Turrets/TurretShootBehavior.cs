@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurretShootBehavior : MonoBehaviour
+public class TurretShootBehavior : TurretAttackBase
 {
     public AudioSource shootAudio;
     public FriendBulletBehavior _BulletPre;
@@ -82,10 +82,10 @@ public class TurretShootBehavior : MonoBehaviour
         }
     }
 
-    //  ·¢Éä×Óµ¯
+    //  ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½
     protected virtual void OnFireBullet() { }
 
-    //  »ñÈ¡×Óµ¯
+    //  ï¿½ï¿½È¡ï¿½Óµï¿½
     protected FriendBulletBehavior GetBullet()
     {
         FriendBulletBehavior bullet = Instantiate(_BulletPre, _Muzzle.position, _Muzzle.rotation);
