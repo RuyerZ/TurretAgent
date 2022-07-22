@@ -8,7 +8,6 @@ public class MineBehavior : FriendBulletBehavior
     public AudioSource explodeSound;
     public Animator Anim;
     public Collider2D Coll;
-
     protected virtual void Start()
     {
         Anim = GetComponent<Animator>();
@@ -41,10 +40,10 @@ public class MineBehavior : FriendBulletBehavior
             explodeSound.Play();
 
         Coll.enabled = false;
+        //gameObject.SetActive(false);
         Anim.SetTrigger("explode");
 
     }
-
 
     void destroyMine()
     {

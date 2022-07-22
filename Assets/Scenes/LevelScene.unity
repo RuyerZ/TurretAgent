@@ -2522,7 +2522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   confirmAudio: {fileID: 2008250158}
-  _MakeLevel: 1
+  _MakeLevel: 2
   _LevelNode: {fileID: 404017333}
   _ScenePrefixName: mission_
 --- !u!4 &2008250157

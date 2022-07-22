@@ -534,6 +534,7 @@ GameObject:
   - component: {fileID: 2606479373048613695}
   - component: {fileID: 2023397709}
   - component: {fileID: 5796322186226171661}
+  - component: {fileID: 2023397707}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -583,7 +584,9 @@ MonoBehaviour:
   _Muzzle: {fileID: 9015699205127807914}
   _RadiusItem: {fileID: 9015699205146946315}
   _AttackRadius: 4
-  _AttackInterval: 0.3
+  _AttackDamage: 1
+  _AttackInterval: 1
+  _AttackIntervalReset: 0
 --- !u!114 &6107787620878664398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -596,7 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bff17c1ced6c0fe419d0cfcb01d457d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
+  maxHP: 1000
 --- !u!82 &8772323415083903032
 AudioSource:
   m_ObjectHideFlags: 0
@@ -754,6 +757,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2023397707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9015699204102001418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af720420d5f64f4fbb2d6765bf9aea1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretName: Basic Tower 1
 --- !u!1 &9015699205127807915
 GameObject:
   m_ObjectHideFlags: 0
