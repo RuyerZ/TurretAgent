@@ -24,22 +24,25 @@ public class TurretMoveBehavior : MonoBehaviour
         SetColor(new Color(0f,1f,0f,0.7f));
         valid = true;
     }
+    bool CollisionCheck(Collider2D other) {
+        return ((other.gameObject.tag == "Path" || other.gameObject.tag == "Turret") && isCarried);
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Path") {
+        if (CollisionCheck(other)) {
             SetInvalid();
         }
     }
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Path") {
+        if (CollisionCheck(other)) {
             SetInvalid();
         }
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Path") {
+        if (CollisionCheck(other)) {
             SetValid();
         }
     }
