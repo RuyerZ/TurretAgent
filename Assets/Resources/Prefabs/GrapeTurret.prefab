@@ -422,7 +422,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d034ff0c6d2866f43a055d5c0bc187f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -507,7 +507,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2ed6dd85781276a4fbd08463418838a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -583,7 +583,9 @@ MonoBehaviour:
   _Muzzle: {fileID: 9015699205127807914}
   _RadiusItem: {fileID: 9015699205146946315}
   _AttackRadius: 4
+  _AttackDamage: 1
   _AttackInterval: 0.3
+  _AttackIntervalReset: 0
   offsetAngle: 20
 --- !u!114 &6107787620878664398
 MonoBehaviour:
