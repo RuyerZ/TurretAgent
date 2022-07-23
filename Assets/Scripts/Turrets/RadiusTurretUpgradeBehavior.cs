@@ -13,7 +13,7 @@ public class RadiusTurretUpgradeBehavior : TurretUpgradeBase {
         float cost = 30f + 10f * level;
         return new List<(string, float)>() {
             ("Damage: " + _Turret._AttackDamage.ToString("N1"), cost),
-            ("CD: " + _Turret._AttackIntervalReset.ToString("N2"), cost),
+            ("CD: " + _Turret._AttackInterval.ToString("N2"), cost),
             ("Range: "+ _Turret._AttackRadius.ToString("N1"),cost),
         };
     }
@@ -23,8 +23,8 @@ public class RadiusTurretUpgradeBehavior : TurretUpgradeBase {
                 _Turret._AttackDamage += 0.5f;
                 break;
             case 1:
-                _Turret._AttackIntervalReset *= 0.8f;
-                if (_Turret._AttackIntervalReset < 0.01f) _Turret._AttackIntervalReset = 0.01f;
+                _Turret._AttackInterval *= 0.8f;
+                if (_Turret._AttackInterval < 0.01f) _Turret._AttackInterval = 0.01f;
                 break;
             case 2:
                 _Turret._AttackRadius += 1;
