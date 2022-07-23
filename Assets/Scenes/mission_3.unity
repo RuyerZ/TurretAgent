@@ -783,42 +783,26 @@ MonoBehaviour:
     prefab: {fileID: 5775048993590621706, guid: 1ef4295ea5211a94ea4151b77869982f, type: 3}
   - code: 98
     prefab: {fileID: 8719160117969813799, guid: 209ae971fbc2b1d46825e963072ae0e8, type: 3}
+  - code: 99
+    prefab: {fileID: 5775048993590621706, guid: c53685aced00fba44b7aee74b01477b3, type: 3}
+  - code: 100
+    prefab: {fileID: 5775048993590621706, guid: 988c219466b30e04097dda05374838b8, type: 3}
   phases:
-  - enemyCode: a
-    pathName: path1
+  - enemyCode: d
+    pathName: path2
     intervalTime: 1
     startTime: 5
-  - enemyCode: a
-    pathName: path2
-    intervalTime: 1
-    startTime: 8
-  - enemyCode: a
+  - enemyCode: cccc
     pathName: path1
-    intervalTime: 1
-    startTime: 12
-  - enemyCode: a
+    intervalTime: 5
+    startTime: 10
+  - enemyCode: aabaa
     pathName: path2
-    intervalTime: 1
-    startTime: 12
-  - enemyCode: aaa
-    pathName: path1
-    intervalTime: 1
-    startTime: 16
-  - enemyCode: aaaaa
-    pathName: path2
-    intervalTime: 1
+    intervalTime: 3
     startTime: 25
-  - enemyCode: aaaaaaa
+  - enemyCode: dcaca
     pathName: path1
-    intervalTime: 1
-    startTime: 36
-  - enemyCode: aba
-    pathName: path1
-    intervalTime: 1
-    startTime: 50
-  - enemyCode: aba
-    pathName: path2
-    intervalTime: 1
+    intervalTime: 2
     startTime: 50
 --- !u!1 &689516607
 GameObject:
