@@ -33,7 +33,7 @@ public class BaseBullet : MonoBehaviour, BulletInterface
         if (s != null)   // if main camera does not have the script, this will be null
         {
             // intersect my bond with the bounds of the world
-            Bounds myBound = GetComponent<Renderer>().bounds;  // this is the bound on the SpriteRenderer
+            Bounds myBound = GetComponentInChildren<Renderer>().bounds;  // this is the bound on the SpriteRenderer
             CameraSupport.WorldBoundStatus status = s.CollideWorldBound(myBound);
             
             // If result is not "inside", then, destroy
