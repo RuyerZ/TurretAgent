@@ -1356,6 +1356,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mItemName
+      value: Rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mItemCount
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7613279108051396609, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
