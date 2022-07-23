@@ -45,14 +45,16 @@ public class ItemSelectButton : MonoBehaviour
         mSelectedEffect.SetActive(active);
     }
 
-    public void SetSold()
+    public bool SetSold()
     {
-        GameManager.sTheGlobalBehavior.mHero.gameObject.GetComponent<PlayerItemBehavior>().AddItem(mItemName, mItemCount);
+        bool success = GameManager.sTheGlobalBehavior.mHero.gameObject.GetComponent<PlayerItemBehavior>().AddItem(mItemName, mItemCount);
+        if (!success) return false;
         if (!isInfinity) {
             SetWindowActive(false);
             mButton.interactable = false;
             mSold = true;
         }
+        return true;
     }
 
     public void OnClick()
