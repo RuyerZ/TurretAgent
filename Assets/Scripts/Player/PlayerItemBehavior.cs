@@ -112,4 +112,59 @@ public class PlayerItemBehavior : MonoBehaviour
         } 
         bar.SetItemCount(index, c);
     }
+    public bool AddItem(string itemname, int count) {
+        ItemBase[] items = GetComponentsInChildren<ItemBase>(true);
+        foreach (ItemBase item in barItems) {
+            if (item == null) continue;
+            if (item.name == itemname) {
+                // if item exists and is infinite, do nothing
+                if (count == -1 || item.getItemCount() < 0) {
+                    return false;
+                }
+                // item exists and stackable, add count
+                item.setItemCount(item.getItemCount() + count);
+                return true;
+            }
+        }
+        ItemBase item_to_add = null;
+        foreach (ItemBase item in items) {
+            if (item.name == itemname) {
+                item_to_add = item;
+                break;
+            }
+        }
+        if (item_to_add == null) {
+            Debug.Log("item name not found!");
+            return false;
+        }
+        for (int i=0; i<barItems.Count; ++i) {
+            if (barItems[i] == null) {
+                barItems[i] = item_to_add;
+                SetItemIconUI(i);
+                SetItemCountUI(i);
+                return true;
+            }
+        }
+        return false;
+    }
+    public bool RemoveItem(string itemname,int count) {
+        for (int i=0; i< barItems.Count;++i) {
+            if (barItems[i] == null) continue;
+            if (barItems[i].name == itemname) {
+                if (barItems[i].getItemCount()<0  || barItems[i].getItemCount() <= count) {
+                    if (activeIndex == i && activated) {
+                        Deactivate();
+                    }
+                    barItems[i] = null;
+                    SetItemIconUI(i);
+                    SetItemCountUI(i);
+                    return true;
+                }
+                barItems[i].setItemCount(barItems[i].getItemCount() - count);
+                SetItemCountUI(i);
+                return true;
+            }
+        }
+        return false;
+    }
 }
