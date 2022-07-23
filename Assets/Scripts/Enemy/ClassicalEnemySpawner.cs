@@ -83,4 +83,11 @@ public class ClassicalEnemySpawner : MonoBehaviour {
             GameManager.sTheGlobalBehavior.GameWin();
         }
     }
+    public string GetEnemiesLeftString() {
+        int enemiesTotal = mSequence.Count;
+        int enemiesDefeated = GameManager.sTheGlobalBehavior.mEnemyManager.GetEnemiesDefeated();
+        int enemiesLeft = enemiesTotal - enemiesDefeated;
+
+        return (enemiesLeft.ToString() + " / " + enemiesTotal.ToString());
+    }
 }

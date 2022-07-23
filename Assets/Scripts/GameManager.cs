@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour {
     public GameObject PauseUI = null;
     private float mBaseHP;
     public bool isPaused = false;
+    private bool isPrepare = false;
+    public bool isDefend = true;
 
     public float Gold = 0;
 
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour {
     }
     void Start() {
         mBaseHP = mMaxBaseHP;
+        if (isDefend) Prepare();
     }
     // Update is called once per frame
     void Update() {
@@ -73,11 +76,23 @@ public class GameManager : MonoBehaviour {
         mHero.gameObject.SetActive(false);
         mPathSystem.gameObject.SetActive(false);
     }
+    //before game start
+    public void Prepare() {
+        isPrepare = true;
+        mPathSystem.gameObject.SetActive(false);
+    }
+    public void startWave() {
+        isPrepare = false;
+        mPathSystem.gameObject.SetActive(true);
+    }
+    public bool GetIsPrepare() {
+        return isPrepare;
+    }
     public void Resume() {
         isPaused = false;
         Time.timeScale = 1;
         mHero.gameObject.SetActive(true);
-        mPathSystem.gameObject.SetActive(true);
+        if (!isPrepare) mPathSystem.gameObject.SetActive(true);
     }
     public void AddGold(float gold) 
     {
