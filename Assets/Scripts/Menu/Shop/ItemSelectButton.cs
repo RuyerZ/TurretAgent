@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class ItemSelectButton : MonoBehaviour
 {
     public GameObject mSelectedEffect;
+    public string mItemName;
+    public int mItemCount;
     public float mPrice = 1.0f;
+    public bool isInfinity = false;
     private int mItemIndex;
     private bool mSold = false;
     private ShopMenu mShopMenu;
@@ -19,7 +22,12 @@ public class ItemSelectButton : MonoBehaviour
         mButton = GetComponentInChildren<Button>();
 
         mText = mButton.GetComponentInChildren<Text>();
-        mText.text = mPrice.ToString() + " $";
+        mText.text = mItemName;
+        if (mItemCount > 0) {
+            mText.text += " x" + mItemCount;
+        }
+        mText.text += " ";
+        mText.text += mPrice.ToString() + " $";
     }
 
     // Update is called once per frame
@@ -39,9 +47,12 @@ public class ItemSelectButton : MonoBehaviour
 
     public void SetSold()
     {
-        SetWindowActive(false);
-        mButton.interactable = false;
-        mSold = true;
+        GameManager.sTheGlobalBehavior.mHero.gameObject.GetComponent<PlayerItemBehavior>().AddItem(mItemName, mItemCount);
+        if (!isInfinity) {
+            SetWindowActive(false);
+            mButton.interactable = false;
+            mSold = true;
+        }
     }
 
     public void OnClick()
