@@ -4,18 +4,14 @@ using UnityEngine;
 
 public abstract class SkillsTurretBehavior : TurretAttackBase
 {
-    public AudioSource shootAudio;
 
     public Color _DarkColor = Color.white;
-    public float _AttackRadius = 3f;
 
-    [SerializeField]
-    private float _CoolingTime = 3f;//ÀäÈ´Ê±¼ä
+    public float _CoolingTime = 3f;//ï¿½ï¿½È´Ê±ï¿½ï¿½
     [HideInInspector]
     public float _CoolingTimelReset;
 
-    [SerializeField]
-    private SpriteRenderer _Renderer = null;
+    public SpriteRenderer _Renderer = null;
 
     public Transform _Explosion;
 
@@ -63,7 +59,7 @@ public abstract class SkillsTurretBehavior : TurretAttackBase
         _Explosion.localScale = radius * Vector3.one;
     }
 
-    //  ÊÍ·Å¼¼ÄÜ
+    //  ï¿½Í·Å¼ï¿½ï¿½ï¿½
     private void ReleaseSkills()
     {
         shootAudio.Play();
@@ -72,7 +68,7 @@ public abstract class SkillsTurretBehavior : TurretAttackBase
         Invoke("ReleaseCompletely", _AnimLength);
     }
 
-    //  ¼¼ÄÜÍê³ÉÊÍ·Å
+    //  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½
     private void ReleaseCompletely()
     {
         _CoolingTime = _CoolingTimelReset;
@@ -80,7 +76,7 @@ public abstract class SkillsTurretBehavior : TurretAttackBase
         _Trigger.enabled = true;
     }
 
-    //  ÀäÈ´¸üÐÂ
+    //  ï¿½ï¿½È´ï¿½ï¿½ï¿½ï¿½
     private void CoolingUpdate()
     {
 

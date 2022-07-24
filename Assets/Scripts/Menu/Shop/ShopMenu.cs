@@ -65,9 +65,9 @@ public class ShopMenu : MonoBehaviour
         if (IsItemAvailable())
         {
             Debug.Log("Buy Item " + itemIndex.ToString());
-            itemWindows[itemIndex].button.SetSold();
-
-            GameManager.sTheGlobalBehavior.Gold -= itemPrice;
+            if (itemWindows[itemIndex].button.SetSold()) {
+                GameManager.sTheGlobalBehavior.Gold -= itemPrice;
+            }
         }
     }
 

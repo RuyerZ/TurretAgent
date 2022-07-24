@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class RadiusTurretBehavior : SkillsTurretBehavior
 {
-    [SerializeField]
-    private float _AttackDamage = 1f;
-
     public float AttackDamage
     {
         get

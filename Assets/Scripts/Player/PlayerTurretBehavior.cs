@@ -19,35 +19,22 @@ public class PlayerTurretBehavior : MonoBehaviour
         if (!isCarried)
             turret = GameManager.sTheGlobalBehavior.mFriendManager.GetClosestTurret(transform.position);
 
-        if (!isCarried && Input.GetKeyDown(KeyCode.F))
-        {
-            handleUpgradeTurret();
-        }
-        if (!isCarried && Input.GetKeyDown(KeyCode.E))
-        {
-            handleCarryTurret();
-        }
-        else if (isCarried)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
+        Vector2 playerPosition = transform.position;
+        playerPosition = transform.position;
+        Vector2 turretPosition = turret.transform.position;
+        bool isInRadius = Vector2.Distance(playerPosition,turretPosition) <= pickUpRadius;
+
+        if (isCarried) {
+            if (Input.GetKeyDown(KeyCode.E)) {
                 handleDropTurret();
             }
             else
             {
                 handleMoveTurret();
             }
-        }
-        Vector2 playerPosition = transform.position;
 
-        if (isCarried)
-        {
             Vector2 mousePoistion = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            //playerPosition.y += 1f;
-
             Vector2 playerToMouseDir = (mousePoistion - playerPosition).normalized;
-
             Vector3 pos = playerPosition + (playerToMouseDir * radius);
 
             if (mousePoistion.y > playerPosition.y)
@@ -58,23 +45,26 @@ public class PlayerTurretBehavior : MonoBehaviour
             {
                 pos.z = -0.001f;
             }
-
             turret.transform.position = pos;
-
-        }
-
-        playerPosition = transform.position;
-        Vector2 turretPosition = turret.transform.position;
-
-        if (Vector2.Distance(playerPosition, turretPosition) <= pickUpRadius && !isCarried)
+        } 
+        else if (isInRadius)
         {
+            if (Input.GetKeyDown(KeyCode.F)) {
+                handleUpgradeTurret();
+            }
+            if (Input.GetKeyDown(KeyCode.E)) {
+                handleCarryTurret();
+            }
+        }
+        
+        if (isInRadius && !isCarried) {
             turret.transform.Find("glow").gameObject.SetActive(true);
-        }
-        else
-        {
+        } 
+        else {
             turret.transform.Find("glow").gameObject.SetActive(false);
         }
-
+        
+        
     }
     void handleCarryTurret()
     {
