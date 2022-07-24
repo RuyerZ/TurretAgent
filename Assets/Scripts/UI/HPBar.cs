@@ -26,7 +26,6 @@ public class HPBar : MonoBehaviour
     public void Set(float x)
     {
         mRate = Mathf.Clamp(x, 0.0f, 1.0f);
-        
-        Debug.Log(mRate);
+    
     }
 }

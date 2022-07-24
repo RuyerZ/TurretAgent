@@ -23,7 +23,7 @@ public class ItemSelectButton : MonoBehaviour
         mShopMenu = GetComponentInParent<ShopMenu>();
         mButton = GetComponentInChildren<Button>();
 
-        mText = mButton.GetComponentInChildren<Text>();
+        mText = transform.Find("Label").gameObject.GetComponentInChildren<Text>();
         if (mItemName.Length == 0) {
             SetWindowActive(false);
             mButton.interactable = false;
@@ -68,6 +68,7 @@ public class ItemSelectButton : MonoBehaviour
         if (!isInfinity) {
             SetWindowActive(false);
             mButton.interactable = false;
+            transform.Find("greyedOut").gameObject.SetActive(true);
             mSold = true;
         }
         return true;

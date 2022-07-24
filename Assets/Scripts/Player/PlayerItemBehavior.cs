@@ -82,11 +82,13 @@ public class PlayerItemBehavior : MonoBehaviour
     }
     public void Activate()
     {
+        if (barItems[activeIndex] == null) return;
         barItems[activeIndex].Activate();
         activated = true;
     }
     public void Deactivate()
     {
+        if (barItems[activeIndex] == null) return;
         barItems[activeIndex].Deactivate();
         activated = false;
     }

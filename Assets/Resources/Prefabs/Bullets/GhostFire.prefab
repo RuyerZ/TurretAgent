@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a94b62a26d7fd94fbc6ce6307b694a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 5
+  dmg: 0.5
   fireforce: 20
 --- !u!114 &5603680319942215951
 MonoBehaviour:
@@ -147,9 +147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8adff316bcb30484b9e8ffe0a395b214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 1
-  fireforce: 0.004
-  lifetime: 5
+  dmg: 0.5
+  fireforce: 0.01
+  lifetime: 8
 --- !u!50 &5504014792860743555
 Rigidbody2D:
   serializedVersion: 4

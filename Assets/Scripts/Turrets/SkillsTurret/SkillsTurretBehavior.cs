@@ -45,8 +45,8 @@ public abstract class SkillsTurretBehavior : TurretAttackBase
     private void SetPickState(bool pick)
     {
         _BePicked = pick;
-        _Trigger.enabled = !pick;
-        _Trigger.gameObject.SetActive(!pick);
+        //_Trigger.enabled = !pick;
+        //_Trigger.gameObject.SetActive(!pick);
     }
 
     private void Update()
@@ -68,7 +68,7 @@ public abstract class SkillsTurretBehavior : TurretAttackBase
         Invoke("ReleaseCompletely", _AnimLength);
     }
 
-    //  ��������ͷ�
+    //  ��������ͷￄ1�7
     private void ReleaseCompletely()
     {
         _CoolingTime = _CoolingTimelReset;

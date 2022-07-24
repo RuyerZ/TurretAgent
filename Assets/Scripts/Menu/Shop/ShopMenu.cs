@@ -18,9 +18,13 @@ public class ShopMenu : MonoBehaviour
     private int itemNumber;
     private int itemIndex = -1;
     private float itemPrice = 0.0f;
+    private bool isOpen = true;
+    private GameObject canvas;
     // Start is called before the first frame update
     void Start()
     {
+        canvas = transform.Find("Canvas").gameObject;
+        GameManager.sTheGlobalBehavior.Pause("shop");
         buyButton.interactable = false;
 
         itemNumber = itemWindows.Length;
@@ -29,13 +33,35 @@ public class ShopMenu : MonoBehaviour
 
         goldText.text = "GOLD: " + GameManager.sTheGlobalBehavior.Gold.ToString() + " $";
     }
+    void OpenShop()
+    {
+        isOpen = true;
+        GameManager.sTheGlobalBehavior.Pause("shop");
+        canvas.SetActive(true);
+    }
+    void CloseShop()
+    {
+        isOpen = false;
+        GameManager.sTheGlobalBehavior.Resume("shop");
+        canvas.SetActive(false);
+    }
 
     // Update is called once per frame
     void Update()
     {
-        buyButton.interactable = IsItemAvailable();
+        if (isOpen) 
+        {
+            buyButton.interactable = IsItemAvailable();
 
-        goldText.text = "GOLD: " + GameManager.sTheGlobalBehavior.Gold.ToString() + " $";
+            goldText.text = "GOLD: " + GameManager.sTheGlobalBehavior.Gold.ToString() + " $";
+        }
+        if (Input.GetKeyDown(KeyCode.B) && 
+            (!GameManager.sTheGlobalBehavior.isPaused || GameManager.sTheGlobalBehavior.GetPausedReason() == "shop")
+            )
+        {
+            if (isOpen) CloseShop();
+            else OpenShop();
+        }
     }
 
     private bool IsItemAvailable()
@@ -73,6 +99,15 @@ public class ShopMenu : MonoBehaviour
 
     public void Continue()
     {
-        gameObject.SetActive(false);
+        CloseShop();
+    }
+
+    public void onShopBtn() {
+        if ((!GameManager.sTheGlobalBehavior.isPaused || GameManager.sTheGlobalBehavior.GetPausedReason() == "shop")
+            )
+        {
+            if (isOpen) CloseShop();
+            else OpenShop();
+        }
     }
 }
