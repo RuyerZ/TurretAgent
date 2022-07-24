@@ -67,6 +67,8 @@ public class ClassicalEnemySpawner : MonoBehaviour {
         enemy.GetComponent<PathBehavior>().pathName = pathName;
     }
     private void Update() {
+        if (GameManager.sTheGlobalBehavior.GetIsPrepare()) return;
+
         mCurrentTime += Time.smoothDeltaTime;
         if (GameManager.sTheGlobalBehavior.mEnemyManager.IsEmpty())
         {
