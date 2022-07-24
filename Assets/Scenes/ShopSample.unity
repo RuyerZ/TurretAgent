@@ -237,11 +237,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mHero: {fileID: 0}
   mPathSystem: {fileID: 0}
-  mEnemyManager: {fileID: 0}
   mMaxBaseHP: 10
   mHPBar: {fileID: 0}
   WinUI: {fileID: 0}
   LoseUI: {fileID: 0}
+  UpgradeUI: {fileID: 0}
+  PauseUI: {fileID: 0}
+  isPaused: 0
+  isDefend: 1
+  Gold: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,6 +385,34 @@ PrefabInstance:
     - target: {fileID: 923127007164698265, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435639902502609387, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2ed6dd85781276a4fbd08463418838a0, type: 3}
+    - target: {fileID: 8815236691316285701, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815236691316285701, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815236691316285701, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815236691316285701, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815236691316285701, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815236691316285701, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
