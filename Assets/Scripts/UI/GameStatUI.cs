@@ -20,13 +20,13 @@ public class GameStatUI : MonoBehaviour
             transform.Find("StartButton").gameObject.SetActive(true);
         }
         else if (classicalSpawner != null) {
-            msg = "Defend Against Attacking Enemies!\nEnemy Left: ";
+            msg = "Defend your home!\nEnemy Left: ";
             msg += classicalSpawner.GetEnemiesLeftString();
             txt.alignment = TextAnchor.UpperLeft;
             transform.Find("StartButton").gameObject.SetActive(false);
         }
         else if (bossHP != null) {
-            msg = "Defeat the boss to win!\nBOSS HP: ";
+            msg = "defeat the boss!\nBOSS HP: ";
             msg += bossHP.GetHPString();
             txt.alignment = TextAnchor.UpperLeft;
             transform.Find("StartButton").gameObject.SetActive(false);
