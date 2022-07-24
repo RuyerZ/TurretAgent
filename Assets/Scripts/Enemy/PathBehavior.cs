@@ -65,4 +65,37 @@ public class PathBehavior : MonoBehaviour {
         _Anim.SetInteger("State", (int)state);
         _LastPoint = transform.position;
     }
+
+    private float _TempSpeed;
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        //  减速塔
+        if (other.CompareTag("DecelerateTurret"))
+        {
+            if (_DecelerateIE != null)
+            {
+                StopCoroutine(_DecelerateIE);
+                pathSpeed = _TempSpeed;
+            }
+            _TempSpeed = pathSpeed;
+            _DecelerateIE = StartCoroutine(IE_Decelerate(other.GetComponentInParent<DecelerateTurretBehavior>()));
+        }
+    }
+
+    private Coroutine _DecelerateIE;
+    //  减速处理协程
+    private IEnumerator IE_Decelerate(DecelerateTurretBehavior turret)
+    {
+        if (turret == null) { yield break; }
+
+        pathSpeed *= Mathf.Clamp01((1 - turret.DecelerateRatio));
+        yield return new WaitForSeconds(turret.DecelerateTime);
+        pathSpeed = _TempSpeed;
+    }
+
+    private void OnDestroy()
+    {
+        if (_DecelerateIE != null) { StopCoroutine(_DecelerateIE); }
+    }
+
 }
