@@ -427,6 +427,7 @@ MonoBehaviour:
   WinUI: {fileID: 1944312812}
   LoseUI: {fileID: 1944312809}
   UpgradeUI: {fileID: 1944312808}
+  PauseUI: {fileID: 0}
   isPaused: 0
   Gold: 0
 --- !u!1 &661929297
@@ -1094,6 +1095,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1377445775, guid: 24eabf3667691d14ea9db097be6aea2b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2287037542495131637, guid: 24eabf3667691d14ea9db097be6aea2b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
