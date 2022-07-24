@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameStatUI : MonoBehaviour
 {
     public ClassicalEnemySpawner classicalSpawner = null;
-    public InfinityEnemySpawner infinitySpawner = null;
+    public EnemyHPBehavior bossHP = null;
 
     // Update is called once per frame
     void Update()
@@ -25,7 +25,16 @@ public class GameStatUI : MonoBehaviour
             txt.alignment = TextAnchor.UpperLeft;
             transform.Find("StartButton").gameObject.SetActive(false);
         }
+        else if (bossHP != null) {
+            msg = "Defeat the boss to win!\nBOSS HP: ";
+            msg += bossHP.GetHPString();
+            txt.alignment = TextAnchor.UpperLeft;
+            transform.Find("StartButton").gameObject.SetActive(false);
+        }
 
         txt.text = msg;
+    }
+    void onStartBtnClick() {
+        GameManager.sTheGlobalBehavior.StartWave();
     }
 }

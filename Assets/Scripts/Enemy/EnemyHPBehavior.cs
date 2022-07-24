@@ -60,4 +60,7 @@ public class EnemyHPBehavior : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+    public string GetHPString() {
+        return (currentHP.ToString() + " / " + maxHP.ToString());
+    }
 }

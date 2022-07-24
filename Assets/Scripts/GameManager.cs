@@ -70,21 +70,23 @@ public class GameManager : MonoBehaviour {
         }
         mHPBar.Set(mBaseHP/mMaxBaseHP);
     }
+
+    //before game start
+    public void Prepare() {
+        isPrepare = true;
+        mPathSystem.gameObject.SetActive(false);
+    }
+    public void StartWave() {
+        isPrepare = false;
+        mPathSystem.gameObject.SetActive(true);
+    }
     public void Pause() {
         isPaused = true;
         Time.timeScale = 0;
         mHero.gameObject.SetActive(false);
         mPathSystem.gameObject.SetActive(false);
     }
-    //before game start
-    public void Prepare() {
-        isPrepare = true;
-        mPathSystem.gameObject.SetActive(false);
-    }
-    public void startWave() {
-        isPrepare = false;
-        mPathSystem.gameObject.SetActive(true);
-    }
+    
     public bool GetIsPrepare() {
         return isPrepare;
     }
