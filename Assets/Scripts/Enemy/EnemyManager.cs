@@ -6,13 +6,20 @@ using UnityEngine.UI;
 public class EnemyManager
 {
     public HashSet<GameObject> mEnemies = new HashSet<GameObject>();
+    private int enemiesDefeated = 0;
+
     public void AddEnemy(GameObject enemy)
     {
         mEnemies.Add(enemy);
     }
     public void RemoveEnemy(GameObject enemy)
     {
+        enemiesDefeated++;
         mEnemies.Remove(enemy);
+    }
+    public int GetEnemiesDefeated()
+    {
+        return enemiesDefeated;
     }
     public void RemoveAllEnemies()
     {

@@ -10,6 +10,7 @@ interface ItemInterface
     void Fire();
     Sprite getIcon();
     int getItemCount();
+    void setItemCount(int count);
 }
 
 public abstract class ItemBase : MonoBehaviour, ItemInterface
@@ -56,5 +57,6 @@ public abstract class ItemBase : MonoBehaviour, ItemInterface
         //transform.position = pos;
     }
     public int getItemCount() { return itemCount;}
+    public void setItemCount(int count) { itemCount = count; }
     public virtual void Fire() {}
 }

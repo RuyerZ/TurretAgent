@@ -6,7 +6,12 @@ using UnityEngine.UI;
 public class ItemSelectButton : MonoBehaviour
 {
     public GameObject mSelectedEffect;
+    public string mItemName;
+    public int mItemCount;
     public float mPrice = 1.0f;
+    public bool isInfinity = false;
+    public bool isTurret = false;
+    public GameObject Prefab;
     private int mItemIndex;
     private bool mSold = false;
     private ShopMenu mShopMenu;
@@ -19,7 +24,17 @@ public class ItemSelectButton : MonoBehaviour
         mButton = GetComponentInChildren<Button>();
 
         mText = mButton.GetComponentInChildren<Text>();
-        mText.text = mPrice.ToString() + " $";
+        if (mItemName.Length == 0) {
+            SetWindowActive(false);
+            mButton.interactable = false;
+            mSold = true;
+        }
+        mText.text = mItemName;
+        if (mItemCount > 0) {
+            mText.text += " x" + mItemCount;
+        }
+        mText.text += " ";
+        mText.text += mPrice.ToString() + " $";
     }
 
     // Update is called once per frame
@@ -36,12 +51,26 @@ public class ItemSelectButton : MonoBehaviour
     {
         mSelectedEffect.SetActive(active);
     }
-
-    public void SetSold()
+    public bool InnerBuy() {
+        if (!isTurret) {
+            return GameManager.sTheGlobalBehavior.mHero.gameObject.GetComponent<PlayerItemBehavior>().AddItem(mItemName, mItemCount);
+        } else {
+            Vector3 pos = GameManager.sTheGlobalBehavior.mHero.transform.position;
+            Quaternion rot = GameManager.sTheGlobalBehavior.mHero.transform.rotation;
+            Instantiate(Prefab, pos, rot);
+            return true;
+        }
+    }
+    public bool SetSold()
     {
-        SetWindowActive(false);
-        mButton.interactable = false;
-        mSold = true;
+        bool success = InnerBuy();
+        if (!success) return false;
+        if (!isInfinity) {
+            SetWindowActive(false);
+            mButton.interactable = false;
+            mSold = true;
+        }
+        return true;
     }
 
     public void OnClick()

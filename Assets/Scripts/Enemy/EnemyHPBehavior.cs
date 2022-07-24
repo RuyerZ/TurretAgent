@@ -15,30 +15,55 @@ public class EnemyHPBehavior : MonoBehaviour {
         }
     }
     void CollisionCheck(GameObject o) {
-        if (o.GetComponent<FriendBulletBehavior>() != null) {
-            FriendBulletBehavior f = o.GetComponent<FriendBulletBehavior>();
+        // Update HP Bar
+        FriendBulletBehavior f = o.GetComponent<FriendBulletBehavior>();
+        //  子弹
+        if (f != null)
+        {
             currentHP -= f.getDmg(gameObject);
-
-            // Update HP Bar
-            HPBar hp = GetComponentInChildren<HPBar>();
-            if (hp != null)
-                hp.Set(currentHP / maxHP);
-
-            if (currentHP <= 0) 
+            if (currentHP <= 0)
                 f.onKill(gameObject);
             f.onHit(gameObject);
-            if (currentHP <= 0) {
-                GameManager.sTheGlobalBehavior.mEnemyManager.RemoveEnemy(gameObject);
-                GameManager.sTheGlobalBehavior.AddGold(Gold);
-                if (DefeatToWin) {
-                    GameManager.sTheGlobalBehavior.GameWin();
-                }
-                Destroy(gameObject);
+
+            UpdateHP();
+        }
+    }
+
+    //  检测塔的攻击
+    private void CheckTurretHit(Collider2D other)
+    {
+        //  AOE塔
+        if (other.CompareTag("RadiusTurret"))
+        {
+           var turret =  other.GetComponentInParent<RadiusTurretBehavior>();
+            if (turret != null)
+            {
+                currentHP -= turret.AttackDamage;
+                UpdateHP();
             }
         }
     }
+
+    //  更新生命
+    private void UpdateHP()
+    {
+        HPBar hp = GetComponentInChildren<HPBar>();
+        if (hp != null) { hp.Set(currentHP / maxHP); }
+        if (currentHP <= 0)
+        {
+            GameManager.sTheGlobalBehavior.mEnemyManager.RemoveEnemy(gameObject);
+            GameManager.sTheGlobalBehavior.AddGold(Gold);
+            if (DefeatToWin)
+            {
+                GameManager.sTheGlobalBehavior.GameWin();
+            }
+            Destroy(gameObject);
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D other) {
         CollisionCheck(other.gameObject);
+        CheckTurretHit(other);
     }
     void OnCollisionEnter2D(Collision2D other) {
         CollisionCheck(other.gameObject);
@@ -59,5 +84,8 @@ public class EnemyHPBehavior : MonoBehaviour {
             }
             Destroy(gameObject);
         }
+    }
+    public string GetHPString() {
+        return (currentHP.ToString() + " / " + maxHP.ToString());
     }
 }

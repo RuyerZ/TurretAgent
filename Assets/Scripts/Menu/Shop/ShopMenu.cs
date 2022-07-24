@@ -18,7 +18,6 @@ public class ShopMenu : MonoBehaviour
     private int itemNumber;
     private int itemIndex = -1;
     private float itemPrice = 0.0f;
-    private float gold = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +27,7 @@ public class ShopMenu : MonoBehaviour
         for (int i = 0; i < itemNumber; i++)
             itemWindows[i].button.Index = i;
 
-        if (GameManager.sTheGlobalBehavior != null)
-            gold = GameManager.sTheGlobalBehavior.GetGold();
-
-
-        goldText.text = "GOLD: " + gold.ToString() + " $";
+        goldText.text = "GOLD: " + GameManager.sTheGlobalBehavior.Gold.ToString() + " $";
     }
 
     // Update is called once per frame
@@ -40,14 +35,14 @@ public class ShopMenu : MonoBehaviour
     {
         buyButton.interactable = IsItemAvailable();
 
-        goldText.text = "GOLD: " + gold.ToString() + " $";
+        goldText.text = "GOLD: " + GameManager.sTheGlobalBehavior.Gold.ToString() + " $";
     }
 
     private bool IsItemAvailable()
     {
         return (itemIndex >= 0)
             && (!itemWindows[itemIndex].button.IsSold)
-            && (itemPrice <= gold);
+            && (itemPrice <= GameManager.sTheGlobalBehavior.Gold);
     }
 
     public void Select(int index)
@@ -70,10 +65,9 @@ public class ShopMenu : MonoBehaviour
         if (IsItemAvailable())
         {
             Debug.Log("Buy Item " + itemIndex.ToString());
-            itemWindows[itemIndex].button.SetSold();
-
-            gold -= itemPrice;
-            GameManager.sTheGlobalBehavior.SetGold(gold);
+            if (itemWindows[itemIndex].button.SetSold()) {
+                GameManager.sTheGlobalBehavior.Gold -= itemPrice;
+            }
         }
     }
 

@@ -6,5 +6,23 @@ using UnityEngine;
 
 public class TurretAttackBase : MonoBehaviour
 {
-    
+    public AudioSource shootAudio;
+
+    public float _AttackRadius;
+    public float _AttackDamage;
+    public float _AttackInterval;
+    protected float _AttackIntervalReset;    
+
+    public float GetAttackRadius()
+    {
+        return _AttackRadius;
+    }
+    public float GetAttackDamage()
+    {
+        return _AttackDamage;
+    }
+    public float GetAttackInterval()
+    {
+        return _AttackInterval;
+    }
 }
