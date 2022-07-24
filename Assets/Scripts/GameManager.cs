@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour {
     public GameObject PauseUI = null;
     private float mBaseHP;
     public bool isPaused = false;
+    // to be change for level specific
     private bool isPrepare = false;
     public bool isDefend = true;
 
