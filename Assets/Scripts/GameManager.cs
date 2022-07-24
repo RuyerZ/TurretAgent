@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour {
     }
 
     //before game start
+    //TO BE FIXED
     public void Prepare() {
         isPrepare = true;
         mPathSystem.gameObject.SetActive(false);
