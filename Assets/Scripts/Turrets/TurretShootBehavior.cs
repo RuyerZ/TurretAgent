@@ -4,21 +4,14 @@ using UnityEngine;
 
 public class TurretShootBehavior : TurretAttackBase
 {
-    public AudioSource shootAudio;
     public FriendBulletBehavior _BulletPre;
     public Transform _Gun;
     public Transform _Muzzle;
     public Transform _RadiusItem;
 
-    public float _AttackRadius;
-    public float _AttackDamage = 1f;
-    public float _AttackInterval = 0.3f;
-    public float _AttackIntervalReset;
-
     private Transform _Target;
-
     private void Awake()
-    {
+    { 
         _AttackIntervalReset = _AttackInterval;
     }
 
@@ -65,16 +58,16 @@ public class TurretShootBehavior : TurretAttackBase
 
     private void AttackUpdate()
     {
-        if (_AttackInterval > 0)
+        if (_AttackIntervalReset > 0)
         {
-            _AttackInterval -= Time.deltaTime;
+            _AttackIntervalReset -= Time.deltaTime;
         }
         else
         {
             if (_Target != null)
             {
                 shootAudio.Play();
-                _AttackInterval = _AttackIntervalReset;
+                _AttackIntervalReset = _AttackInterval;
 
                 GetBullet().Fire();
                 OnFireBullet();
