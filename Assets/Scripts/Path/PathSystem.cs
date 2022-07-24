@@ -65,7 +65,7 @@ public class PathSystem : MonoBehaviour
     private Dictionary<string, Path> mPathDict;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         InitPathDict();
         /*for (float i = 0.0f; i < 8.0f; i += 0.1f)
