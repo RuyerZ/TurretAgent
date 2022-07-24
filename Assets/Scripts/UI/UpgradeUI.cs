@@ -10,7 +10,7 @@ public class UpgradeUI : MonoBehaviour {
 
     public void Close() {
         gameObject.SetActive(false);
-        GameManager.sTheGlobalBehavior.Resume();
+        GameManager.sTheGlobalBehavior.Resume("upgrade");
     }
     void OnDisable() {
         turretUpgradeBehavior = null;
@@ -23,7 +23,7 @@ public class UpgradeUI : MonoBehaviour {
         UpdateUI();
     }
     public void CloseUI() {
-        GameManager.sTheGlobalBehavior.Resume();
+        GameManager.sTheGlobalBehavior.Resume("upgrade");
         gameObject.SetActive(false);
     }
     public void SetTurret(GameObject t) {

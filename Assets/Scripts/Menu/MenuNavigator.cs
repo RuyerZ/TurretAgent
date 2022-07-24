@@ -30,7 +30,7 @@ public class MenuNavigator : MonoBehaviour
         SceneManager.LoadScene("MenuScene");
     }
     public void CloseUI(GameObject o) {
-        GameManager.sTheGlobalBehavior.Resume();
+        GameManager.sTheGlobalBehavior.Resume("pause");
         o.SetActive(false);
     }
 }
