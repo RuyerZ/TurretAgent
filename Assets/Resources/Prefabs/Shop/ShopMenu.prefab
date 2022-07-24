@@ -793,7 +793,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3098285502972790461, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Name
-      value: Item 7
+      value: Item 7 RadiusTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: Prefab
+      value: 
+      objectReference: {fileID: 7823742287485519402, guid: 00c8d059e47628f479560bfd98707d90, type: 3}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mPrice
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: isTurret
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mItemName
+      value: RadiusTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mItemCount
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7613279108051396609, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Pivot.x
@@ -906,11 +926,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3098285502972790461, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Name
-      value: Item 3
+      value: Item 3 Mine
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mPrice
-      value: 4
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: isTurret
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mItemName
+      value: Mine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: isInfinity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mItemCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemIndex
@@ -1027,11 +1063,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3098285502972790461, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Name
-      value: Item 4
+      value: Item 4 Rocket
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mPrice
-      value: 4
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: isTurret
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mItemName
+      value: Rocket
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: isInfinity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mItemCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemIndex
@@ -1148,7 +1200,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3098285502972790461, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Name
-      value: Item 5
+      value: Item 5 Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: Prefab
+      value: 
+      objectReference: {fileID: 9015699204102001418, guid: 24eabf3667691d14ea9db097be6aea2b, type: 3}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mPrice
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: isTurret
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mItemName
+      value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mItemCount
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7613279108051396609, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Pivot.x
@@ -1261,11 +1333,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3098285502972790461, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Name
-      value: Item 2
+      value: Item 2 MachineGun
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mPrice
-      value: 3
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mItemName
+      value: MachineGun
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mItemCount
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemIndex
@@ -2068,11 +2148,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3098285502972790461, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Name
-      value: Item 1
+      value: Item 1 Rifle
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mPrice
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mItemName
+      value: Rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mItemCount
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemIndex
@@ -2189,7 +2277,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3098285502972790461, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Name
-      value: Item 6
+      value: Item 6 Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: Prefab
+      value: 
+      objectReference: {fileID: 9015699204102001418, guid: 24eabf3667691d14ea9db097be6aea2b, type: 3}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mPrice
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: isTurret
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mItemName
+      value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mItemCount
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7613279108051396609, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Pivot.x
@@ -2532,7 +2640,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3098285502972790461, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Name
-      value: Item 0 Rifle
+      value: Item 0 Pistol
       objectReference: {fileID: 0}
     - target: {fileID: 6695140558397681894, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_CullTransparentMesh
@@ -2540,11 +2648,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mPrice
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemName
-      value: Rifle
+      value: Pistol
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemCount
@@ -2891,7 +2999,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3098285502972790461, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Name
-      value: Item 8
+      value: Item 8 GrapeTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: Prefab
+      value: 
+      objectReference: {fileID: 9015699204102001418, guid: ecfa24659685c8a42ae9452547a835b9, type: 3}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mPrice
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: isTurret
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mItemName
+      value: GrapeTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: mItemCount
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7613279108051396609, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Pivot.x
