@@ -12,7 +12,7 @@ public class Tutorial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.sTheGlobalBehavior.Pause();
+        GameManager.sTheGlobalBehavior.Pause("tutorial");
         transform.Find("Slide" + currentSlide.ToString()).gameObject.SetActive(true);
         transform.Find("Background").gameObject.SetActive(true);
         isActive = true;
@@ -25,7 +25,7 @@ public class Tutorial : MonoBehaviour
             NextSlide();
         }
         if (GameManager.sTheGlobalBehavior.Gold >= minBuyGold && !trigger) {
-            GameManager.sTheGlobalBehavior.Pause();
+            GameManager.sTheGlobalBehavior.Pause("tutorial");
             transform.Find("Slide" + currentSlide.ToString()).gameObject.SetActive(true);
             transform.Find("Background").gameObject.SetActive(true);
             trigger = true;
@@ -37,7 +37,7 @@ public class Tutorial : MonoBehaviour
         transform.Find("Slide" + currentSlide.ToString()).gameObject.SetActive(false);
 
         if (currentSlide >= 8) {
-            GameManager.sTheGlobalBehavior.Resume();
+            GameManager.sTheGlobalBehavior.Resume("tutorial");
             isActive = false;
             transform.Find("Background").gameObject.SetActive(false);
             currentSlide++;

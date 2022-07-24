@@ -114,7 +114,7 @@ public class PlayerTurretBehavior : MonoBehaviour
     }
     void handleUpgradeTurret()
     {
-        GameManager.sTheGlobalBehavior.Pause();
+        GameManager.sTheGlobalBehavior.Pause("upgrade");
         GameManager.sTheGlobalBehavior.UpgradeUI.GetComponent<UpgradeUI>().SetTurret(turret);
         GameManager.sTheGlobalBehavior.UpgradeUI.SetActive(true);
 
