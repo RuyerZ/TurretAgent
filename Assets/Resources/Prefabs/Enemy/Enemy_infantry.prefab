@@ -268,6 +268,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 5
+  Gold: 1
+  DefeatToWin: 0
 --- !u!61 &4348446996672904322
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -306,7 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 388f33ce3e5925845ab2241a46b3bbd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 2371533233397772053, guid: e533f0f5ae28cef468125a30dbc9d9e3, type: 3}
+  bulletPrefab: {fileID: 2371533233397772053, guid: d31dfd5b5d4431b4cb66b9f5ab8ae5d8, type: 3}
   shootAudio: {fileID: 2056835814926436260}
   mShootCooldown: 1
   mShootFromRadius: 0.7
