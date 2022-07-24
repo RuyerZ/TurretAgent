@@ -12,8 +12,9 @@ public class TurretHPBehavior : MonoBehaviour {
     public void TakeDamage(float damage) {
         currentHP -= damage;
         if (currentHP <= 0) {
+            currentHP = 0;
             gameObject.GetComponent<TurretShootBehavior>().enabled = false;
-            GameManager.sTheGlobalBehavior.mFriendManager.RemoveTurret(gameObject);
+            //GameManager.sTheGlobalBehavior.mFriendManager.RemoveTurret(gameObject);
         }
     }
     public void Repair(float repair) {
@@ -23,7 +24,7 @@ public class TurretHPBehavior : MonoBehaviour {
         }
         if (currentHP > 0) {
             gameObject.GetComponent<TurretShootBehavior>().enabled = true;
-            GameManager.sTheGlobalBehavior.mFriendManager.AddTurret(gameObject);
+            //GameManager.sTheGlobalBehavior.mFriendManager.AddTurret(gameObject);
         }
     }
     public float GetCurrentHP()
@@ -35,6 +36,9 @@ public class TurretHPBehavior : MonoBehaviour {
             EnemyBulletBehavior t = other.GetComponent<EnemyBulletBehavior>();
             TakeDamage(t.getDmg(gameObject));
             t.onHit(gameObject);
+            HPBar hp = GetComponentInChildren<HPBar>();
+            if (hp != null)
+                hp.Set(currentHP / maxHP);
         }
     }
     void OnTriggerEnter2D(Collider2D other) {

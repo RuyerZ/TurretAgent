@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class TurretShootUpgrageBehavior : TurretUpgradeBase {
     TurretShootBehavior _Turret;
+    TurretHPBehavior _HP;
     int levelDamage = 0;
     int levelCD = 0;
     int levelRange = 0;
     void Start() {
         _Turret = GetComponent<TurretShootBehavior>();
+        _HP = GetComponent<TurretHPBehavior>();
         Debug.Assert(_Turret != null);
+        Debug.Assert(_HP != null);
     }
     public override List<(string, float)> GetUpgrades() {
         float costDamage = 5f + 5f * levelDamage;
@@ -19,6 +22,7 @@ public class TurretShootUpgrageBehavior : TurretUpgradeBase {
             ("Damage: " + _Turret._AttackDamage.ToString("N1"), costDamage),
             ("CD: " + _Turret._AttackInterval.ToString("N2"), costCD),
             ("Range: "+ _Turret._AttackRadius.ToString("N1"),costRange),
+            ("HP: "+ _HP.maxHP.ToString("N1"),5f),
         };
     }
     public override bool Upgrade(int index) {
@@ -35,6 +39,9 @@ public class TurretShootUpgrageBehavior : TurretUpgradeBase {
             case 2:
                 _Turret._AttackRadius += 1;
                 levelRange++;
+                break;
+            case 3:
+                _HP.maxHP += 2;
                 break;
             default:
                 return false;
