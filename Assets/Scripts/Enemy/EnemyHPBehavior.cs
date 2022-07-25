@@ -6,6 +6,7 @@ public class EnemyHPBehavior : MonoBehaviour {
     public float maxHP = 5.0f;
     public float Gold = 1f;
     public bool DefeatToWin = false;
+    public float damageBlock = 0;
     private float currentHP;
     void Start() {
         currentHP = maxHP;
@@ -20,7 +21,9 @@ public class EnemyHPBehavior : MonoBehaviour {
         //  ×Óµ¯
         if (f != null)
         {
-            currentHP -= f.getDmg(gameObject);
+            float trueDmg = f.getDmg(gameObject) - damageBlock;
+            if (trueDmg < 0) trueDmg = 0;
+            currentHP -= trueDmg;
             if (currentHP <= 0)
                 f.onKill(gameObject);
             f.onHit(gameObject);
@@ -70,7 +73,10 @@ public class EnemyHPBehavior : MonoBehaviour {
     }
     public void DamageEnemy(float dmg)
     {
-        currentHP -= dmg;
+        float trueDmg = dmg - damageBlock;
+        if (trueDmg < 0) trueDmg = 0;
+        Debug.Log(trueDmg);
+        currentHP -= trueDmg;
         // Update HP Bar
         HPBar hp = GetComponentInChildren<HPBar>();
         if (hp != null)

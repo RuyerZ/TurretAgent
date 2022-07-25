@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71f5a3fb7c3ae84eb142088ae6132ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 2
+  dmg: 3
   fireforce: 20
 --- !u!212 &892899108227419295
 SpriteRenderer:

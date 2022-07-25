@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 3101218937242912319}
   - component: {fileID: 6149742329043854454}
   m_Layer: 0
-  m_Name: EnemyFast
+  m_Name: Enemy_fast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathName: path1
-  pathSpeed: 2
+  pathSpeed: 2.5
   baseDamage: 1
 --- !u!114 &3101218937242912319
 MonoBehaviour:
@@ -169,6 +169,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 5
+  Gold: 1
+  DefeatToWin: 0
+  damageBlock: 0
 --- !u!61 &6149742329043854454
 BoxCollider2D:
   m_ObjectHideFlags: 0

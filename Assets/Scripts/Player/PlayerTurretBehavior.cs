@@ -55,6 +55,9 @@ public class PlayerTurretBehavior : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E)) {
                 handleCarryTurret();
             }
+            if (Input.GetKeyDown(KeyCode.R)) {
+                handleRepairTurret();
+            }
         }
         
         if (isInRadius && !isCarried) {
@@ -114,9 +117,13 @@ public class PlayerTurretBehavior : MonoBehaviour
     }
     void handleUpgradeTurret()
     {
-        GameManager.sTheGlobalBehavior.Pause();
+        GameManager.sTheGlobalBehavior.Pause("upgrade");
         GameManager.sTheGlobalBehavior.UpgradeUI.GetComponent<UpgradeUI>().SetTurret(turret);
         GameManager.sTheGlobalBehavior.UpgradeUI.SetActive(true);
 
+    }
+    void handleRepairTurret()
+    {
+        turret.GetComponent<TurretHPBehavior>().Repair(9999);
     }
 }

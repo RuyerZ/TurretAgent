@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour {
     public GameObject PauseUI = null;
     private float mBaseHP;
     public bool isPaused = false;
+    private string pauseReason;
     // to be change for level specific
     private bool isPrepare = false;
     public bool isDefend = true;
@@ -41,11 +42,11 @@ public class GameManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             if (isPaused) {
                 PauseUI.SetActive(false);
-                Resume();
+                Resume("pause");
             }
             else {
                 PauseUI.SetActive(true);
-                Pause();
+                Pause("pause");
             }
         }
     }
@@ -53,14 +54,12 @@ public class GameManager : MonoBehaviour {
     public void GameFail() {
         if (!isGameEnd) {
             isGameEnd = true;
-            Pause();
             LoseUI.SetActive(true);
         }
     }
     public void GameWin() {
         if (!isGameEnd) {
             isGameEnd = true;
-            Pause();
             WinUI.SetActive(true);
         }
     }
@@ -82,21 +81,27 @@ public class GameManager : MonoBehaviour {
         isPrepare = false;
         mPathSystem.gameObject.SetActive(true);
     }
-    public void Pause() {
+    public bool GetIsPrepare() {
+        return isPrepare;
+    }
+    public void Pause(string t) {
+        if (isPaused) return;
         isPaused = true;
+        pauseReason = t;
         Time.timeScale = 0;
         mHero.gameObject.SetActive(false);
         mPathSystem.gameObject.SetActive(false);
     }
-    
-    public bool GetIsPrepare() {
-        return isPrepare;
-    }
-    public void Resume() {
+    public void Resume(string t) {
+        if (!isPaused) return;
+        if (t != pauseReason) return;
         isPaused = false;
         Time.timeScale = 1;
         mHero.gameObject.SetActive(true);
         if (!isPrepare) mPathSystem.gameObject.SetActive(true);
+    }
+    public string GetPausedReason() {
+        return pauseReason;
     }
     public void AddGold(float gold) 
     {
