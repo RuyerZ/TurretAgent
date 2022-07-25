@@ -899,6 +899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -1038,7 +1039,7 @@ MonoBehaviour:
   PauseUI: {fileID: 272187524}
   isPaused: 0
   isDefend: 0
-  Gold: 75
+  Gold: 30
 --- !u!1 &640883778
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,50 +1159,46 @@ MonoBehaviour:
   - code: 101
     prefab: {fileID: 5775048993590621706, guid: 5f84abb300acb8e4f97ceb4498a3ddd7, type: 3}
   phases:
-  - enemyCode: ddd
+  - enemyCode: aaaaa
     pathName: path2
-    intervalTime: 1
+    intervalTime: 2
     startTime: 5
-  - enemyCode: ccccccccc
+  - enemyCode: aaaaa
     pathName: path1
-    intervalTime: 5
-    startTime: 1
-  - enemyCode: aabaadd
+    intervalTime: 2
+    startTime: 6
+  - enemyCode: aabaadaabaa
     pathName: path2
-    intervalTime: 1
+    intervalTime: 2
     startTime: 25
-  - enemyCode: dcacad
+  - enemyCode: ccccceccccc
     pathName: path1
     intervalTime: 1
-    startTime: 50
-  - enemyCode: eebeaccaadebedd
+    startTime: 36
+  - enemyCode: eebaaaabee
     pathName: path2
-    intervalTime: 1
-    startTime: 50
-  - enemyCode: abcdabcdabcdaecddeee
+    intervalTime: 2
+    startTime: 60
+  - enemyCode: cccccdccccc
     pathName: path1
     intervalTime: 1
     startTime: 70
-  - enemyCode: dddeeeeddcccccbeaaeeee
+  - enemyCode: aadcccbeeeecccbaa
     pathName: path2
     intervalTime: 1
-    startTime: 70
-  - enemyCode: dddeeeeddcccccbeeee
+    startTime: 90
+  - enemyCode: cceccd
     pathName: path1
-    intervalTime: 1
+    intervalTime: 3
     startTime: 95
-  - enemyCode: dddeeeeddcccccbeaaeeee
-    pathName: path2
-    intervalTime: 1
-    startTime: 95
-  - enemyCode: deeeedccccceaaeeee
+  - enemyCode: baaaecccccbaaa
     pathName: path1
-    intervalTime: 1
-    startTime: 95
-  - enemyCode: deeeedccccbeaaeeee
+    intervalTime: 2
+    startTime: 130
+  - enemyCode: daaccaacceaaa
     pathName: path2
-    intervalTime: 1
-    startTime: 95
+    intervalTime: 2
+    startTime: 141
 --- !u!1 &689516607
 GameObject:
   m_ObjectHideFlags: 0
