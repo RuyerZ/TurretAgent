@@ -26,6 +26,7 @@ public class GhostFireBulletBehavior : MonoBehaviour, BulletInterface
 
     public void Update()
     {
+        if (GameManager.sTheGlobalBehavior.isPaused) return;
         // Check lifetime
         lifetime -= Time.smoothDeltaTime;
         if (lifetime <= 0)

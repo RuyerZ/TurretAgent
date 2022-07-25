@@ -769,7 +769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af720420d5f64f4fbb2d6765bf9aea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretName: Basic Tower 1
+  turretName: Basic Tower
 --- !u!1 &9015699205127807915
 GameObject:
   m_ObjectHideFlags: 0

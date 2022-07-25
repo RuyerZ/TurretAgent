@@ -26,6 +26,9 @@ public class TurretHPBehavior : MonoBehaviour {
             gameObject.GetComponent<TurretShootBehavior>().enabled = true;
             //GameManager.sTheGlobalBehavior.mFriendManager.AddTurret(gameObject);
         }
+        HPBar hp = GetComponentInChildren<HPBar>();
+        if (hp != null)
+            hp.Set(currentHP / maxHP);
     }
     public float GetCurrentHP()
     {

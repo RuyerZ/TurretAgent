@@ -100,6 +100,9 @@ public class GameManager : MonoBehaviour {
         mHero.gameObject.SetActive(true);
         if (!isPrepare) mPathSystem.gameObject.SetActive(true);
     }
+    public string GetPausedReason() {
+        return pauseReason;
+    }
     public void AddGold(float gold) 
     {
         Gold += gold;

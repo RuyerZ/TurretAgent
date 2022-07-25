@@ -221,5 +221,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a94b62a26d7fd94fbc6ce6307b694a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 1
-  fireforce: 15
+  dmg: 0.5
+  fireforce: 4

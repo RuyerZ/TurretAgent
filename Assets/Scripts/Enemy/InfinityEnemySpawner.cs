@@ -88,7 +88,7 @@ public class InfinityEnemySpawner : MonoBehaviour
         mCurrentTime += Time.smoothDeltaTime;
         if (GameManager.sTheGlobalBehavior.mEnemyManager.IsEmpty())
         {
-            mCurrentTime += Time.smoothDeltaTime * 1f; // Speed 1x up
+            mCurrentTime += Time.smoothDeltaTime * 1.5f; // Speed 1x up
         }
         if (!isSequenceLoop)
         {

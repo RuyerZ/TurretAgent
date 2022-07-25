@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 9058740811563748877}
   - component: {fileID: 6364994032351552725}
   m_Layer: 0
-  m_Name: 'Enemy_grape '
+  m_Name: Enemy_grape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,6 +140,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 5
+  Gold: 1
+  DefeatToWin: 0
+  damageBlock: 0
 --- !u!61 &4868100437123468206
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -180,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2371533233397772053, guid: faabd1d2ec69e4f4181f1b6d98e7637e, type: 3}
   shootAudio: {fileID: 7159992548656394376}
-  mShootCooldown: 1
+  mShootCooldown: 2
   mShootFromRadius: 0.7
   offsetAngle: 30
 --- !u!82 &6364994032351552725

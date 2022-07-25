@@ -50,8 +50,6 @@ public class RepairTool : ItemBase
         Vector2 turretPosition = turretHP.transform.position;
 
         if (Vector2.Distance(toolPosition,turretPosition) > repairRadius) {
-            Debug.Log("too far!");
-            Debug.Log(Vector2.Distance(toolPosition,turretPosition));
             return;
         }
         if (itemCount <= 0) return;
@@ -73,7 +71,6 @@ public class RepairTool : ItemBase
 
         turretHP.Repair(repairRate);
         itemCount--;
-        Debug.Log(itemCount);
 
         timeStamp = Time.time + repairTime;
     }
