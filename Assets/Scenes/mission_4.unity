@@ -1018,7 +1018,7 @@ MonoBehaviour:
   PauseUI: {fileID: 1037969204}
   isPaused: 0
   isDefend: 1
-  Gold: 200
+  Gold: 120
 --- !u!1 &661929297
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,7 +1111,7 @@ MonoBehaviour:
   - code: 103
     prefab: {fileID: 8719160117969813799, guid: 99380a47ca3593d4c9ecdffcc4bec015, type: 3}
   phases:
-  - enemyCode: e
+  - enemyCode: aa
     pathName: path1
     intervalTime: 1
     startTime: 5
@@ -1419,11 +1419,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 923127007164698265, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.8035307
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 923127007164698265, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9618669
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 923127007164698265, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1895,7 +1895,6 @@ MonoBehaviour:
     - {fileID: 908463711}
     - {fileID: 675566116}
     - {fileID: 971879957}
-    - {fileID: 675566116}
     - {fileID: 402381049}
     - {fileID: 727098705}
     - {fileID: 119722834}
@@ -2703,6 +2702,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534902900}
   m_CullTransparentMesh: 1
+--- !u!114 &1552922911 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 858493326, guid: e68e50fd55472cc4484843464683ae36, type: 3}
+  m_PrefabInstance: {fileID: 2011708534}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b5296e560cb60140bdd99e87298daca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1561813782 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1594881944, guid: e68e50fd55472cc4484843464683ae36, type: 3}
@@ -3190,7 +3200,7 @@ PrefabInstance:
     - target: {fileID: 1594881945, guid: e68e50fd55472cc4484843464683ae36, type: 3}
       propertyPath: barItems.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1552922911}
     - target: {fileID: 1594881945, guid: e68e50fd55472cc4484843464683ae36, type: 3}
       propertyPath: barItems.Array.data[1]
       value: 

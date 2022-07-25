@@ -151,7 +151,7 @@ MonoBehaviour:
   maxHP: 20
   Gold: 10
   DefeatToWin: 0
-  damageBlock: 3
+  damageBlock: 0.8
 --- !u!61 &6149742329043854454
 BoxCollider2D:
   m_ObjectHideFlags: 0
