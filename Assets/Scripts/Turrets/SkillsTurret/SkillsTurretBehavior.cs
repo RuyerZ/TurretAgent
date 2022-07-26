@@ -52,6 +52,7 @@ public abstract class SkillsTurretBehavior : TurretAttackBase
     private void Update()
     {
         CoolingUpdate();
+        UpdateRadius(_AttackRadius);
     }
 
     public void UpdateRadius(float radius)

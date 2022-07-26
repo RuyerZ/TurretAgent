@@ -62,7 +62,7 @@ public class DecelerateTowerUpgradeBehavior : TurretUpgradeBase {
                 next = _Turret._DecelerateTime + 0.5f;
                 break;
             case 2:
-                next = _Turret._AttackRadius + 1;
+                next = _Turret._AttackRadius + 0.3f;
                 break;
             case 3:
                 next = _HP.maxHP + 5;
