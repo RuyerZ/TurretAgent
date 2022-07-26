@@ -138,6 +138,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 5
+  Gold: 4
+  DefeatToWin: 0
+  damageBlock: 0
 --- !u!61 &931609592971584102
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -177,6 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 0}
+  shootAudio: {fileID: 0}
   mShootCooldown: 1
   mShootFromRadius: 0.7
 --- !u!82 &6961415224649857160

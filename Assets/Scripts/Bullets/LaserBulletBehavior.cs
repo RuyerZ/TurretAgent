@@ -8,6 +8,7 @@ public class LaserBulletBehavior : EnemyBulletBehavior
     public float mStartTime = 4.0f;
     public float mDestroyTime = 16.0f;
     private SpriteRenderer mSprite;
+    private BoxCollider2D mBoxCollider;
     private float mDamage = 0.0f;
     private float mTimer = 0.0f;
     private bool mStart = false;
@@ -15,12 +16,18 @@ public class LaserBulletBehavior : EnemyBulletBehavior
     public void Start()
     {
         mSprite = GetComponentInChildren<SpriteRenderer>();
+        mBoxCollider = GetComponent<BoxCollider2D>();
+
         if (mSprite != null)
         {
             Color color = mSprite.color;
             color.a = 0.5f;
             mSprite.color = color;
         }
+
+        if (mBoxCollider != null)
+            mBoxCollider.enabled = false;
+
         mDamage = dmg;
         dmg = 0f;
     }
@@ -38,6 +45,9 @@ public class LaserBulletBehavior : EnemyBulletBehavior
                 color.a = 1f;
                 mSprite.color = color;
             }
+            if (mBoxCollider != null)
+                mBoxCollider.enabled = true;
+
             mStart = true;
             dmg = mDamage;
         }
@@ -46,7 +56,13 @@ public class LaserBulletBehavior : EnemyBulletBehavior
     }
     public override void Fire()
     {
-        transform.localRotation = Quaternion.Euler(0, 0, 90);
+        if (GameManager.sTheGlobalBehavior.mHero != null)
+        {
+            Vector3 target = GameManager.sTheGlobalBehavior.mHero.transform.position;
+            Vector2 direction = target - transform.position;
+            transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90f + Random.Range(-30f, 30f));
+        }
+        else transform.localRotation = Quaternion.Euler(0, 0, 90);
     }
     public override void onHit(GameObject o)
     {

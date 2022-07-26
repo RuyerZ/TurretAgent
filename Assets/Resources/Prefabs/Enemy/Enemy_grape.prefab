@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 5
-  Gold: 2
+  Gold: 8
   DefeatToWin: 0
   damageBlock: 0
 --- !u!61 &4868100437123468206
@@ -186,6 +186,7 @@ MonoBehaviour:
   mShootCooldown: 2
   mShootFromRadius: 0.7
   offsetAngle: 30
+  bulletFactor: 1
 --- !u!82 &6364994032351552725
 AudioSource:
   m_ObjectHideFlags: 0
