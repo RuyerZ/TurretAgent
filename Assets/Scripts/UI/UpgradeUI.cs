@@ -46,8 +46,14 @@ public class UpgradeUI : MonoBehaviour {
                 upgradeUI.Find("AfterUpgrade").GetComponentInChildren<Text>().text = upgrades[i].Item3;
 
                 float cost = upgrades[i].Item4;
-                if (cost < 0) upgradeUI.Find("UpgradeButton").GetComponentInChildren<Text>().text = "∞";
-                else upgradeUI.Find("UpgradeButton").GetComponentInChildren<Text>().text = "$" + upgrades[i].Item4.ToString("#.#");
+                if (cost < 0) {
+                    upgradeUI.Find("UpgradeButton").GetComponentInChildren<Text>().text = "∞";
+                    upgradeUI.Find("UpgradeButton").GetComponent<Button>().interactable = false;
+                }
+                else {
+                    upgradeUI.Find("UpgradeButton").GetComponentInChildren<Text>().text = "$" + upgrades[i].Item4.ToString("#.#");
+                    upgradeUI.Find("UpgradeButton").GetComponent<Button>().interactable = true;
+                }
             }
         }
 
