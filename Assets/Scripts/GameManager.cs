@@ -70,6 +70,11 @@ public class GameManager : MonoBehaviour {
         }
         mHPBar.Set(mBaseHP/mMaxBaseHP);
     }
+    public void AddBaseHP(float heal) {
+        mBaseHP += heal;
+        if (mBaseHP > mMaxBaseHP) mBaseHP = mMaxBaseHP;
+        mHPBar.Set(mBaseHP/mMaxBaseHP);
+    }
 
     //before game start
     //TO BE FIXED
