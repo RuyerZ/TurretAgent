@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 5
-  Gold: 1
+  Gold: 3
   DefeatToWin: 0
   damageBlock: 0
 --- !u!61 &6149742329043854454

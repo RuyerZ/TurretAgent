@@ -1899,7 +1899,7 @@ MonoBehaviour:
   mSelectedEffect: {fileID: 6232081457343626896}
   mItemName: EMP Turret
   mItemCount: 1
-  mPrice: 100
+  mPrice: 70
   MaxBuyCount: 1
   TurretPrefab: {fileID: 4221876540520457419, guid: 72a303843fea5874bbd23d8f675ad101, type: 3}
 --- !u!1 &6232081457343626896 stripped
@@ -2440,7 +2440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mPrice
-      value: 100
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemName
@@ -3269,7 +3269,7 @@ MonoBehaviour:
   mSelectedEffect: {fileID: 8838624318500565398}
   mItemName: AOE Turret
   mItemCount: 1
-  mPrice: 50
+  mPrice: 70
   MaxBuyCount: 1
   TurretPrefab: {fileID: 7823742287485519402, guid: 00c8d059e47628f479560bfd98707d90, type: 3}
 --- !u!224 &5223745675256335319 stripped
@@ -3749,7 +3749,7 @@ MonoBehaviour:
   mSelectedEffect: {fileID: 8141478728372390543}
   mItemName: Grape Turret
   mItemCount: 1
-  mPrice: 100
+  mPrice: 65
   MaxBuyCount: 1
   TurretPrefab: {fileID: 9015699204102001418, guid: ecfa24659685c8a42ae9452547a835b9, type: 3}
 --- !u!224 &4767965354140954830 stripped
@@ -3932,7 +3932,7 @@ MonoBehaviour:
   mSelectedEffect: {fileID: 8130269343448548478}
   mItemName: Turret
   mItemCount: 1
-  mPrice: 60
+  mPrice: 40
   MaxBuyCount: 1
   TurretPrefab: {fileID: 9015699204102001418, guid: 24eabf3667691d14ea9db097be6aea2b, type: 3}
 --- !u!224 &4756896434396479039 stripped

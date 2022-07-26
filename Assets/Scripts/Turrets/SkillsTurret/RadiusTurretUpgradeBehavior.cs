@@ -63,7 +63,7 @@ public class RadiusTurretUpgradeBehavior : TurretUpgradeBase {
                 next = _Turret._CoolingTimelReset * 0.8f;
                 break;
             case 2:
-                next = _Turret._AttackRadius + 1;
+                next = _Turret._AttackRadius + 0.3f;
                 break;
             case 3:
                 next = _HP.maxHP + 5;
