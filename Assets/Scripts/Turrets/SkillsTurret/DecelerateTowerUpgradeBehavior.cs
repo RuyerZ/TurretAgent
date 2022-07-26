@@ -25,6 +25,8 @@ public class DecelerateTowerUpgradeBehavior : TurretUpgradeBase {
             string nextUpgrade = getNextUpgradeString(i);
             float cost = initCosts[i] + currentLevels[i] * costFactors[i];
 
+            if (currentLevels[i] >= maxLevels[i]) cost = -999;
+
             l.Add((lvlString,upgradeText,nextUpgrade,cost));
         }
         return l;
