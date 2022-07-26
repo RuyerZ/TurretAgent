@@ -86,7 +86,11 @@ public class ExplodeEnemyBehavior : MonoBehaviour
 
         HPBar hp = GetComponentInChildren<HPBar>();
         hp.gameObject.SetActive(false);
-
+        PathBehavior enemy_move = GetComponent<PathBehavior>();
+        if (enemy_move != null)
+        {
+            enemy_move.enabled = false;
+        }
 
         //  伤害
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, explosionRadius, Vector3.zero);
