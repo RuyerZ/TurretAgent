@@ -155,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmg: 2
   fireforce: 0
-  mStartTime: 3
+  mStartTime: 3.5
   mDestroyTime: 4
 --- !u!50 &8051989434836665398
 Rigidbody2D:

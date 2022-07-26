@@ -8,6 +8,7 @@ public class LaserBulletBehavior : EnemyBulletBehavior
     public float mStartTime = 4.0f;
     public float mDestroyTime = 16.0f;
     private SpriteRenderer mSprite;
+    private BoxCollider2D mBoxCollider;
     private float mDamage = 0.0f;
     private float mTimer = 0.0f;
     private bool mStart = false;
@@ -15,12 +16,18 @@ public class LaserBulletBehavior : EnemyBulletBehavior
     public void Start()
     {
         mSprite = GetComponentInChildren<SpriteRenderer>();
+        mBoxCollider = GetComponent<BoxCollider2D>();
+
         if (mSprite != null)
         {
             Color color = mSprite.color;
             color.a = 0.5f;
             mSprite.color = color;
         }
+
+        if (mBoxCollider != null)
+            mBoxCollider.enabled = false;
+
         mDamage = dmg;
         dmg = 0f;
     }
@@ -38,6 +45,9 @@ public class LaserBulletBehavior : EnemyBulletBehavior
                 color.a = 1f;
                 mSprite.color = color;
             }
+            if (mBoxCollider != null)
+                mBoxCollider.enabled = true;
+
             mStart = true;
             dmg = mDamage;
         }
