@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ExplodeEnemyBehavior : MonoBehaviour
 {
-    public float damageValue = 1f;
+    public float damageValueToPlayer = 1f;
+    public float damageValueToTower = 10f;
 
     public float explosionRadius = 3f;
     public AudioSource explodeSound;
@@ -12,10 +13,9 @@ public class ExplodeEnemyBehavior : MonoBehaviour
     private Animator Anim;
     private Collider2D Coll;
 
-    [Range(0, 10f)]
-    public float k1 = 2f;
-    public float k2 = 1f;
-    public float k3 = 1f;
+    private float k1 = 0.2f;
+    private float k2 = 0.7f;
+    private float k3 = 0.2f;
 
     private float towerDistance;
     private float pathDistance;
@@ -47,7 +47,7 @@ public class ExplodeEnemyBehavior : MonoBehaviour
         towerDistance = GetTowerDistance();
         pathDistance = pathBehavior != null ? pathBehavior.PathDistance : 0;//防止被除数等于0；
 
-        float ratio = k1 * Time.smoothDeltaTime * (float)System.Math.Tanh(k2 / k3 * towerDistance + pathDistance);
+        float ratio = k1 * Time.smoothDeltaTime * (float)System.Math.Tanh(k2 * towerDistance + k3 * pathDistance);
         //Debug.Log("概率：" + ratio);
 
         return Random.Range(0, 1f) < ratio;
@@ -97,7 +97,7 @@ public class ExplodeEnemyBehavior : MonoBehaviour
                 TurretHPBehavior turret = hits[i].collider.GetComponentInParent<TurretHPBehavior>();
                 if (turret != null)
                 {
-                    turret.TakeDamage(damageValue);
+                    turret.TakeDamage(damageValueToTower);
                 }
             }
             else if (hits[i].collider.CompareTag("Player"))
@@ -105,16 +105,13 @@ public class ExplodeEnemyBehavior : MonoBehaviour
                 PlayerHPBehavior player = hits[i].collider.GetComponentInParent<PlayerHPBehavior>();
                 if (player != null)
                 {
-                    player.TakeDamage(damageValue);
+                    player.TakeDamage(damageValueToPlayer);
                 }
             }
         }
-
     }
-
-
-    public void Destroy()
-    {
+    public void Destroy() {
+        GameManager.sTheGlobalBehavior.mEnemyManager.RemoveEnemy(gameObject);
         Destroy(gameObject);
     }
 }
