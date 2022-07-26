@@ -112,9 +112,9 @@ MonoBehaviour:
   explosionRadius: 2
   explodeSound: {fileID: 5879959044718209288}
   explodeGo: {fileID: 5879959046656236985}
-  k1: 2.11
-  k2: 100
-  k3: 1
+  k1: 0.5
+  k2: 0.7
+  k3: 0.3
 --- !u!82 &5879959044718209288
 AudioSource:
   m_ObjectHideFlags: 0
