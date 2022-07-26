@@ -599,7 +599,7 @@ MonoBehaviour:
   - button: {fileID: 3753587931053620375}
     description: {fileID: 2696332549990523187}
   - button: {fileID: 8316928585920206260}
-    description: {fileID: 0}
+    description: {fileID: 8431052655259922037}
   - button: {fileID: 7751489682433987022}
     description: {fileID: 1767310565807317357}
   buyButton: {fileID: 8319797245434267257}
@@ -1722,6 +1722,11 @@ PrefabInstance:
 --- !u!224 &5482373622825816701 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5050613852199019530, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
+  m_PrefabInstance: {fileID: 721190882379593335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8431052655259922037 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9152214879222749186, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
   m_PrefabInstance: {fileID: 721190882379593335}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &940232992212937936
@@ -5304,11 +5309,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5050613852199019530, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 142
+      value: 258.5119
       objectReference: {fileID: 0}
     - target: {fileID: 5050613852199019530, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 68
+      value: 112.3872
       objectReference: {fileID: 0}
     - target: {fileID: 5050613852199019530, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
