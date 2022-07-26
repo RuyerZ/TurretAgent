@@ -1434,11 +1434,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6418392799474520006, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Text
-      value: Mine 10$
+      value: Mine $3
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mPrice
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: isTurret
@@ -1994,7 +1994,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6418392799474520006, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Text
-      value: Rocket 15$
+      value: Rocket $15
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mPrice
@@ -2324,7 +2324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6418392799474520006, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Text
-      value: Machine Gun 50$
+      value: Machine Gun $50
       objectReference: {fileID: 0}
     - target: {fileID: 6418392799474520006, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -2857,7 +2857,7 @@ PrefabInstance:
         A bolt-action rifle, high damage but low attack
         speed.
 
-        Damage: 4.0
+        Damage: 5.0
 
         Attack Interval: 1.0'
       objectReference: {fileID: 0}
@@ -3115,14 +3115,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4137556808376485732, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_Text
-      value: 'Machine Gun
+      value: 'Machine Gun $50
 
         Shoots fast but low damage, bad against tanks.
 
         Damage:
         0.5
 
-        Attack Interval: 0.1'
+        Attack Interval: 0.08'
       objectReference: {fileID: 0}
     - target: {fileID: 5050613852199019530, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_Pivot.x
@@ -3281,11 +3281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6418392799474520006, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Text
-      value: Rifle 30$
+      value: Rifle $35
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mPrice
-      value: 15
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemName
@@ -3934,13 +3934,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4137556808376485732, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_Text
-      value: 'Mine
+      value: 'Mine $2
 
-        Place down
+        Place down on enemies'' path. Explodes on touch.
 
-        Damage: 5
+        Damage:
+        4
 
-        Radius: 3'
+        Explosion Radius: 3'
       objectReference: {fileID: 0}
     - target: {fileID: 5050613852199019530, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_Pivot.x
