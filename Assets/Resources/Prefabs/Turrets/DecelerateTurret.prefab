@@ -415,7 +415,7 @@ MonoBehaviour:
   _Explosion: {fileID: 7904412604510666796}
   _Trigger: {fileID: 9136187088655541854}
   _AnimLength: 1.167
-  _DecelerateRatio: 0.5
+  _DecelerateRatio: 0.3
   _DecelerateTime: 1
 --- !u!61 &4805529109350553620
 BoxCollider2D:

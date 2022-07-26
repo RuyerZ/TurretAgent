@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1724401810711435793}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.554, z: 0}
   m_LocalScale: {x: 1.2, y: 1.4, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2cd90c55bb372d248abdecea7587e7b5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 88897263d30870542a7e8047c7ced897, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -171,9 +171,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.083453506}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.17124078
 --- !u!114 &2166000638287311909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,8 +186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71f5a3fb7c3ae84eb142088ae6132ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 3
-  fireforce: 20
+  dmg: 5
+  fireforce: 30
 --- !u!212 &892899108227419295
 SpriteRenderer:
   m_ObjectHideFlags: 0

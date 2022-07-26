@@ -79,7 +79,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Radius Turret 80$
+  m_Text: Aoe Turret
 --- !u!1 &3098285502972790461
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,9 +139,7 @@ MonoBehaviour:
   mItemName: 
   mItemCount: 0
   mPrice: 1
-  isInfinity: 0
-  isTurret: 0
-  Prefab: {fileID: 0}
+  MaxBuyCount: -1
 --- !u!1 &3625556665633092967
 GameObject:
   m_ObjectHideFlags: 0

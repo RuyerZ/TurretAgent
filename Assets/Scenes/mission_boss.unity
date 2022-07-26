@@ -963,6 +963,7 @@ MonoBehaviour:
   PauseUI: {fileID: 1417974148}
   isPaused: 0
   isDefend: 0
+  currentLevel: 1
   Gold: 50
 --- !u!1 &724447129
 GameObject:
@@ -1947,6 +1948,10 @@ PrefabInstance:
       propertyPath: bar
       value: 
       objectReference: {fileID: 1459405237}
+    - target: {fileID: 2116251060, guid: e68e50fd55472cc4484843464683ae36, type: 3}
+      propertyPath: cooldownDuration
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 4226471582209010074, guid: e68e50fd55472cc4484843464683ae36, type: 3}
       propertyPath: m_RootOrder
       value: 5
