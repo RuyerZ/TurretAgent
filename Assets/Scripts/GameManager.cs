@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
     // to be change for level specific
     private bool isPrepare = false;
     public bool isDefend = true;
+    public int currentLevel = 1;
 
     public float Gold = 0;
 

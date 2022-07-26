@@ -102,5 +102,4 @@ public abstract class SkillsTurretBehavior : TurretAttackBase
             }
         }
     }
-
 }
