@@ -692,7 +692,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -205131167
-  m_SortingLayer: -1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d8bbcb317c911db4ab751ed23766df62, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -761,6 +761,18 @@ PrefabInstance:
     - target: {fileID: 705624274191058194, guid: baec526802fb0b949adea80719b3fdc8, type: 3}
       propertyPath: m_Name
       value: base
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548500086869452612, guid: baec526802fb0b949adea80719b3fdc8, type: 3}
+      propertyPath: maxHP
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548500086869452612, guid: baec526802fb0b949adea80719b3fdc8, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1551332955}
+    - target: {fileID: 8865430552853211643, guid: baec526802fb0b949adea80719b3fdc8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9196476567869468063, guid: baec526802fb0b949adea80719b3fdc8, type: 3}
       propertyPath: m_RootOrder
@@ -994,7 +1006,10 @@ MonoBehaviour:
   PauseUI: {fileID: 1417974148}
   isPaused: 0
   isDefend: 0
+  currentLevel: 1
   Gold: 50
+  volumeSlider: {fileID: 0}
+  source: {fileID: 0}
 --- !u!1 &724447129
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,7 +1361,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -205131167
-  m_SortingLayer: -1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: dc5853e4a32180c4d88c15b1321d0a13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2340,6 +2355,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ea8460651b37f45b30612c764613e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1551332955 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7187260351029923679, guid: baec526802fb0b949adea80719b3fdc8, type: 3}
+  m_PrefabInstance: {fileID: 377767688}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1561813782 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1594881944, guid: e68e50fd55472cc4484843464683ae36, type: 3}
