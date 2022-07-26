@@ -5,10 +5,10 @@ using UnityEngine;
 public class DecelerateTurretBehavior : SkillsTurretBehavior
 {
     [SerializeField, Range(0, 1f)]
-    public float _DecelerateRatio = 0.5f;//¼õËÙ±ÈÀý
+    public float _DecelerateRatio = 0.5f;//ï¿½ï¿½ï¿½Ù±ï¿½ï¿½ï¿½
 
     [SerializeField]
-    private float _DecelerateTime = 1f;//¼õËÙÊ±¼ä
+    public float _DecelerateTime = 1f;//ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
 
     public float DecelerateRatio
     {
