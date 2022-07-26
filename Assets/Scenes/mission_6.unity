@@ -1290,85 +1290,105 @@ MonoBehaviour:
   phases:
   - enemyCode: aaaaaaaaaa
     pathName: path5
-    intervalTime: 30
+    intervalTime: 20
     startTime: 5
-  - enemyCode: aaaaaaaaa
+  - enemyCode: cccccccccc
     pathName: path3
-    intervalTime: 30
-    startTime: 10
+    intervalTime: 20
+    startTime: 40
   - enemyCode: aaaaaaaaa
-    pathName: path1
-    intervalTime: 30
-    startTime: 10
-  - enemyCode: bcbcbcbcbcbc
     pathName: path1
     intervalTime: 20
-    startTime: 30
-  - enemyCode: bcbcbcbcbcbcbc
+    startTime: 10
+  - enemyCode: bbbbbbbbb
+    pathName: path1
+    intervalTime: 20
+    startTime: 80
+  - enemyCode: ccccccccc
     pathName: path2
     intervalTime: 20
-    startTime: 30
-  - enemyCode: dddddddd
+    startTime: 80
+  - enemyCode: ddddddddd
     pathName: path4
     intervalTime: 20
-    startTime: 50
-  - enemyCode: eeeeeeee
+    startTime: 75
+  - enemyCode: eeeeeeeee
     pathName: path2
     intervalTime: 20
-    startTime: 60
+    startTime: 70
   - enemyCode: fffff
     pathName: path1
-    intervalTime: 40
-    startTime: 80
+    intervalTime: 30
+    startTime: 120
   - enemyCode: gg
     pathName: path5
-    intervalTime: 50
+    intervalTime: 30
     startTime: 200
   - enemyCode: hhhhh
     pathName: path3
-    intervalTime: 30
+    intervalTime: 25
     startTime: 180
-  - enemyCode: 
-    pathName: 
-    intervalTime: 0
+  - enemyCode: aaaaaacc
+    pathName: path5
+    intervalTime: 1.7
+    startTime: 10
+  - enemyCode: aaabaaa
+    pathName: path4
+    intervalTime: 1
+    startTime: 35
+  - enemyCode: aabcdebcaa
+    pathName: path3
+    intervalTime: 1.5
+    startTime: 45
+  - enemyCode: eeccbhaaa
+    pathName: path2
+    intervalTime: 1
+    startTime: 70
+  - enemyCode: bbccddeeff
+    pathName: path3
+    intervalTime: 3
+    startTime: 90
+  - enemyCode: ahgha
+    pathName: path5
+    intervalTime: 2
+    startTime: 120
+  - enemyCode: faaabbcddccaaccbbeefg
+    pathName: path4
+    intervalTime: 1
+    startTime: 150
+  - enemyCode: faaabbcddccaaccbbeefg
+    pathName: path2
+    intervalTime: 1
+    startTime: 180
+  - enemyCode: haaabbchdccaacchbeefg
+    pathName: path1
+    intervalTime: 1
+    startTime: 210
+  - enemyCode: gghhgg
+    pathName: path5
+    intervalTime: 5
+    startTime: 240
+  phases_loop:
+  - enemyCode: aabbccddeeffgghh
+    pathName: path2
+    intervalTime: 1
     startTime: 0
-  - enemyCode: 
-    pathName: 
-    intervalTime: 0
+  - enemyCode: ggg
+    pathName: path1
+    intervalTime: 1
+    startTime: 10
+  - enemyCode: hhh
+    pathName: path5
+    intervalTime: 1
+    startTime: 10
+  - enemyCode: ffeeddccbbaabbccddee
+    pathName: path4
+    intervalTime: 1
     startTime: 0
-  - enemyCode: 
-    pathName: 
-    intervalTime: 0
-    startTime: 0
-  - enemyCode: 
-    pathName: 
-    intervalTime: 0
-    startTime: 0
-  - enemyCode: 
-    pathName: 
-    intervalTime: 0
-    startTime: 0
-  - enemyCode: 
-    pathName: 
-    intervalTime: 0
-    startTime: 0
-  - enemyCode: 
-    pathName: 
-    intervalTime: 0
-    startTime: 0
-  - enemyCode: 
-    pathName: 
-    intervalTime: 0
-    startTime: 0
-  - enemyCode: 
-    pathName: 
-    intervalTime: 0
-    startTime: 0
-  - enemyCode: 
-    pathName: 
-    intervalTime: 0
-    startTime: 0
-  phases_loop: []
+  - enemyCode: hhhhh
+    pathName: path3
+    intervalTime: 2
+    startTime: 5
   doBaseDamage: 1
 --- !u!4 &929673124
 Transform:
@@ -1944,7 +1964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mHero: {fileID: 1059962981}
   mPathSystem: {fileID: 849738915}
-  mMaxBaseHP: 1000
+  mMaxBaseHP: 25
   mHPBar: {fileID: 674411424}
   WinUI: {fileID: 1348536599698092550, guid: a0a139e6d3aa2f74dbc206179c053cdf, type: 3}
   LoseUI: {fileID: 2966899406464908339, guid: 5fbeacdf5fd91fc4eb7768dc6f0c0ea2, type: 3}
