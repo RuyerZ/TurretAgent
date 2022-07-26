@@ -581,7 +581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootAudio: {fileID: 8772323415083903032}
   _AttackRadius: 4
-  _AttackDamage: 1
+  _AttackDamage: 1.5
   _AttackInterval: 1
   _BulletPre: {fileID: 2166000638287311909, guid: dbe31f41acd00e14280dfd62df2b3814, type: 3}
   _Gun: {fileID: 9015699205209216021}

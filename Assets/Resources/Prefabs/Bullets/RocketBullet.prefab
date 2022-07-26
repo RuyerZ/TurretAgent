@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionRadius: 3
-  dmg: 10
+  dmg: 5
   fireforce: 20
   Anim: {fileID: 1090671161581397025}
   Coll: {fileID: 8078248047318606466}

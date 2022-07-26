@@ -38,8 +38,6 @@ public abstract class ItemSelectButtonBase : MonoBehaviour {
         if (mItemCount > 1) {
             mText.text += " x" + mItemCount;
         }
-        mText.text += " ";
-        mText.text += mPrice.ToString() + " $";
         LeftBuyCount = MaxBuyCount;
     }
     public bool SetSold()

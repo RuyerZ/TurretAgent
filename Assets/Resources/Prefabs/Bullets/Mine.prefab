@@ -240,9 +240,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b63063f80ab10459e3f4004fe3ad80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 5
+  dmg: 10
   fireforce: 0
-  explosionRadius: 3
+  explosionRadius: 5
   explodeSound: {fileID: 4338878665328878581}
   Anim: {fileID: 1356112643}
   Coll: {fileID: -3405878725663853139}
