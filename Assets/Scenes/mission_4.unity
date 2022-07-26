@@ -1008,7 +1008,7 @@ MonoBehaviour:
   isPaused: 0
   isDefend: 1
   currentLevel: 1
-  Gold: 120
+  Gold: 9999
 --- !u!1 &661929297
 GameObject:
   m_ObjectHideFlags: 0

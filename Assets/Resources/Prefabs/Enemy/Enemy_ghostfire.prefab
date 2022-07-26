@@ -209,7 +209,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -145459317, guid: 9d318f942a0169e49b3f1eeaca0c8aac, type: 3}
+  m_Sprite: {fileID: -967985644, guid: 2c4dcfc50a0474049ad5239fd19cfd3c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -230,7 +230,7 @@ Animator:
   m_GameObject: {fileID: 8719160117969813799}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c1922ad632b2a5d408e64c0a53d2d3c4, type: 2}
+  m_Controller: {fileID: 9100000, guid: d2b1b98c72f46cc4187e550bc749da9d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 5
-  Gold: 3
+  Gold: 6
   DefeatToWin: 0
   damageBlock: 0
 --- !u!61 &4348446996672904322
@@ -288,7 +288,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.61}
+    oldSize: {x: 0.64, y: 0.7}
     newSize: {x: 0.5, y: 0.61}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

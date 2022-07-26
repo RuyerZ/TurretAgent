@@ -169,6 +169,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 5
+  Gold: 2
+  DefeatToWin: 0
+  damageBlock: 0
 --- !u!61 &6149742329043854454
 BoxCollider2D:
   m_ObjectHideFlags: 0
