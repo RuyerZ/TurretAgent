@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5879959044718209290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.89, y: -1.11, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -83,7 +83,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007818401, y: -0.13291454}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -94,7 +94,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8287607, y: 2.0945897}
+  m_Size: {x: 1.02, y: 1.22}
   m_EdgeRadius: 0
 --- !u!114 &5879959044718209287
 MonoBehaviour:
@@ -108,13 +108,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f564a5406d8324ea36ce34277348cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageValue: 1
-  explosionRadius: 2
+  damageValueToPlayer: 1
+  damageValueToTower: 10
+  explosionRadius: 4
   explodeSound: {fileID: 5879959044718209288}
   explodeGo: {fileID: 5879959046656236985}
-  k1: 0.5
-  k2: 0.7
-  k3: 0.3
 --- !u!82 &5879959044718209288
 AudioSource:
   m_ObjectHideFlags: 0
@@ -257,7 +255,7 @@ Transform:
   m_GameObject: {fileID: 5879959046656236991}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5879959044718209289}
@@ -328,11 +326,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4274320739296880121, guid: cdc834c1f2cf0524d9ff0f82a8105ccb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4274320739296880121, guid: cdc834c1f2cf0524d9ff0f82a8105ccb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4274320739296880121, guid: cdc834c1f2cf0524d9ff0f82a8105ccb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -340,7 +338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4274320739296880121, guid: cdc834c1f2cf0524d9ff0f82a8105ccb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.29
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4274320739296880121, guid: cdc834c1f2cf0524d9ff0f82a8105ccb, type: 3}
       propertyPath: m_LocalPosition.z

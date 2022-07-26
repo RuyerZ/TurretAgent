@@ -5,7 +5,7 @@ using UnityEngine;
 public class ExplodeEnemyBehavior : MonoBehaviour
 {
     public float damageValueToPlayer = 1f;
-    public float damageValueToTower = 10f;
+    public float damageValueToTower = 15f;
 
     public float explosionRadius = 3f;
     public AudioSource explodeSound;
@@ -86,7 +86,11 @@ public class ExplodeEnemyBehavior : MonoBehaviour
 
         HPBar hp = GetComponentInChildren<HPBar>();
         hp.gameObject.SetActive(false);
-
+        PathBehavior enemy_move = GetComponent<PathBehavior>();
+        if (enemy_move != null)
+        {
+            enemy_move.enabled = false;
+        }
 
         //  伤害
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, explosionRadius, Vector3.zero);
@@ -97,7 +101,8 @@ public class ExplodeEnemyBehavior : MonoBehaviour
                 TurretHPBehavior turret = hits[i].collider.GetComponentInParent<TurretHPBehavior>();
                 if (turret != null)
                 {
-                    turret.TakeDamage(damageValueToTower);
+                    float dist = Vector3.Distance(transform.position, turret.transform.position);
+                    turret.TakeDamage((float)damageValueToTower/dist);
                 }
             }
             else if (hits[i].collider.CompareTag("Player"))
