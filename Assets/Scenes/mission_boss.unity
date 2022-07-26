@@ -385,6 +385,8 @@ MonoBehaviour:
     prefab: {fileID: 492743805561107979, guid: 9a81ddfe1a44cc541b81e72e07aba8dd, type: 3}
   - code: 103
     prefab: {fileID: 5879959044718209290, guid: e38a68bdde62a6245882ae355553ad62, type: 3}
+  - code: 104
+    prefab: {fileID: 5775048993590621706, guid: 832a5cf5ec1119f4a8a5e4fbf222e37c, type: 3}
   phases:
   - enemyCode: aaaaa
     pathName: path1
@@ -427,11 +429,11 @@ MonoBehaviour:
     pathName: path2
     intervalTime: 2
     startTime: 20
-  - enemyCode: aaafccgccfcacaceaacd
+  - enemyCode: aaafccgccfcacaceaacdh
     pathName: path2
     intervalTime: 2
     startTime: 40
-  - enemyCode: aaafccgccfcacaceaacd
+  - enemyCode: aaafccgccfcacaceaacdh
     pathName: path2
     intervalTime: 2
     startTime: 60
@@ -449,7 +451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 923127007164698264, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 923127007164698265, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
       propertyPath: m_RootOrder
@@ -862,6 +864,8 @@ MonoBehaviour:
   isDefend: 0
   currentLevel: 1
   Gold: 50
+  volumeSlider: {fileID: 0}
+  source: {fileID: 0}
 --- !u!1 &656248814
 GameObject:
   m_ObjectHideFlags: 0
