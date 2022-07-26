@@ -12,11 +12,11 @@ public class ShootPlayerBehavior : MonoBehaviour
 
     void Start()
     {
-        shootAudio = GetComponent<AudioSource>();
+        if (shootAudio == null) shootAudio = GetComponent<AudioSource>();
     }
     void Fire(Vector3 target)
     {
-        shootAudio.Play();
+        if (shootAudio != null) shootAudio.Play();
         //EnemyBulletBehavior b = Instantiate(bulletPrefab, transform.position, transform.rotation);
         //Vector2 direction = target - transform.position;
         //b.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f);
@@ -27,7 +27,7 @@ public class ShootPlayerBehavior : MonoBehaviour
 
     protected virtual void OnFireBullet(Vector3 target) { }
 
-    //  获取子弹
+    //  锟斤拷取锟接碉拷
     protected EnemyBulletBehavior GetBullet(Vector3 target)
     {
         EnemyBulletBehavior b = Instantiate(bulletPrefab, transform.position, transform.rotation);
