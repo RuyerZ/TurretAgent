@@ -8,7 +8,7 @@ public class ShopMenu : MonoBehaviour
     [System.Serializable]
     public struct ItemWindow
     {
-        public ItemSelectButton button;
+        public ItemSelectButtonBase button;
         public GameObject description;
     }
 
