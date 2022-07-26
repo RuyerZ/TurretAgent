@@ -34,7 +34,7 @@ public class TurretHPBehavior : MonoBehaviour
         }
         if (currentHP > 0)
         {
-            gameObject.GetComponent<TurretShootBehavior>().enabled = true;
+            gameObject.GetComponent<TurretAttackBase>().enabled = true;
             //GameManager.sTheGlobalBehavior.mFriendManager.AddTurret(gameObject);
         }
         HPBar hp = GetComponentInChildren<HPBar>();

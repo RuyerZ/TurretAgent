@@ -27,7 +27,7 @@ public class MenuNavigator : MonoBehaviour
     public void OnExitToMenuBtn()
     {
         confirmAudio.Play();
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene("LevelScene");
     }
     public void CloseUI(GameObject o) {
         GameManager.sTheGlobalBehavior.Resume("pause");

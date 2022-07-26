@@ -6,9 +6,9 @@ public class DecelerateTowerUpgradeBehavior : TurretUpgradeBase {
     DecelerateTurretBehavior _Turret;
     TurretHPBehavior _HP;
     int[] currentLevels = {0,0,0,0};
-    int[] maxLevels = {3,4,4,10};
-    float[] initCosts = {20,20,10,5};
-    float[] costFactors = {20,20,10,5};
+    int[] maxLevels = {8,10,6,10};
+    float[] initCosts = {20,20,20,5};
+    float[] costFactors = {5,5,5,5};
     string[] upgradeNames = {"Slow", "Slow Time", "Range", "Health"};
 
     void Start() {
@@ -56,13 +56,13 @@ public class DecelerateTowerUpgradeBehavior : TurretUpgradeBase {
         float next;
         switch (index) {
             case 0:
-                next = _Turret._DecelerateRatio + 0.1f;
+                next = _Turret._DecelerateRatio + 0.05f;
                 break;
             case 1:
                 next = _Turret._DecelerateTime + 0.5f;
                 break;
             case 2:
-                next = _Turret._AttackRadius + 0.3f;
+                next = _Turret._AttackRadius + 0.5f;
                 break;
             case 3:
                 next = _HP.maxHP + 5;

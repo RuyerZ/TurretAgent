@@ -6,9 +6,9 @@ public class RadiusTurretUpgradeBehavior : TurretUpgradeBase {
     RadiusTurretBehavior _Turret;
     TurretHPBehavior _HP;
     int[] currentLevels = {0,0,0,0};
-    int[] maxLevels = {10,5,4,10};
-    float[] initCosts = {10,10,10,5};
-    float[] costFactors = {5,10,10,5};
+    int[] maxLevels = {10,10,6,10};
+    float[] initCosts = {20,20,20,5};
+    float[] costFactors = {5,5,5,5};
     string[] upgradeNames = {"Damage", "Cooldown", "Range", "Health"};
 
     void Start() {
@@ -63,7 +63,7 @@ public class RadiusTurretUpgradeBehavior : TurretUpgradeBase {
                 next = _Turret._CoolingTimelReset * 0.8f;
                 break;
             case 2:
-                next = _Turret._AttackRadius + 0.3f;
+                next = _Turret._AttackRadius + 0.5f;
                 break;
             case 3:
                 next = _HP.maxHP + 5;
