@@ -12,6 +12,7 @@ public class ShopMenu : MonoBehaviour
         public GameObject description;
     }
 
+    public GameObject noItemSelected;
     public ItemWindow[] itemWindows;
     public Button buyButton;
     public Text goldText;
@@ -84,6 +85,8 @@ public class ShopMenu : MonoBehaviour
         itemWindows[index].description.SetActive(true);
         itemIndex = index;
         itemPrice = itemWindows[index].button.Price;
+
+        if (noItemSelected != null) noItemSelected.SetActive(false);
     }
 
     public void Buy()
