@@ -222,6 +222,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 1
-  fireforce: 4
-  followFactor: 0.06
+  fireforce: 3
+  followFactor: 0.08
   lifetime: 5

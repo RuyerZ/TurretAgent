@@ -304,6 +304,7 @@ GameObject:
   - component: {fileID: 6900869505360230824}
   - component: {fileID: 9196476568113015449}
   - component: {fileID: 230864693628604506}
+  - component: {fileID: 3548500086643204179}
   m_Layer: 0
   m_Name: boss
   m_TagString: Untagged
@@ -978,8 +979,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: -5348497175753863424, guid: d552743e57f41e843a77271368312bd2, type: 3}
   shootAudio: {fileID: 1219062115}
-  mShootCooldown: 3
+  mShootCooldown: 12
   mShootFromRadius: 1.4
+--- !u!114 &3548500086643204179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6200948478423032731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 388f33ce3e5925845ab2241a46b3bbd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 2439379502635251015, guid: e98c8f44beb875346a580feff33d06fc, type: 3}
+  shootAudio: {fileID: 812056722}
+  mShootCooldown: 48
+  mShootFromRadius: 2
 --- !u!1 &6900869504687538950
 GameObject:
   m_ObjectHideFlags: 0
