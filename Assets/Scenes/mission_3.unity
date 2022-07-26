@@ -923,7 +923,7 @@ MonoBehaviour:
   isPaused: 0
   isDefend: 1
   currentLevel: 1
-  Gold: 30
+  Gold: 40
   volumeSlider: {fileID: 0}
   source: {fileID: 0}
 --- !u!1 &640883778
@@ -1720,7 +1720,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 889081718605894112, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
       propertyPath: m_Text
-      value: 'Enemies come from every direction and move up. '
+      value: 'Pay attention to enemy path.
+
+        You have 1 free aoe turret provided.'
       objectReference: {fileID: 0}
     - target: {fileID: 923127007164698264, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
       propertyPath: m_Name
@@ -2297,6 +2299,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1177233627, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1177233627, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1177233627, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955499229, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955499229, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3082323790240466329, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2409,6 +2431,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnExitToMenuBtn
       objectReference: {fileID: 0}
+    - target: {fileID: 4344344571374478623, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1944312814}
+    - target: {fileID: 4344344571374478623, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnBtnClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344344571374478623, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
 --- !u!1 &1944312808 stripped
@@ -2448,6 +2482,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3082323790664842746, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
   m_PrefabInstance: {fileID: 1944312807}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1944312814 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7693289000383895320, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
+  m_PrefabInstance: {fileID: 1944312807}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944312808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7b859fe3c5eb3e4f909fa8037d2bba8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1987188894
 GameObject:
   m_ObjectHideFlags: 0

@@ -125,6 +125,6 @@ public class EnemyHPBehavior : MonoBehaviour
     }
     public string GetHPString()
     {
-        return (currentHP.ToString() + " / " + maxHP.ToString());
+        return (currentHP.ToString("N1") + " / " + maxHP.ToString());
     }
 }
