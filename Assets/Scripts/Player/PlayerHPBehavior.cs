@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHPBehavior : MonoBehaviour
-{
+public class PlayerHPBehavior : MonoBehaviour {
     //public float maxHP = 10.0f;
     //private float currentHP;
 
@@ -14,8 +13,7 @@ public class PlayerHPBehavior : MonoBehaviour
     private Coroutine _BeHitC;
     private Color _DefaultColor;
 
-    void Start()
-    {
+    void Start() {
         //currentHP = maxHP;
         //Debug.Assert(gameObject.GetComponent<BoxCollider2D>() != null);
         if (_SR == null)
@@ -33,39 +31,24 @@ public class PlayerHPBehavior : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float value)
-    {
-        GameManager.sTheGlobalBehavior.ReduceBaseHP(value);
-        if (_BeHitC != null)
-        {
-            StopCoroutine(_BeHitC);
-            _BeHitC = null;
-        }
-        _BeHitC = StartCoroutine(Twinkle());
-    }
-
-    void CollisionCheck(GameObject o)
-    {
-        if (o.GetComponent<EnemyBulletBehavior>() != null)
-        {
+    void CollisionCheck(GameObject o) {
+        if (o.GetComponent<EnemyBulletBehavior>() != null) {
             EnemyBulletBehavior f = o.GetComponent<EnemyBulletBehavior>();
+            GameManager.sTheGlobalBehavior.ReduceBaseHP(f.getDmg(gameObject));
             f.onHit(gameObject);
-            //GameManager.sTheGlobalBehavior.ReduceBaseHP(f.getDmg(gameObject));
 
-            //if (_BeHitC != null)
-            //{
-            //    StopCoroutine(_BeHitC);
-            //    _BeHitC = null;
-            //}
-            //_BeHitC = StartCoroutine(Twinkle());
+            if (_BeHitC != null)
+            {
+                StopCoroutine(_BeHitC);
+                _BeHitC = null;
+            }
+            _BeHitC = StartCoroutine(Twinkle());
         }
     }
-    void OnTriggerEnter2D(Collider2D other)
-    {
+    void OnTriggerEnter2D(Collider2D other) {
         CollisionCheck(other.gameObject);
     }
-    void OnCollisionEnter2D(Collision2D other)
-    {
+    void OnCollisionEnter2D(Collision2D other) {
         CollisionCheck(other.gameObject);
     }
 
@@ -76,7 +59,7 @@ public class PlayerHPBehavior : MonoBehaviour
         SetColor(Color.white);
         int count = 0;
         const float interval = 0.2f;
-        while (count < _TwinkleCount)
+        while(count < _TwinkleCount)
         {
             //SetAlpha(0f);
             SetColor(_BeHitColor);
@@ -91,10 +74,7 @@ public class PlayerHPBehavior : MonoBehaviour
 
     private void SetAlpha(float alpha)
     {
-        if (_SR == null)
-        {
-            return;
-        }
+        if (_SR == null) { return; }
 
         alpha = Mathf.Clamp01(alpha);
 
@@ -105,10 +85,7 @@ public class PlayerHPBehavior : MonoBehaviour
 
     private void SetColor(Color color)
     {
-        if (_SR == null)
-        {
-            return;
-        }
+        if (_SR == null) { return; }
         _SR.color = color;
     }
 
