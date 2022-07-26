@@ -446,7 +446,7 @@ MonoBehaviour:
   Gold: 0
   DefeatToWin: 1
   damageBlock: 0
-  animator: {fileID: 0}
+  animator: {fileID: 4357962118965307862}
 --- !u!95 &4357962118965307862
 Animator:
   serializedVersion: 4
