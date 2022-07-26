@@ -91,8 +91,8 @@ public class PlayerTurretBehavior : MonoBehaviour
         bool valid = turret.GetComponent<TurretMoveBehavior>().GetIsValid();
         if (!valid)
             return;
-
-        turret.GetComponent<TurretAttackBase>().enabled = true;
+        if (turret.GetComponent<TurretHPBehavior>().GetCurrentHP()>0)
+            turret.GetComponent<TurretAttackBase>().enabled = true;
         gameObject.GetComponent<PlayerItemBehavior>().Activate();
 
         isCarried = false;
