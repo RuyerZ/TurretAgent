@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
+            if (PauseUI.activeSelf)
             {
                 PauseUI.SetActive(false);
                 Resume("pause");
@@ -139,6 +139,7 @@ public class GameManager : MonoBehaviour
         if (t != pauseReason)
             return;
         isPaused = false;
+        pauseReason = "notPaused";
         Time.timeScale = 1;
         mHero.gameObject.SetActive(true);
         if (!isPrepare)
