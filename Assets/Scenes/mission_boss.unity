@@ -385,6 +385,8 @@ MonoBehaviour:
     prefab: {fileID: 492743805561107979, guid: 9a81ddfe1a44cc541b81e72e07aba8dd, type: 3}
   - code: 103
     prefab: {fileID: 5879959044718209290, guid: e38a68bdde62a6245882ae355553ad62, type: 3}
+  - code: 104
+    prefab: {fileID: 5775048993590621706, guid: 832a5cf5ec1119f4a8a5e4fbf222e37c, type: 3}
   phases:
   - enemyCode: aaaaa
     pathName: path1
@@ -427,11 +429,11 @@ MonoBehaviour:
     pathName: path2
     intervalTime: 2
     startTime: 20
-  - enemyCode: aaafccgccfcacaceaacd
+  - enemyCode: aaafccgccfcacaceaacdh
     pathName: path2
     intervalTime: 2
     startTime: 40
-  - enemyCode: aaafccgccfcacaceaacd
+  - enemyCode: aaafccgccfcacaceaacdh
     pathName: path2
     intervalTime: 2
     startTime: 60
@@ -449,7 +451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 923127007164698264, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 923127007164698265, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
       propertyPath: m_RootOrder
@@ -862,6 +864,8 @@ MonoBehaviour:
   isDefend: 0
   currentLevel: 1
   Gold: 50
+  volumeSlider: {fileID: 0}
+  source: {fileID: 0}
 --- !u!1 &656248814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,6 +1764,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2095485643, guid: f0e018ea3f4f11d4f81d28c557dcde94, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 2258905857766715013, guid: 7fd3feb3624f35c4a808c31e908cec2e, type: 3}
+    - target: {fileID: 2095485643, guid: f0e018ea3f4f11d4f81d28c557dcde94, type: 3}
+      propertyPath: mShootCooldown
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 2334169685068237590, guid: f0e018ea3f4f11d4f81d28c557dcde94, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1803,14 +1815,6 @@ PrefabInstance:
     - target: {fileID: 2334169685068237590, guid: f0e018ea3f4f11d4f81d28c557dcde94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548500086643204179, guid: f0e018ea3f4f11d4f81d28c557dcde94, type: 3}
-      propertyPath: mShootCooldown
-      value: 36
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548500086643204179, guid: f0e018ea3f4f11d4f81d28c557dcde94, type: 3}
-      propertyPath: mShootFromRadius
-      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6200948478423032731, guid: f0e018ea3f4f11d4f81d28c557dcde94, type: 3}
       propertyPath: m_Name
