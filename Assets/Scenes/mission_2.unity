@@ -130,6 +130,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1177233627, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1177233627, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1177233627, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955499229, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955499229, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 845320562897248123, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3082323790534837828, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -891,7 +915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3548500086869452612, guid: baec526802fb0b949adea80719b3fdc8, type: 3}
       propertyPath: maxHP
-      value: 2
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 3548500086869452612, guid: baec526802fb0b949adea80719b3fdc8, type: 3}
       propertyPath: animator
@@ -1089,6 +1113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 629102615}
   - component: {fileID: 629102616}
+  - component: {fileID: 629102617}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2361,6 +2386,17 @@ Transform:
   m_Father: {fileID: 1092904906}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1252245329 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 837237539, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
+  m_PrefabInstance: {fileID: 6399807}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1417974148 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 845320562897248123, guid: cb73a6589b5e0f142ac1bc043d1595c6, type: 3}
