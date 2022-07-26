@@ -10,7 +10,7 @@ public class EnemyHPBehavior : MonoBehaviour {
     private float currentHP;
     void Start() {
         currentHP = maxHP;
-        Debug.Assert(gameObject.GetComponent<BoxCollider2D>() != null);
+        Debug.Assert(gameObject.GetComponent<Collider2D>() != null);
         if (GetComponent<PathBehavior>() == null) {
             GameManager.sTheGlobalBehavior.mEnemyManager.AddEnemy(gameObject);
         }
@@ -18,7 +18,7 @@ public class EnemyHPBehavior : MonoBehaviour {
     void CollisionCheck(GameObject o) {
         // Update HP Bar
         FriendBulletBehavior f = o.GetComponent<FriendBulletBehavior>();
-        //  ×Óµ¯
+        //  ï¿½Óµï¿½
         if (f != null)
         {
             float trueDmg = f.getDmg(gameObject) - damageBlock;
@@ -32,10 +32,10 @@ public class EnemyHPBehavior : MonoBehaviour {
         }
     }
 
-    //  ¼ì²âËþµÄ¹¥»÷
+    //  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½
     private void CheckTurretHit(Collider2D other)
     {
-        //  AOEËþ
+        //  AOEï¿½ï¿½
         if (other.CompareTag("RadiusTurret"))
         {
            var turret =  other.GetComponentInParent<RadiusTurretBehavior>();
@@ -47,8 +47,8 @@ public class EnemyHPBehavior : MonoBehaviour {
         }
     }
 
-    //  ¸üÐÂÉúÃü
-    private void UpdateHP()
+    //  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    protected virtual void UpdateHP()
     {
         HPBar hp = GetComponentInChildren<HPBar>();
         if (hp != null) { hp.Set(currentHP / maxHP); }

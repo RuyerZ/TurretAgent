@@ -97,8 +97,9 @@ GameObject:
   - component: {fileID: 3101218937242912319}
   - component: {fileID: 6149742329043854454}
   - component: {fileID: 4977160654098821799}
+  - component: {fileID: 7995215267866417002}
   m_Layer: 0
-  m_Name: Enemy_tank
+  m_Name: Enemy_Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,8 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathName: path1
-  pathSpeed: 1
-  baseDamage: 3
+  pathSpeed: 0.2
+  baseDamage: 1
 --- !u!114 &3101218937242912319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,10 +149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca1990b49de3cc49bcb724534367ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 20
-  Gold: 10
+  maxHP: 15
+  Gold: 1
   DefeatToWin: 0
-  damageBlock: 0.8
 --- !u!61 &6149742329043854454
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -185,11 +185,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5775048993590621706}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10225d9c3d2fd474f9e26e763eb5520b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7995215267866417002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5775048993590621706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acf2b2a30315968499a2d7ccb6b87344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnEnemyPrefab: {fileID: 5775048993590621706, guid: 1ef4295ea5211a94ea4151b77869982f, type: 3}
+  spawnEnemyCount: 3
 --- !u!1001 &7858891811486077242
 PrefabInstance:
   m_ObjectHideFlags: 0

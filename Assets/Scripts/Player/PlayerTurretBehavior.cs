@@ -18,6 +18,7 @@ public class PlayerTurretBehavior : MonoBehaviour
     {
         if (!isCarried)
             turret = GameManager.sTheGlobalBehavior.mFriendManager.GetClosestTurret(transform.position);
+        if (turret == null) return;
 
         Vector2 playerPosition = transform.position;
         playerPosition = transform.position;

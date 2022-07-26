@@ -36,6 +36,7 @@ public class InfinityEnemySpawner : MonoBehaviour
     private List<SequenceItem> mSequence;
     private List<SequenceItem> mSequence_loop;
     private int mCurrentSequenceIndex;
+    private int mLoopCount = 1;
     private void Start()
     {
         enemyPrefabDict = new Dictionary<char, GameObject>();
@@ -88,7 +89,7 @@ public class InfinityEnemySpawner : MonoBehaviour
         mCurrentTime += Time.smoothDeltaTime;
         if (GameManager.sTheGlobalBehavior.mEnemyManager.IsEmpty())
         {
-            mCurrentTime += Time.smoothDeltaTime * 1.5f; // Speed 1x up
+            mCurrentTime += Time.smoothDeltaTime * 1f; // Speed 1x up
         }
         if (!isSequenceLoop)
         {
@@ -108,12 +109,14 @@ public class InfinityEnemySpawner : MonoBehaviour
         {
             if (mCurrentTime > mSequence_loop[mCurrentSequenceIndex].time)
             {
-                Spawn(mSequence_loop[mCurrentSequenceIndex].code, mSequence_loop[mCurrentSequenceIndex].pathName);
+                for (int i = 0; i < mLoopCount; i++)
+                    Spawn(mSequence_loop[mCurrentSequenceIndex].code, mSequence_loop[mCurrentSequenceIndex].pathName);
                 mCurrentSequenceIndex++;
                 if (mCurrentSequenceIndex >= mSequence_loop.Count)
                 {
                     mCurrentSequenceIndex = 0;
                     mCurrentTime = 0;
+                    mLoopCount++;
                 }
             }
         }
