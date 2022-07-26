@@ -70,10 +70,12 @@ public class EnemyHPBehavior : MonoBehaviour
             if (DefeatToWin)
             {
                 transform.localScale = Vector3.one * 5f;
-                animator.SetTrigger("explode");
+                if (animator != null) {
+                    animator.SetTrigger("explode");
+                    Invoke("DelayInvole", 0.7f);
+                }
                 hp.gameObject.SetActive(false);
-
-                Invoke("DelayInvole", 0.7f);
+                GameManager.sTheGlobalBehavior.GameWin();
             }
             else
             {
