@@ -149,10 +149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca1990b49de3cc49bcb724534367ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 40
+  maxHP: 15
   Gold: 1
   DefeatToWin: 0
-  damageBlock: 1
 --- !u!61 &6149742329043854454
 BoxCollider2D:
   m_ObjectHideFlags: 0
