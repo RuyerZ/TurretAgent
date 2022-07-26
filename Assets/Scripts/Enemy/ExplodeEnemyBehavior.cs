@@ -97,7 +97,8 @@ public class ExplodeEnemyBehavior : MonoBehaviour
                 TurretHPBehavior turret = hits[i].collider.GetComponentInParent<TurretHPBehavior>();
                 if (turret != null)
                 {
-                    turret.TakeDamage(damageValueToTower);
+                    float dist = Vector3.Distance(transform.position, turret.transform.position);
+                    turret.TakeDamage((float)damageValueToTower/dist);
                 }
             }
             else if (hits[i].collider.CompareTag("Player"))
