@@ -31,8 +31,6 @@ public class ShopMenu : MonoBehaviour
         itemNumber = itemWindows.Length;
         for (int i = 0; i < itemNumber; i++)
             itemWindows[i].button.Index = i;
-
-        goldText.text = "GOLD: " + GameManager.sTheGlobalBehavior.Gold.ToString() + " $";
     }
     void OpenShop()
     {
@@ -54,7 +52,7 @@ public class ShopMenu : MonoBehaviour
         {
             buyButton.interactable = IsItemAvailable();
 
-            goldText.text = "GOLD: " + GameManager.sTheGlobalBehavior.Gold.ToString() + " $";
+            goldText.text = "COST: $" + itemPrice.ToString();
         }
         if (Input.GetKeyDown(KeyCode.B) && 
             (!GameManager.sTheGlobalBehavior.isPaused || GameManager.sTheGlobalBehavior.GetPausedReason() == "shop")

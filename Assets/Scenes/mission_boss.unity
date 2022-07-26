@@ -457,7 +457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 923127007164698264, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 923127007164698265, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
       propertyPath: m_RootOrder
@@ -2119,13 +2119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2cdf1fd00796e4693a2c1bd447a00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ghostfire: {fileID: 0}
-  shootAudio: {fileID: 1219062115}
-  mShootTime: 1
-  bulletFactor: 1
-  offsetAngle: 20
-  mShootFromRadius: 2
-  CDticker: 0
 --- !u!114 &9196476568113015449
 MonoBehaviour:
   m_ObjectHideFlags: 0

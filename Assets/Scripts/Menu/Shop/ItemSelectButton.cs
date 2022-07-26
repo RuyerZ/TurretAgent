@@ -33,8 +33,6 @@ public class ItemSelectButton : MonoBehaviour
         if (mItemCount > 0) {
             mText.text += " x" + mItemCount;
         }
-        mText.text += " ";
-        mText.text += mPrice.ToString() + " $";
     }
 
     // Update is called once per frame

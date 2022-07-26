@@ -350,7 +350,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 107.1084, y: -279}
+  m_AnchoredPosition: {x: 113, y: 311}
   m_SizeDelta: {x: 278.0081, y: 91.3711}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5484799750607779097
@@ -383,18 +383,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 50
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 50
+    m_MaxSize: 60
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Gold: 50$'
+  m_Text: 'Cost: $0'
 --- !u!1 &923127006680061789
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,7 +1281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mPrice
-      value: 80
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: isTurret
@@ -1289,7 +1289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemName
-      value: RadiusTurret
+      value: AOE Turret
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemCount
@@ -1438,7 +1438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mPrice
-      value: 3
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: isTurret
@@ -1454,7 +1454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemCount
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemIndex
@@ -1706,7 +1706,7 @@ PrefabInstance:
       objectReference: {fileID: 4221876540520457419, guid: 72a303843fea5874bbd23d8f675ad101, type: 3}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mPrice
-      value: 120
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: isTurret
@@ -1994,11 +1994,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6418392799474520006, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Text
-      value: Rocket $15
+      value: Rocket $12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418392799474520006, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mPrice
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: isTurret
@@ -2014,7 +2018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemCount
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemIndex
@@ -2147,7 +2151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6418392799474520006, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Text
-      value: Turret 25$
+      value: Turret $30
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: Prefab
@@ -2155,7 +2159,7 @@ PrefabInstance:
       objectReference: {fileID: 9015699204102001418, guid: 24eabf3667691d14ea9db097be6aea2b, type: 3}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mPrice
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: isTurret
@@ -2336,7 +2340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemName
-      value: MachineGun
+      value: Machine Gun
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemCount
@@ -2457,14 +2461,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4137556808376485732, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_Text
-      value: 'Basic Turret
+      value: 'Basic Turret $60
 
-        Damage: 1
 
-        Attack CD: 1
+        The basic single-target turret. Upgradable.
 
-        Radius:
-        4'
+
+        Base
+        Damage: 2.0
+
+        Attack Interval: 1.0
+
+        Attack Radius: 4.0'
       objectReference: {fileID: 0}
     - target: {fileID: 5050613852199019530, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_Pivot.x
@@ -2723,7 +2731,7 @@ PrefabInstance:
       objectReference: {fileID: 4221876540520457419, guid: 72a303843fea5874bbd23d8f675ad101, type: 3}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mPrice
-      value: 60
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: isTurret
@@ -2852,14 +2860,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4137556808376485732, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_Text
-      value: 'Rifle $30
-
-        A bolt-action rifle, high damage but low attack
-        speed.
-
-        Damage: 5.0
-
-        Attack Interval: 1.0'
+      value: "Rifle \nA bolt-action rifle, high damage but low attack speed.\n\nDamage:
+        5.0\nAttack Interval: 1.0\n"
       objectReference: {fileID: 0}
     - target: {fileID: 5050613852199019530, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_Pivot.x
@@ -2982,7 +2984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6418392799474520006, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Text
-      value: Radius Turret 50$
+      value: AOE Turret $50
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: Prefab
@@ -2998,7 +3000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemName
-      value: RadiusTurret
+      value: AOE Turret
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemCount
@@ -3115,9 +3117,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4137556808376485732, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_Text
-      value: 'Machine Gun $50
+      value: 'Machine Gun
+
 
         Shoots fast but low damage, bad against tanks.
+
 
         Damage:
         0.5
@@ -3438,7 +3442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemName
-      value: GrapeTurret
+      value: Grape Turret
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemCount
@@ -3571,7 +3575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6418392799474520006, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: m_Text
-      value: Turret 40$
+      value: Turret $60
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: Prefab
@@ -3579,7 +3583,7 @@ PrefabInstance:
       objectReference: {fileID: 9015699204102001418, guid: 24eabf3667691d14ea9db097be6aea2b, type: 3}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mPrice
-      value: 40
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: isTurret
@@ -3934,14 +3938,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4137556808376485732, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_Text
-      value: 'Mine $2
+      value: '[CONSUMABLE] Mine X5
 
-        Place down on enemies'' path. Explodes on touch.
 
-        Damage:
-        4
+        Place down and explodes on touch.
 
-        Explosion Radius: 3'
+
+        AOE
+        Damage: 4.0
+
+        Explosion Radius: 3.0'
       objectReference: {fileID: 0}
     - target: {fileID: 5050613852199019530, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_Pivot.x
@@ -4208,7 +4214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemName
-      value: GrapeTurret
+      value: Grape Turret
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemCount
@@ -4440,11 +4446,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4137556808376485732, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_Text
-      value: 'Rocket
+      value: '[CONSUMABLE] Rocket X3
 
-        Damage: 10
 
-        Radius: 3'
+        Point and shoot for huge AOE damage.
+
+
+        AOE
+        Damage: 12.0
+
+        Explosion Radius: 3.5'
       objectReference: {fileID: 0}
     - target: {fileID: 5050613852199019530, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_Pivot.x
@@ -4559,14 +4570,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4137556808376485732, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_Text
-      value: 'Basic Turret
+      value: 'Basic Turret $30
 
-        Damage: 1
 
-        Attack CD: 1
+        The basic single-target turret. Upgradable.
 
-        Radius:
-        4'
+
+        Base
+        Damage: 2.0
+
+        Attack Interval: 1.0
+
+        Attack Radius: 4.0'
       objectReference: {fileID: 0}
     - target: {fileID: 5050613852199019530, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_Pivot.x
