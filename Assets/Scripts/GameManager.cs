@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
     public static GameManager sTheGlobalBehavior = null; // Single pattern
 
     public PlayerMoveBehavior mHero = null;  // must set in the editor
@@ -26,102 +27,143 @@ public class GameManager : MonoBehaviour {
 
     public float Gold = 0;
 
+    public Slider volumeSlider;
+    public AudioSource source;
+
     // Start is called before the first frame update
-    void Awake() {
+    void Awake()
+    {
         GameManager.sTheGlobalBehavior = this;  // Singleton pattern
         Time.timeScale = 1;
         //Debug.Assert(mHero != null);
         //Debug.Assert(mEnemyManager != null);
         //Debug.Assert(mPathSystem != null);
+
+        if (volumeSlider != null && source != null)
+        {
+            volumeSlider.value = source.volume;
+        }
     }
-    void Start() {
+    void Start()
+    {
         mBaseHP = mMaxBaseHP;
-        if (isDefend) Prepare();
+        if (isDefend)
+            Prepare();
     }
     // Update is called once per frame
-    void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            if (isPaused) {
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused)
+            {
                 PauseUI.SetActive(false);
                 Resume("pause");
             }
-            else {
+            else
+            {
                 PauseUI.SetActive(true);
                 Pause("pause");
             }
         }
+
+        if (volumeSlider != null && source != null)
+        {
+            source.volume = volumeSlider.value;
+        }
     }
     private bool isGameEnd = false;
-    public void GameFail() {
-        if (!isGameEnd) {
+    public void GameFail()
+    {
+        if (!isGameEnd)
+        {
             isGameEnd = true;
             LoseUI.SetActive(true);
         }
     }
-    public void GameWin() {
-        if (!isGameEnd) {
+    public void GameWin()
+    {
+        if (!isGameEnd)
+        {
             isGameEnd = true;
             WinUI.SetActive(true);
         }
     }
-    public void ReduceBaseHP(float dmg) {
+    public void ReduceBaseHP(float dmg)
+    {
         mBaseHP -= dmg;
-        if (mBaseHP <= 0) {
+        if (mBaseHP <= 0)
+        {
             GameFail();
         }
-        mHPBar.Set(mBaseHP/mMaxBaseHP);
+        mHPBar.Set(mBaseHP / mMaxBaseHP);
     }
-    public void AddBaseHP(float heal) {
+    public void AddBaseHP(float heal)
+    {
         mBaseHP += heal;
-        if (mBaseHP > mMaxBaseHP) mBaseHP = mMaxBaseHP;
-        mHPBar.Set(mBaseHP/mMaxBaseHP);
+        if (mBaseHP > mMaxBaseHP)
+            mBaseHP = mMaxBaseHP;
+        mHPBar.Set(mBaseHP / mMaxBaseHP);
     }
 
     //before game start
     //TO BE FIXED
-    public void Prepare() {
+    public void Prepare()
+    {
         isPrepare = true;
         mPathSystem.gameObject.SetActive(false);
     }
-    public void StartWave() {
+    public void StartWave()
+    {
         isPrepare = false;
         mPathSystem.gameObject.SetActive(true);
     }
-    public bool GetIsPrepare() {
+    public bool GetIsPrepare()
+    {
         return isPrepare;
     }
-    public void Pause(string t) {
-        if (isPaused) return;
+    public void Pause(string t)
+    {
+        if (isPaused)
+            return;
         isPaused = true;
         pauseReason = t;
         Time.timeScale = 0;
         mHero.gameObject.SetActive(false);
         mPathSystem.gameObject.SetActive(false);
     }
-    public void Resume(string t) {
-        if (!isPaused) return;
-        if (t != pauseReason) return;
+    public void Resume(string t)
+    {
+        if (!isPaused)
+            return;
+        if (t != pauseReason)
+            return;
         isPaused = false;
         Time.timeScale = 1;
         mHero.gameObject.SetActive(true);
-        if (!isPrepare) mPathSystem.gameObject.SetActive(true);
+        if (!isPrepare)
+            mPathSystem.gameObject.SetActive(true);
     }
-    public string GetPausedReason() {
+    public string GetPausedReason()
+    {
         return pauseReason;
     }
-    public void AddGold(float gold) 
+    public void AddGold(float gold)
     {
         Gold += gold;
     }
-    public void SetGold(float gold) 
+    public void SetGold(float gold)
     {
         Gold = gold;
     }
-    public float GetGold() {
+    public float GetGold()
+    {
         return Gold;
     }
-    public bool Buy(float gold) {
-        if (Gold >= gold) {
+    public bool Buy(float gold)
+    {
+        if (Gold >= gold)
+        {
             Gold -= gold;
             return true;
         }

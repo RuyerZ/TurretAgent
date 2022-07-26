@@ -25,13 +25,6 @@ public class PlayerHPBehavior : MonoBehaviour
         _DefaultColor = _SR.color;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartCoroutine(Twinkle());
-        }
-    }
 
     public void TakeDamage(float value)
     {
