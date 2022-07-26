@@ -177,6 +177,7 @@ MonoBehaviour:
   PauseUI: {fileID: 694024929}
   isPaused: 0
   isDefend: 0
+  currentLevel: 1
   Gold: 75
 --- !u!1001 &97472296
 PrefabInstance:
@@ -1534,7 +1535,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.4564703, y: -0.7194059}
+  m_Offset: {x: 0.5343649, y: -0.8751951}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1545,7 +1546,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.9502645, y: 2.2929666}
+  m_Size: {x: 2.5607915, y: 1.9813884}
   m_EdgeRadius: 0
 --- !u!1 &1247767784
 GameObject:
@@ -1848,6 +1849,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4226471582209010055, guid: e68e50fd55472cc4484843464683ae36, type: 3}
       propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4226471582209010073, guid: e68e50fd55472cc4484843464683ae36, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4226471582209010073, guid: e68e50fd55472cc4484843464683ae36, type: 3}
+      propertyPath: m_AngularDrag
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4226471582209010074, guid: e68e50fd55472cc4484843464683ae36, type: 3}
@@ -2251,7 +2260,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.1389098, y: -0.6865493}
+  m_Offset: {x: -1.9441735, y: -0.6281284}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2262,7 +2271,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8236446, y: 2.4122117}
+  m_Size: {x: 2.434172, y: 1.8280022}
   m_EdgeRadius: 0
 --- !u!1 &1880144588
 GameObject:
