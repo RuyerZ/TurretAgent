@@ -405,8 +405,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootAudio: {fileID: 2356154687059005921}
-  _DarkColor: {r: 0.47058824, g: 0.38039216, b: 0.38039216, a: 1}
   _AttackRadius: 3
+  _AttackDamage: 0
+  _AttackInterval: 0
+  _DarkColor: {r: 0.47058824, g: 0.38039216, b: 0.38039216, a: 1}
   _CoolingTime: 3
   _CoolingTimelReset: 0
   _Renderer: {fileID: 324004680249847926}
@@ -428,7 +430,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.024830788, y: -0.5290226}
+  m_Offset: {x: 0, y: -0.28}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -439,7 +441,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6502823, y: 0.6518166}
+  m_Size: {x: 0.6, y: 1.2}
   m_EdgeRadius: 0
 --- !u!114 &1647155241402044241
 MonoBehaviour:
