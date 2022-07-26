@@ -14,8 +14,10 @@ public class EnemyManager
     }
     public void RemoveEnemy(GameObject enemy)
     {
-        enemiesDefeated++;
-        mEnemies.Remove(enemy);
+        if (mEnemies.Remove(enemy))
+        {
+            enemiesDefeated++;
+        }
     }
     public int GetEnemiesDefeated()
     {
