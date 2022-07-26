@@ -46,7 +46,13 @@ public class LaserBulletBehavior : EnemyBulletBehavior
     }
     public override void Fire()
     {
-        transform.localRotation = Quaternion.Euler(0, 0, 90);
+        if (GameManager.sTheGlobalBehavior.mHero != null)
+        {
+            Vector3 target = GameManager.sTheGlobalBehavior.mHero.transform.position;
+            Vector2 direction = target - transform.position;
+            transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 180f);
+        }
+        else transform.localRotation = Quaternion.Euler(0, 0, 90);
     }
     public override void onHit(GameObject o)
     {

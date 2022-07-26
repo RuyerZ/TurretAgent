@@ -289,6 +289,54 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &2095485641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2095485642}
+  - component: {fileID: 2095485643}
+  m_Layer: 0
+  m_Name: LaserShooter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2095485642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095485641}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.14, y: -1.49, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2334169685068237590}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2095485643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095485641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 388f33ce3e5925845ab2241a46b3bbd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 2439379502635251015, guid: e98c8f44beb875346a580feff33d06fc, type: 3}
+  shootAudio: {fileID: 812056722}
+  mShootCooldown: 36
+  mShootFromRadius: 1.4
 --- !u!1 &6200948478423032731
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +352,6 @@ GameObject:
   - component: {fileID: 6900869505360230824}
   - component: {fileID: 9196476568113015449}
   - component: {fileID: 230864693628604506}
-  - component: {fileID: 3548500086643204179}
   m_Layer: 0
   m_Name: boss
   m_TagString: Untagged
@@ -327,6 +374,7 @@ Transform:
   - {fileID: 3439597996882257195}
   - {fileID: 6900869504687538953}
   - {fileID: 473162053}
+  - {fileID: 2095485642}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -981,22 +1029,6 @@ MonoBehaviour:
   shootAudio: {fileID: 1219062115}
   mShootCooldown: 12
   mShootFromRadius: 1.4
---- !u!114 &3548500086643204179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6200948478423032731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 388f33ce3e5925845ab2241a46b3bbd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 2439379502635251015, guid: e98c8f44beb875346a580feff33d06fc, type: 3}
-  shootAudio: {fileID: 812056722}
-  mShootCooldown: 48
-  mShootFromRadius: 2
 --- !u!1 &6900869504687538950
 GameObject:
   m_ObjectHideFlags: 0
