@@ -5701,10 +5701,14 @@ PrefabInstance:
     - target: {fileID: 2526153984703737744, guid: 9b37d88753fe996448b8d0a15dd18396, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4467162946309406649}
+      objectReference: {fileID: 7693289000383895320}
     - target: {fileID: 2526153984703737744, guid: 9b37d88753fe996448b8d0a15dd18396, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: OnBtnClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2526153984703737744, guid: 9b37d88753fe996448b8d0a15dd18396, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4408537418528410831, guid: 9b37d88753fe996448b8d0a15dd18396, type: 3}
       propertyPath: m_Pivot.x
