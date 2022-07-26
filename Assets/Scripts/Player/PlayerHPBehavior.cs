@@ -34,7 +34,7 @@ public class PlayerHPBehavior : MonoBehaviour {
     void CollisionCheck(GameObject o) {
         if (o.GetComponent<EnemyBulletBehavior>() != null) {
             EnemyBulletBehavior f = o.GetComponent<EnemyBulletBehavior>();
-            GameManager.sTheGlobalBehavior.ReduceBaseHP(f.getDmg(gameObject));
+            TakeDamage(f.getDmg(gameObject));
             f.onHit(gameObject);
 
             if (_BeHitC != null)
@@ -52,7 +52,7 @@ public class PlayerHPBehavior : MonoBehaviour {
         CollisionCheck(other.gameObject);
     }
 
-    //  иак╦
+    //  О©╫О©╫к╦
     private IEnumerator Twinkle()
     {
         //SetAlpha(1f);
