@@ -89,7 +89,7 @@ public class RadiusTurretUpgradeBehavior : TurretUpgradeBase {
                 stat = _Turret._AttackDamage;
                 break;
             case 1:
-                stat = _Turret._AttackInterval;
+                stat = _Turret._CoolingTimelReset;
                 break;
             case 2:
                 stat = _Turret._AttackRadius;
