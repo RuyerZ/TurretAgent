@@ -5,7 +5,7 @@ using UnityEngine;
 public class ExplodeEnemyBehavior : MonoBehaviour
 {
     public float damageValueToPlayer = 1f;
-    public float damageValueToTower = 10f;
+    public float damageValueToTower = 15f;
 
     public float explosionRadius = 3f;
     public AudioSource explodeSound;
