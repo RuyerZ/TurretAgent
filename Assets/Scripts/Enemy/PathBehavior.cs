@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PathBehavior : MonoBehaviour {
+public class PathBehavior : MonoBehaviour
+{
     public string pathName;
     public float pathSpeed = 1.0f;
     public float baseDamage = 1.0f;
@@ -10,7 +11,19 @@ public class PathBehavior : MonoBehaviour {
     private float pathDistance;
     private Animator _Anim;
     private Vector3 _LastPoint;
-    private enum AnimState { Idle, Down, Up, Left, Right }
+
+    public float PathDistance
+    {
+        get
+        {
+            return pathDistance;
+        }
+    }
+
+    private enum AnimState
+    {
+        Idle, Down, Up, Left, Right
+    }
     public void Awake()
     {
         _Anim = GetComponentInChildren<Animator>();
@@ -33,11 +46,13 @@ public class PathBehavior : MonoBehaviour {
     {
         //Debug.Assert(pathSystem != null);
         //Debug.Assert(pathName != null && pathSystem.PathExists(pathName));
-        if ( Time.smoothDeltaTime == 0 ) return;
+        if (Time.smoothDeltaTime == 0)
+            return;
         pathDistance += pathSpeed * Time.smoothDeltaTime;
         Vector3 position = pathSystem.GetPositionFromPath(pathName, pathDistance);
         position.z = 0;
-        if (pathSystem.IsPathEnd(pathName, pathDistance)) {
+        if (pathSystem.IsPathEnd(pathName, pathDistance))
+        {
             GameManager.sTheGlobalBehavior.mEnemyManager.RemoveEnemy(gameObject);
             GameManager.sTheGlobalBehavior.ReduceBaseHP(baseDamage);
             Destroy(gameObject);
@@ -47,18 +62,36 @@ public class PathBehavior : MonoBehaviour {
     }
     private void UpdateAnim()
     {
-        if (_Anim == null || GameManager.sTheGlobalBehavior.isPaused) { return; }
+        if (_Anim == null || GameManager.sTheGlobalBehavior.isPaused)
+        {
+            return;
+        }
         AnimState state = AnimState.Idle;
 
-        if (transform.position == _LastPoint) { state = AnimState.Idle; }
+        if (transform.position == _LastPoint)
+        {
+            state = AnimState.Idle;
+        }
         else
         {
-            if (transform.position.x < _LastPoint.x) { state = AnimState.Left; }
-            else if (transform.position.x > _LastPoint.x) { state = AnimState.Right; }
+            if (transform.position.x < _LastPoint.x)
+            {
+                state = AnimState.Left;
+            }
+            else if (transform.position.x > _LastPoint.x)
+            {
+                state = AnimState.Right;
+            }
             else if (transform.position.x == _LastPoint.x)
             {
-                if (transform.position.y < _LastPoint.y) { state = AnimState.Down; }
-                else { state = AnimState.Up; }
+                if (transform.position.y < _LastPoint.y)
+                {
+                    state = AnimState.Down;
+                }
+                else
+                {
+                    state = AnimState.Up;
+                }
             }
         }
 
@@ -86,7 +119,10 @@ public class PathBehavior : MonoBehaviour {
     //  减速处理协程
     private IEnumerator IE_Decelerate(DecelerateTurretBehavior turret)
     {
-        if (turret == null) { yield break; }
+        if (turret == null)
+        {
+            yield break;
+        }
 
         pathSpeed *= Mathf.Clamp01((1 - turret.DecelerateRatio));
         yield return new WaitForSeconds(turret.DecelerateTime);
@@ -95,7 +131,10 @@ public class PathBehavior : MonoBehaviour {
 
     private void OnDestroy()
     {
-        if (_DecelerateIE != null) { StopCoroutine(_DecelerateIE); }
+        if (_DecelerateIE != null)
+        {
+            StopCoroutine(_DecelerateIE);
+        }
     }
 
 }
