@@ -50,7 +50,7 @@ public class LaserBulletBehavior : EnemyBulletBehavior
         {
             Vector3 target = GameManager.sTheGlobalBehavior.mHero.transform.position;
             Vector2 direction = target - transform.position;
-            transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 180f);
+            transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90f + Random.Range(-30f, 30f));
         }
         else transform.localRotation = Quaternion.Euler(0, 0, 90);
     }
