@@ -8,8 +8,8 @@ public abstract class TurretUpgradeBase : MonoBehaviour {
     public string GetTurretName() {
         return turretName;
     }
-    public virtual List<(string,float)> GetUpgrades() {
-        return new List<(string,float)>();
+    public virtual List<(string,string,string,float)> GetUpgrades() {
+        return new List<(string,string,string,float)>();
     }
     public virtual bool Upgrade(int index) {
         return false;
