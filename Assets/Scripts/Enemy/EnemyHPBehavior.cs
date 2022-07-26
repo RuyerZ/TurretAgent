@@ -73,9 +73,10 @@ public class EnemyHPBehavior : MonoBehaviour
                     transform.localScale = Vector3.one * 5f;
                     animator.SetTrigger("explode");
                     Invoke("DelayInvole", 0.7f);
+                } else {
+                    hp.gameObject.SetActive(false);
+                    GameManager.sTheGlobalBehavior.GameWin();
                 }
-                hp.gameObject.SetActive(false);
-                GameManager.sTheGlobalBehavior.GameWin();
             }
             else
             {
