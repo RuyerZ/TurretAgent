@@ -1,0 +1,3016 @@
+fileFormatVersion: 2
+guid: 62693162a3bdeb643b856cf1919259b0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 184
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01dd2a1bf80591345a35c0e4c57980f1
+      internalID: -578829534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 184
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf4823e1136f6843abb8c359f82fa86
+      internalID: -822540352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 183
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a796e5492ba58934dbfa4e76391fbeb8
+      internalID: 1341905418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 149
+        width: 68
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c04f6a4a7304647b6dff54b659a4f7
+      internalID: 2026030496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_4
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 184
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e608aea5be96c4cbcf037fa96c9233
+      internalID: 1729706444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_5
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 183
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2bd3569e896be74887e2406e50f9fce
+      internalID: 865466618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_6
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 184
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39204c3ac8cb81f449b3c2a568aabdaa
+      internalID: -130115543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_7
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 183
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c0c7c925f7b0c4b9e12eb686a091c4
+      internalID: 856117264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_8
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 183
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77a96029765ff147a93123efc520177
+      internalID: 389957457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 167
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44fde2722c346554a847640daa61c70a
+      internalID: -180704626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_10
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 166
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787a54af0f3858847a58371da162e3b6
+      internalID: -76291598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_11
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 166
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea34d86a5786a7469fc06c95842da6b
+      internalID: -1033485850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_12
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 166
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8814163d8a4b1f944af99d486f7f5092
+      internalID: 1050082658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_13
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 168
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee86f708119c3d43b241e0b233de47a
+      internalID: 138371921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_14
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 166
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07043a48db54ebe40ba2ca270929900c
+      internalID: 669432277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_15
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 166
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f3291394dbba04baa0673974bd680f
+      internalID: -1182768721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_16
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 166
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06e0d46ee1c12347b469915c2c6823d
+      internalID: -1288333890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 149
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbfa6d2a5ea98d64eae729e666cc5a1b
+      internalID: 576955097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_18
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 149
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c107f0683e25e8343974fd811063f05d
+      internalID: 1455045393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_19
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 149
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc1aa9d03ba9eb4d8add16105b5f827
+      internalID: -337342349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_20
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 149
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 663d91fdb7b985d4f989de81e18d70dd
+      internalID: -1469399576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_21
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 149
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94fb224b18ac63b4f99c787c440d9766
+      internalID: -1440881221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_22
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 150
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a87031f21c72484fa80d5d1a42a57be
+      internalID: -839338760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_23
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 150
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9225eb287ce492f46accf939bd168e8e
+      internalID: -444074297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_24
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 150
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3175d5bb080d1d49ab4f90a75421e1f
+      internalID: 439830429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 132
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e89e2e4ac9bea488749160db317336
+      internalID: -1337351768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_26
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 132
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0f58426b5002a4a8b8a4ad9b224307
+      internalID: 1976036087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_27
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 132
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae992256f89045408bd54b2786f9ee2
+      internalID: -1076304345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_28
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 132
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67e10fadd9f6cb4a8016f111bee27c4
+      internalID: -1096026959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_29
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 132
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caeb1ff6d611fa44881a3470ff1b2350
+      internalID: -1580448018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_30
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 132
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61f1c74f2db60f46a1025eedfd21ed0
+      internalID: -1135520002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_31
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 132
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce2562156b95d14ea34ca3ab7a6ddab
+      internalID: 1445833398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_32
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 132
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f1f95928c708d44b430eef7e607b96
+      internalID: 1986411987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_33
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 132
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21684e386c39bad428072959e6d84f56
+      internalID: -1906181688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_34
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 132
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e7bec8ee797b143b9e7d3a247c91b4
+      internalID: -1243904883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_35
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 132
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4baa902e3c3beda45acb3a0f8bea9068
+      internalID: 1559140286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_36
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 132
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1419c820d71d7ab45b650c950f9b8ff7
+      internalID: 1386647793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f6dbd9bec5f4d42867f336e88b6fa4
+      internalID: 579449107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_38
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a2c096984a710f418f57ef895c38257
+      internalID: 2123461597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_39
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ea96d90c656624e950905d8987da5e
+      internalID: 1378828478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_40
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 115
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5dc9d7fa9886146bf069500188c890
+      internalID: 509596653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_41
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af002d9e7c11dea42853b955d012eb8a
+      internalID: 1536867290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_42
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 115
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe79407c7c686f84d953123d0e208f8b
+      internalID: -222734955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_43
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035b33d8d4f64984d8973ce86532aee5
+      internalID: -998154926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_44
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 115
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1111757b124c0bc41a4adc77a53bc888
+      internalID: 1349580243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_45
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55176a5876be444f9ffecd43b993f83
+      internalID: -690135380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_46
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1eb051d11ef05f47b4552b2740a7d80
+      internalID: 2085190353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_47
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38c168a0c54a64499ec2797bc060fff
+      internalID: -1091010372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_48
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660e019fdca0a034ead27c515854174a
+      internalID: 452730512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484e007966c0c864692ab6a10f0f9b09
+      internalID: 1867715836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_50
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3580232b934d2b4b874021aa4cac279
+      internalID: -1054702441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_51
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f47438199b4044193eda780ad21043
+      internalID: -944076098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_52
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f649b16002ad92d4d8a34d6910ee46b1
+      internalID: -935623901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_53
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 99
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786c4bf5571de874a919b0c8071d2146
+      internalID: -2053674708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_54
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a99101756774194f884a9d468706935
+      internalID: -263746055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_55
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 99
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cffd85a139bf8a439fe2c30b00ebb96
+      internalID: 510962261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_56
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 98
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a117bffa0e16844486130883f0531c4
+      internalID: -1889121623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_57
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f7faf069f055514095527065d50151d
+      internalID: -2081195065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_58
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 98
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d584aa16c020a124182bfbb8aee76fa5
+      internalID: -1247678438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_59
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 98
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5576f8939aeca6f4e9d8087cf56e0fc4
+      internalID: -1459262319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_60
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 98
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986391ab6a99dd04c8c830738dabaa56
+      internalID: -960591577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_61
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bedd5a40c3abfe48bd72b34de146a57
+      internalID: 480257128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_62
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cec8cfd0f016894794e11302fcd1af4
+      internalID: -2131726897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_63
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5851907bd12f0a49bad5caa05811ff1
+      internalID: 153467610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_64
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1b447133d9b2f4aa36d85cc3dc8cab
+      internalID: -1483265920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_65
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f803444b8c23542458edfc2db7b0df3c
+      internalID: 743957369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_66
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53853794ef835e8438268bc7230ce9d9
+      internalID: -1131750478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_67
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b2fffe7ed35bc4784a4b8bfb2d27e6
+      internalID: 1997145048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_68
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c5099e6f4774c418bea57836e9abe6
+      internalID: -385654920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_69
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 81
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc5a241e65c4a84882ab8f37de3af1b
+      internalID: -1839710264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_70
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 81
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50bfa1bd5db3b847a86850ec28c064e
+      internalID: -1511947138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_71
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 81
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7cf628f03d02b94795463db9c7a1169
+      internalID: 1840553046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82b361c9cafd434fbcf0bc65c754dd6
+      internalID: 290462873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_73
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06007e43143c789469b963133f76bc5c
+      internalID: -370333300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_74
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5446fa3d54962a54592ad86139b357c3
+      internalID: -1823177090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_75
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 75
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57aac05214f01174b97dff32c2027aad
+      internalID: 1888017731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_76
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0978297eb07bc6e44bad5b258b1d4f76
+      internalID: -1094593385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_77
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ad69d42a0226c44a5449686acbe49f
+      internalID: 253190319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_78
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2a3cd1b33700941a840ffcd451dd86
+      internalID: -2045181479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_79
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebdef44c5caa7304a991af0f55eafb33
+      internalID: -1341538900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_80
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 65
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c2ddd0096ea0f04398139c72e51bb6a
+      internalID: -1704257945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_81
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 65
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8aa79d71a9eaa4f9ac72715eb41b94
+      internalID: 102176698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_82
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 64
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25de28d0af960a4288acd17bc3f8dbe
+      internalID: -1489287929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_83
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b6845b7e8a5f54aab51218d830d992
+      internalID: 1549699403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_84
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 65
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b210badaaadd2846bbb5cabb7594b25
+      internalID: -997625782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 761af3ef4d68ded43a605d939fc42a12
+      internalID: 1502003833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_86
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 47
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f5511a29b818249be0c578b9302b1f
+      internalID: -597622193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_87
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 454e27c8b818ce646a5b2938d9aec032
+      internalID: 364539516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_88
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 48
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1487c12baa2fa424ab84ea36633bb732
+      internalID: 34261435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_89
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ac5b24707494b41be953cb5318a084
+      internalID: -174810506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_90
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d9201da57d334f4cbc892e9b04d6404
+      internalID: -298979773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_91
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4b4ad79998b7b42b9b898c99fd9807
+      internalID: -1077200043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_92
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e6fecb0d480ae4baebdc2f03a821ea
+      internalID: 1946436907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_93
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ea64f1c86af8d4faae2dfbe9b85632
+      internalID: -780006921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_94
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 57
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ac005bf4728454a9b914ff9485105f
+      internalID: -213634264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_95
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc230593ef55f642bf0014380fe2d79
+      internalID: 328582739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_96
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 47
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a206b28d928db4da300cf3bf7a4b53
+      internalID: 167738732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_97
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 26
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b9a1677f4fbe748a486fcd218d3d68
+      internalID: 746425339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_98
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 26
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7718b8bad6e75ec4d81bd30cccb0c749
+      internalID: -93721717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_99
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 26
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f9c6b3453d73b4986c76ce34de1619
+      internalID: -305831728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_100
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 26
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973030a1258e5804fb53b9146fc14893
+      internalID: -1431885870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_101
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 27
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c1e1d36fb124546b393441f4c00c90
+      internalID: 682766098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_102
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 27
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488d6a57d7044c247862575d5ba8f5f7
+      internalID: -146359233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_103
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 26
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e49b9c1a4b469a4395debe4b16a4e7e
+      internalID: 52085788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_104
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 26
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fadcecaec0a2234db33a4e1d627aec4
+      internalID: -2054667004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_105
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 26
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccda4640342dcf54fb5a5b68ec4661b3
+      internalID: -1475423118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_106
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 26
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4574cef9717332947ab85c77258ec0b0
+      internalID: -2121087614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_107
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 26
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7ccf7b8ca2ffa43b8eb93c35834ecf
+      internalID: -2080068311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26eaa3bf3f92acd429f0a4bb9a081082
+      internalID: 1489523986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_109
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 13
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b81cd205c7b1c4a970fdc2263097b2
+      internalID: 1999639362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_110
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 14
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07cae12fd4b3cc14fbc846f17baf34d4
+      internalID: -1353093095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_111
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 20
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f208566c1035e4aa5259330ab885af
+      internalID: -703286574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_112
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 14
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a173199c3a89b294d8aa983b2e4fb244
+      internalID: -1907116910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_113
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 14
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e776aceb6e450240ae1053467c898fe
+      internalID: -1632196680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_114
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 14
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b46b442ae7866842b6ef08b19e0ac18
+      internalID: 50405634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_115
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 14
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b2abf64f33005f4aa337bcf5188a845
+      internalID: -42315702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_116
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 13
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b921e30b42b2487448e63d2b325a2085
+      internalID: -938915492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_117
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 12
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e170c981cb8bc4ba0a8dbf51efd7ad
+      internalID: 390726259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_118
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 13
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a95fb24f47bf79d44b75d7278fee98bd
+      internalID: 103154410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_119
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 13
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 009e0dea399fa484480ddd8356c701b4
+      internalID: 528369970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_120
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 13
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84939a476da08964e8eea39af5c9745f
+      internalID: 173031063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_121
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 073b16a5d0b674f4a872f1494587cbd2
+      internalID: 1489682083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_122
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5aed5e0b83d6ba4fa547fbf1c0e0d9d
+      internalID: 145836842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_123
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee7402310f598f4abc4516ea0774515
+      internalID: -1116784552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_124
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86e54c85c7867e428bcb1730da7c1dc
+      internalID: 689753142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_125
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10e1394c93137304bad2d69f80e148db
+      internalID: 1669786571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_126
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59b7aa48d409044f8edbc057a40a5ae
+      internalID: -596836526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_127
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eefd2f68ed7a2fc488167c26c852a305
+      internalID: 1881440684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_128
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cea337be792dbb4c88187b8ae6aa43f
+      internalID: 860752840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_129
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e39723d7b3090af4bb5eb986261cfead
+      internalID: 1122672440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeteorRepository1Icons_fixed 1_130
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ce67d1d63b2284d95939a7713a9076
+      internalID: -1651237374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      MeteorRepository1Icons_fixed 1_73: -370333300
+      MeteorRepository1Icons_fixed 1_85: 1502003833
+      MeteorRepository1Icons_fixed 1_130: -1651237374
+      MeteorRepository1Icons_fixed 1_25: -1337351768
+      MeteorRepository1Icons_fixed 1_52: -935623901
+      MeteorRepository1Icons_fixed 1_84: -997625782
+      MeteorRepository1Icons_fixed 1_83: 1549699403
+      MeteorRepository1Icons_fixed 1_74: -1823177090
+      MeteorRepository1Icons_fixed 1_93: -780006921
+      MeteorRepository1Icons_fixed 1_4: 1729706444
+      MeteorRepository1Icons_fixed 1_13: 138371921
+      MeteorRepository1Icons_fixed 1_27: -1076304345
+      MeteorRepository1Icons_fixed 1_44: 1349580243
+      MeteorRepository1Icons_fixed 1_108: 1489523986
+      MeteorRepository1Icons_fixed 1_40: 509596653
+      MeteorRepository1Icons_fixed 1_58: -1247678438
+      MeteorRepository1Icons_fixed 1_47: -1091010372
+      MeteorRepository1Icons_fixed 1_35: 1559140286
+      MeteorRepository1Icons_fixed 1_59: -1459262319
+      MeteorRepository1Icons_fixed 1_50: -1054702441
+      MeteorRepository1Icons_fixed 1_60: -960591577
+      MeteorRepository1Icons_fixed 1_31: 1445833398
+      MeteorRepository1Icons_fixed 1_5: 865466618
+      MeteorRepository1Icons_fixed 1_76: -1094593385
+      MeteorRepository1Icons_fixed 1_63: 153467610
+      MeteorRepository1Icons_fixed 1_94: -213634264
+      MeteorRepository1Icons_fixed 1_113: -1632196680
+      MeteorRepository1Icons_fixed 1_56: -1889121623
+      MeteorRepository1Icons_fixed 1_8: 389957457
+      MeteorRepository1Icons_fixed 1_61: 480257128
+      MeteorRepository1Icons_fixed 1_49: 1867715836
+      MeteorRepository1Icons_fixed 1_89: -174810506
+      MeteorRepository1Icons_fixed 1_37: 579449107
+      MeteorRepository1Icons_fixed 1_46: 2085190353
+      MeteorRepository1Icons_fixed 1_64: -1483265920
+      MeteorRepository1Icons_fixed 1_0: -578829534
+      MeteorRepository1Icons_fixed 1_103: 52085788
+      MeteorRepository1Icons_fixed 1_109: 1999639362
+      MeteorRepository1Icons_fixed 1_121: 1489682083
+      MeteorRepository1Icons_fixed 1_30: -1135520002
+      MeteorRepository1Icons_fixed 1_69: -1839710264
+      MeteorRepository1Icons_fixed 1_12: 1050082658
+      MeteorRepository1Icons_fixed 1_62: -2131726897
+      MeteorRepository1Icons_fixed 1_98: -93721717
+      MeteorRepository1Icons_fixed 1_33: -1906181688
+      MeteorRepository1Icons_fixed 1_28: -1096026959
+      MeteorRepository1Icons_fixed 1_106: -2121087614
+      MeteorRepository1Icons_fixed 1_2: 1341905418
+      MeteorRepository1Icons_fixed 1_82: -1489287929
+      MeteorRepository1Icons_fixed 1_70: -1511947138
+      MeteorRepository1Icons_fixed 1_22: -839338760
+      MeteorRepository1Icons_fixed 1_34: -1243904883
+      MeteorRepository1Icons_fixed 1_92: 1946436907
+      MeteorRepository1Icons_fixed 1_32: 1986411987
+      MeteorRepository1Icons_fixed 1_41: 1536867290
+      MeteorRepository1Icons_fixed 1_3: 2026030496
+      MeteorRepository1Icons_fixed 1_111: -703286574
+      MeteorRepository1Icons_fixed 1_120: 173031063
+      MeteorRepository1Icons_fixed 1_18: 1455045393
+      MeteorRepository1Icons_fixed 1_38: 2123461597
+      MeteorRepository1Icons_fixed 1_105: -1475423118
+      MeteorRepository1Icons_fixed 1_125: 1669786571
+      MeteorRepository1Icons_fixed 1_21: -1440881221
+      MeteorRepository1Icons_fixed 1_51: -944076098
+      MeteorRepository1Icons_fixed 1_107: -2080068311
+      MeteorRepository1Icons_fixed 1_67: 1997145048
+      MeteorRepository1Icons_fixed 1_14: 669432277
+      MeteorRepository1Icons_fixed 1_102: -146359233
+      MeteorRepository1Icons_fixed 1_10: -76291598
+      MeteorRepository1Icons_fixed 1_43: -998154926
+      MeteorRepository1Icons_fixed 1_90: -298979773
+      MeteorRepository1Icons_fixed 1_78: -2045181479
+      MeteorRepository1Icons_fixed 1_11: -1033485850
+      MeteorRepository1Icons_fixed 1_80: -1704257945
+      MeteorRepository1Icons_fixed 1_87: 364539516
+      MeteorRepository1Icons_fixed 1_99: -305831728
+      MeteorRepository1Icons_fixed 1_104: -2054667004
+      MeteorRepository1Icons_fixed 1_114: 50405634
+      MeteorRepository1Icons_fixed 1_48: 452730512
+      MeteorRepository1Icons_fixed 1_100: -1431885870
+      MeteorRepository1Icons_fixed 1_127: 1881440684
+      MeteorRepository1Icons_fixed 1_97: 746425339
+      MeteorRepository1Icons_fixed 1_17: 576955097
+      MeteorRepository1Icons_fixed 1_19: -337342349
+      MeteorRepository1Icons_fixed 1_95: 328582739
+      MeteorRepository1Icons_fixed 1_101: 682766098
+      MeteorRepository1Icons_fixed 1_45: -690135380
+      MeteorRepository1Icons_fixed 1_66: -1131750478
+      MeteorRepository1Icons_fixed 1_119: 528369970
+      MeteorRepository1Icons_fixed 1_110: -1353093095
+      MeteorRepository1Icons_fixed 1_39: 1378828478
+      MeteorRepository1Icons_fixed 1_91: -1077200043
+      MeteorRepository1Icons_fixed 1_42: -222734955
+      MeteorRepository1Icons_fixed 1_115: -42315702
+      MeteorRepository1Icons_fixed 1_123: -1116784552
+      MeteorRepository1Icons_fixed 1_128: 860752840
+      MeteorRepository1Icons_fixed 1_16: -1288333890
+      MeteorRepository1Icons_fixed 1_116: -938915492
+      MeteorRepository1Icons_fixed 1_68: -385654920
+      MeteorRepository1Icons_fixed 1_96: 167738732
+      MeteorRepository1Icons_fixed 1_26: 1976036087
+      MeteorRepository1Icons_fixed 1_55: 510962261
+      MeteorRepository1Icons_fixed 1_71: 1840553046
+      MeteorRepository1Icons_fixed 1_75: 1888017731
+      MeteorRepository1Icons_fixed 1_129: 1122672440
+      MeteorRepository1Icons_fixed 1_20: -1469399576
+      MeteorRepository1Icons_fixed 1_24: 439830429
+      MeteorRepository1Icons_fixed 1_122: 145836842
+      MeteorRepository1Icons_fixed 1_9: -180704626
+      MeteorRepository1Icons_fixed 1_118: 103154410
+      MeteorRepository1Icons_fixed 1_88: 34261435
+      MeteorRepository1Icons_fixed 1_117: 390726259
+      MeteorRepository1Icons_fixed 1_126: -596836526
+      MeteorRepository1Icons_fixed 1_77: 253190319
+      MeteorRepository1Icons_fixed 1_57: -2081195065
+      MeteorRepository1Icons_fixed 1_65: 743957369
+      MeteorRepository1Icons_fixed 1_79: -1341538900
+      MeteorRepository1Icons_fixed 1_53: -2053674708
+      MeteorRepository1Icons_fixed 1_124: 689753142
+      MeteorRepository1Icons_fixed 1_15: -1182768721
+      MeteorRepository1Icons_fixed 1_54: -263746055
+      MeteorRepository1Icons_fixed 1_6: -130115543
+      MeteorRepository1Icons_fixed 1_29: -1580448018
+      MeteorRepository1Icons_fixed 1_112: -1907116910
+      MeteorRepository1Icons_fixed 1_36: 1386647793
+      MeteorRepository1Icons_fixed 1_72: 290462873
+      MeteorRepository1Icons_fixed 1_23: -444074297
+      MeteorRepository1Icons_fixed 1_1: -822540352
+      MeteorRepository1Icons_fixed 1_81: 102176698
+      MeteorRepository1Icons_fixed 1_7: 856117264
+      MeteorRepository1Icons_fixed 1_86: -597622193
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
