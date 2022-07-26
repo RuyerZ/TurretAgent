@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RadiusTurretUpgradeBehavior : TurretUpgradeBase {
-    RadiusTurretBehavior _Turret;
+public class DecelerateTowerUpgradeBehavior : TurretUpgradeBase {
+    DecelerateTurretBehavior _Turret;
     TurretHPBehavior _HP;
     int[] currentLevels = {0,0,0,0};
-    int[] maxLevels = {10,5,4,10};
-    float[] initCosts = {10,10,10,5};
-    float[] costFactors = {5,10,10,5};
-    string[] upgradeNames = {"Damage", "Cooldown", "Range", "Health"};
+    int[] maxLevels = {3,4,4,10};
+    float[] initCosts = {20,20,10,5};
+    float[] costFactors = {20,20,10,5};
+    string[] upgradeNames = {"Slow", "Slow Time", "Range", "Health"};
 
     void Start() {
-        _Turret = GetComponent<RadiusTurretBehavior>();
+        _Turret = GetComponent<DecelerateTurretBehavior>();
         _HP = GetComponent<TurretHPBehavior>();
         Debug.Assert(_Turret != null);
         Debug.Assert(_HP != null);
@@ -33,11 +33,10 @@ public class RadiusTurretUpgradeBehavior : TurretUpgradeBase {
         if (currentLevels[index] >= maxLevels[index]) return false;
         switch (index) {
             case 0:
-                _Turret._AttackDamage = getNextUpgrade(index);
+                _Turret._DecelerateRatio = getNextUpgrade(index);
                 break;
             case 1:
-                _Turret._CoolingTimelReset = getNextUpgrade(index);
-                if (_Turret._CoolingTimelReset < 0.01f) _Turret._CoolingTimelReset = 0.01f;
+                _Turret._DecelerateTime = getNextUpgrade(index);
                 break;
             case 2:
                 _Turret._AttackRadius = getNextUpgrade(index);
@@ -57,10 +56,10 @@ public class RadiusTurretUpgradeBehavior : TurretUpgradeBase {
         float next;
         switch (index) {
             case 0:
-                next = _Turret._AttackDamage * 1.25f;
+                next = _Turret._DecelerateRatio + 0.1f;
                 break;
             case 1:
-                next = _Turret._CoolingTimelReset * 0.8f;
+                next = _Turret._DecelerateTime + 0.5f;
                 break;
             case 2:
                 next = _Turret._AttackRadius + 1;
@@ -86,10 +85,10 @@ public class RadiusTurretUpgradeBehavior : TurretUpgradeBase {
         float stat;
         switch (index) {
             case 0:
-                stat = _Turret._AttackDamage;
+                stat = _Turret._DecelerateRatio;
                 break;
             case 1:
-                stat = _Turret._AttackInterval;
+                stat = _Turret._DecelerateTime;
                 break;
             case 2:
                 stat = _Turret._AttackRadius;

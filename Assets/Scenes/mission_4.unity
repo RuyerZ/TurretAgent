@@ -334,7 +334,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -657870009
+  m_SortingLayerID: -205131167
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9ac53059a6a082b48b11ee182045a18b, type: 3}
@@ -490,17 +490,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286245729}
   m_CullTransparentMesh: 1
---- !u!114 &320732298 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8429912187682540146, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
-  m_PrefabInstance: {fileID: 771040265}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 377471b88ede9c64586e5dd11ae9a564, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &402381048
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,7 +592,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -657870009
+  m_SortingLayerID: -205131167
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 37ef08cec00fa8b448ce61910b4f991c, type: 3}
@@ -1018,6 +1007,7 @@ MonoBehaviour:
   PauseUI: {fileID: 1037969204}
   isPaused: 0
   isDefend: 1
+  currentLevel: 1
   Gold: 120
 --- !u!1 &661929297
 GameObject:
@@ -1457,10 +1447,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 923127007164698266, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
-      propertyPath: itemWindows.Array.data[9].button
-      value: 
-      objectReference: {fileID: 320732298}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
 --- !u!1 &794113057
@@ -1737,7 +1723,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -657870009
+  m_SortingLayerID: -205131167
   m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 81f5fd02049aef44f9ab4bff44cdac23, type: 3}
@@ -2135,7 +2121,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -657870009
+  m_SortingLayerID: -205131167
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d97400a6d22952d41bc1ac5ab638f164, type: 3}
@@ -2223,7 +2209,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9dd7bf46fc66cb94d88fbf91b4a5e819, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2608,7 +2594,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -657870009
+  m_SortingLayerID: -205131167
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8f45a7d56d66ad64193201505c5a0783, type: 3}
@@ -3032,7 +3018,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -657870009
+  m_SortingLayerID: -205131167
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e8e6e51a5099bf94ab3329454f2cc21e, type: 3}
