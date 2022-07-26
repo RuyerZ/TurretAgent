@@ -17,7 +17,7 @@ public class TurretHPBehavior : MonoBehaviour
         if (currentHP <= 0)
         {
             currentHP = 0;
-            gameObject.GetComponent<TurretShootBehavior>().enabled = false;
+            gameObject.GetComponent<TurretAttackBase>().enabled = false;
             //GameManager.sTheGlobalBehavior.mFriendManager.RemoveTurret(gameObject);
         }
 
