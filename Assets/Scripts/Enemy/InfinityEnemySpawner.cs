@@ -23,6 +23,7 @@ public class InfinityEnemySpawner : MonoBehaviour
     public EnemyPrefab[] enemyPrefabs;
     public PhaseInfo[] phases;
     public PhaseInfo[] phases_loop;
+    public bool doBaseDamage = true;
 
     private Dictionary<char, GameObject> enemyPrefabDict;
 
@@ -82,6 +83,8 @@ public class InfinityEnemySpawner : MonoBehaviour
     {
         GameObject enemy = Instantiate(enemyPrefabDict[code]);
         enemy.GetComponent<PathBehavior>().pathName = pathName;
+        if (!doBaseDamage)
+            enemy.GetComponent<PathBehavior>().baseDamage = 0;
     }
     private bool isSequenceLoop = false;
     private void Update()
