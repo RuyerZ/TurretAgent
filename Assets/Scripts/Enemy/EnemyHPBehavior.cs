@@ -69,8 +69,8 @@ public class EnemyHPBehavior : MonoBehaviour
             GameManager.sTheGlobalBehavior.AddGold(Gold);
             if (DefeatToWin)
             {
-                transform.localScale = Vector3.one * 5f;
                 if (animator != null) {
+                    transform.localScale = Vector3.one * 5f;
                     animator.SetTrigger("explode");
                     Invoke("DelayInvole", 0.7f);
                 }
