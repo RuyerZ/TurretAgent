@@ -7,7 +7,7 @@ public class RadiusTurretUpgradeBehavior : TurretUpgradeBase {
     TurretHPBehavior _HP;
     int[] currentLevels = {0,0,0,0};
     int[] maxLevels = {10,10,6,10};
-    float[] initCosts = {20,20,20,5};
+    float[] initCosts = {10,10,10,5};
     float[] costFactors = {5,5,5,5};
     string[] upgradeNames = {"Damage", "Cooldown", "Range", "Health"};
 

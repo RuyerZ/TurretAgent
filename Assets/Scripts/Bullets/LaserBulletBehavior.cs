@@ -7,7 +7,11 @@ public class LaserBulletBehavior : EnemyBulletBehavior
 {
     public float mStartTime = 4.0f;
     public float mDestroyTime = 16.0f;
+    public float animTime = 0.2f;
+    public AudioSource laserAudio;
+    public Animator animator;
     private SpriteRenderer mSprite;
+    private SpriteRenderer warn;
     private BoxCollider2D mBoxCollider;
     private float mDamage = 0.0f;
     private float mTimer = 0.0f;
@@ -15,15 +19,19 @@ public class LaserBulletBehavior : EnemyBulletBehavior
 
     public void Start()
     {
-        mSprite = GetComponentInChildren<SpriteRenderer>();
+        mSprite = transform.Find("Sprite").GetComponent<SpriteRenderer>();
+        warn = transform.Find("warn").GetComponent<SpriteRenderer>();
         mBoxCollider = GetComponent<BoxCollider2D>();
 
-        if (mSprite != null)
-        {
-            Color color = mSprite.color;
-            color.a = 0.5f;
-            mSprite.color = color;
-        }
+        mSprite.enabled = false;
+        warn.enabled = true;
+
+        // if (mSprite != null)
+        // {
+        //     Color color = mSprite.color;
+        //     color.a = 0.5f;
+        //     mSprite.color = color;
+        // }
 
         if (mBoxCollider != null)
             mBoxCollider.enabled = false;
@@ -37,19 +45,32 @@ public class LaserBulletBehavior : EnemyBulletBehavior
         if (mTimer > mDestroyTime)
             Destroy(gameObject);
 
+        if (!mStart && mTimer < mStartTime) {
+            Color color = warn.color;
+            color.a = (mTimer / mStartTime);
+            warn.color = color;
+        }
+        
+
         if (!mStart && mTimer > mStartTime)
         {
             if (mSprite != null)
             {
-                Color color = mSprite.color;
-                color.a = 1f;
-                mSprite.color = color;
+                mSprite.enabled = true;
             }
+        }
+        if (!mStart && mTimer > mStartTime + animTime) {
+            
             if (mBoxCollider != null)
                 mBoxCollider.enabled = true;
 
             mStart = true;
             dmg = mDamage;
+
+            animator.SetBool("next",true);
+            if (laserAudio) laserAudio.Play();
+
+            warn.enabled = false;
         }
 
         mTimer += Time.smoothDeltaTime;

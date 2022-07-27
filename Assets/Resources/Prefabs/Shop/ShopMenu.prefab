@@ -486,7 +486,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &923127006680061784
 MonoBehaviour:
@@ -1422,7 +1422,7 @@ MonoBehaviour:
   mSelectedEffect: {fileID: 6836758867805074692}
   mItemName: AOE Turret
   mItemCount: 1
-  mPrice: 100
+  mPrice: 80
   MaxBuyCount: 1
   TurretPrefab: {fileID: 7823742287485519402, guid: 00c8d059e47628f479560bfd98707d90, type: 3}
 --- !u!1 &6836758867805074692 stripped
@@ -1616,14 +1616,14 @@ PrefabInstance:
         0 damage. Upgradable.
 
 
-        Slow factor: 0.3
+        Slow factor: 0.5
 
         Slow Time: 1.0
 
         Attack
         Interval: 3.0
 
-        Range: 3.0'
+        Range: 4.0'
       objectReference: {fileID: 0}
     - target: {fileID: 5050613852199019530, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_Pivot.x
@@ -2084,7 +2084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mPrice
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6877535674140152509, guid: 4697dc0685b8a5c47b16123bb86ae743, type: 3}
       propertyPath: mItemName
@@ -2576,7 +2576,7 @@ PrefabInstance:
 
 
         Damage:
-        1.5
+        1.0
 
         Attack Interval: 1.0
 
@@ -2702,7 +2702,7 @@ PrefabInstance:
 
 
         Damage:
-        1.0
+        2.0
 
         Attack Interval: 3.0
 
@@ -2982,7 +2982,7 @@ MonoBehaviour:
   mSelectedEffect: {fileID: 4900988639861180947}
   mItemName: EMP Turret
   mItemCount: 1
-  mPrice: 50
+  mPrice: 40
   MaxBuyCount: 1
   TurretPrefab: {fileID: 4221876540520457419, guid: 72a303843fea5874bbd23d8f675ad101, type: 3}
 --- !u!1 &4900988639861180947 stripped
@@ -3269,7 +3269,7 @@ MonoBehaviour:
   mSelectedEffect: {fileID: 8838624318500565398}
   mItemName: AOE Turret
   mItemCount: 1
-  mPrice: 70
+  mPrice: 50
   MaxBuyCount: 1
   TurretPrefab: {fileID: 7823742287485519402, guid: 00c8d059e47628f479560bfd98707d90, type: 3}
 --- !u!224 &5223745675256335319 stripped
@@ -3749,7 +3749,7 @@ MonoBehaviour:
   mSelectedEffect: {fileID: 8141478728372390543}
   mItemName: Grape Turret
   mItemCount: 1
-  mPrice: 65
+  mPrice: 80
   MaxBuyCount: 1
   TurretPrefab: {fileID: 9015699204102001418, guid: ecfa24659685c8a42ae9452547a835b9, type: 3}
 --- !u!224 &4767965354140954830 stripped
@@ -4179,7 +4179,7 @@ PrefabInstance:
 
 
         Damage:
-        1.0
+        2.0
 
         Attack Interval: 3.0
 
@@ -4427,7 +4427,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4137556808376485732, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_Text
-      value: '[CONSUMABLE] Mine X3
+      value: '[CONSUMABLE] Mine X1
 
 
         Place down and explodes on touch.
@@ -4850,7 +4850,7 @@ MonoBehaviour:
   mSelectedEffect: {fileID: 196025472084905288}
   mItemName: Grape Turret
   mItemCount: 1
-  mPrice: 50
+  mPrice: 60
   MaxBuyCount: 1
   TurretPrefab: {fileID: 9015699204102001418, guid: ecfa24659685c8a42ae9452547a835b9, type: 3}
 --- !u!1001 &6514596336541628721
@@ -4869,14 +4869,14 @@ PrefabInstance:
         0 damage. Upgradable.
 
 
-        Slow factor: 0.3
+        Slow factor: 0.5
 
         Slow Time: 1.0
 
         Attack
         Interval: 3.0
 
-        Range: 3.0'
+        Range: 4.0'
       objectReference: {fileID: 0}
     - target: {fileID: 5050613852199019530, guid: a5ff7f8d87dc71f42a2aed15b91250bb, type: 3}
       propertyPath: m_Pivot.x
@@ -5122,7 +5122,7 @@ PrefabInstance:
 
 
         Damage:
-        1.5
+        1.0
 
         Attack Interval: 1.0
 

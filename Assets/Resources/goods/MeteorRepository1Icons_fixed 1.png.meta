@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -2878,8 +2878,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       MeteorRepository1Icons_fixed 1_73: -370333300
+      MeteorRepository1Icons_fixed 1_7: 856117264
       MeteorRepository1Icons_fixed 1_85: 1502003833
-      MeteorRepository1Icons_fixed 1_130: -1651237374
       MeteorRepository1Icons_fixed 1_25: -1337351768
       MeteorRepository1Icons_fixed 1_52: -935623901
       MeteorRepository1Icons_fixed 1_84: -997625782
@@ -2942,9 +2942,9 @@ TextureImporter:
       MeteorRepository1Icons_fixed 1_21: -1440881221
       MeteorRepository1Icons_fixed 1_51: -944076098
       MeteorRepository1Icons_fixed 1_107: -2080068311
+      MeteorRepository1Icons_fixed 1_102: -146359233
       MeteorRepository1Icons_fixed 1_67: 1997145048
       MeteorRepository1Icons_fixed 1_14: 669432277
-      MeteorRepository1Icons_fixed 1_102: -146359233
       MeteorRepository1Icons_fixed 1_10: -76291598
       MeteorRepository1Icons_fixed 1_43: -998154926
       MeteorRepository1Icons_fixed 1_90: -298979773
@@ -2956,8 +2956,8 @@ TextureImporter:
       MeteorRepository1Icons_fixed 1_104: -2054667004
       MeteorRepository1Icons_fixed 1_114: 50405634
       MeteorRepository1Icons_fixed 1_48: 452730512
-      MeteorRepository1Icons_fixed 1_100: -1431885870
       MeteorRepository1Icons_fixed 1_127: 1881440684
+      MeteorRepository1Icons_fixed 1_100: -1431885870
       MeteorRepository1Icons_fixed 1_97: 746425339
       MeteorRepository1Icons_fixed 1_17: 576955097
       MeteorRepository1Icons_fixed 1_19: -337342349
@@ -3004,10 +3004,10 @@ TextureImporter:
       MeteorRepository1Icons_fixed 1_36: 1386647793
       MeteorRepository1Icons_fixed 1_72: 290462873
       MeteorRepository1Icons_fixed 1_23: -444074297
-      MeteorRepository1Icons_fixed 1_1: -822540352
       MeteorRepository1Icons_fixed 1_81: 102176698
-      MeteorRepository1Icons_fixed 1_7: 856117264
+      MeteorRepository1Icons_fixed 1_130: -1651237374
       MeteorRepository1Icons_fixed 1_86: -597622193
+      MeteorRepository1Icons_fixed 1_1: -822540352
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -78,6 +78,7 @@ public class GameManager : MonoBehaviour
         if (!isGameEnd)
         {
             isGameEnd = true;
+            Pause("end");
             LoseUI.SetActive(true);
         }
     }
@@ -86,6 +87,7 @@ public class GameManager : MonoBehaviour
         if (!isGameEnd)
         {
             isGameEnd = true;
+            Pause("end");
             WinUI.SetActive(true);
         }
     }

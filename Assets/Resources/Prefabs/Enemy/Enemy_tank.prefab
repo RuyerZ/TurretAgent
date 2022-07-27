@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 4977160654098821799}
   - component: {fileID: 7995215267866417002}
   m_Layer: 0
-  m_Name: Enemy_Tank
+  m_Name: Enemy_tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathName: path1
-  pathSpeed: 0.2
+  pathSpeed: 0.5
   baseDamage: 1
 --- !u!114 &3101218937242912319
 MonoBehaviour:
@@ -149,9 +149,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca1990b49de3cc49bcb724534367ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 15
-  Gold: 1
+  maxHP: 30
+  Gold: 20
   DefeatToWin: 0
+  damageBlock: 1
+  animator: {fileID: 0}
 --- !u!61 &6149742329043854454
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -185,7 +187,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5775048993590621706}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10225d9c3d2fd474f9e26e763eb5520b, type: 3}
   m_Name: 
