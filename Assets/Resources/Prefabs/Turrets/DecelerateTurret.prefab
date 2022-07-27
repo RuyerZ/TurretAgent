@@ -554,7 +554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootAudio: {fileID: 2356154687059005921}
-  _AttackRadius: 3
+  _AttackRadius: 4
   _AttackDamage: 0
   _AttackInterval: 0
   _DarkColor: {r: 0.47058824, g: 0.38039216, b: 0.38039216, a: 1}

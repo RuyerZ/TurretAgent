@@ -1620,7 +1620,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -205131167
-  m_SortingLayer: 0
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c8ecfeb3a81cef64aa77e09c9b172d7d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2180,6 +2180,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 889081718605894112, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
+      propertyPath: m_Text
+      value: It's at the right bottom corner.
+      objectReference: {fileID: 0}
     - target: {fileID: 923127006680061789, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2235,6 +2239,14 @@ PrefabInstance:
     - target: {fileID: 923127007164698265, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 923127007164698266, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723416181072120398, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}
+      propertyPath: m_Text
+      value: Level 6 - Destroy enemy base
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1afecf9b2ce348c469a8fd2a05a9359d, type: 3}

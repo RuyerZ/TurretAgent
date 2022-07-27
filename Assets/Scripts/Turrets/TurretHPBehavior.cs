@@ -51,7 +51,7 @@ public class TurretHPBehavior : MonoBehaviour
         {
             EnemyBulletBehavior t = other.GetComponent<EnemyBulletBehavior>();
             TakeDamage(t.getDmg(gameObject));
-            t.onHit(gameObject);
+            //t.onHit(gameObject);
             //HPBar hp = GetComponentInChildren<HPBar>();
             //if (hp != null)
             //    hp.Set(currentHP / maxHP);

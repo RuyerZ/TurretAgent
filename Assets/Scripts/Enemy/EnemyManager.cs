@@ -42,6 +42,14 @@ public class EnemyManager
                 closest = enemy;
                 closestDistance = distance;
             }
+            if (enemy.CompareTag("Boss")) {
+                distance = (enemy.transform.Find("pivot").position - position).magnitude;
+                if (distance < closestDistance)
+                {
+                    closest = enemy.transform.Find("pivot").gameObject;
+                    closestDistance = distance;
+                }
+            }
         }
         return closest;
     }

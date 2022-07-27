@@ -756,7 +756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootAudio: {fileID: 9222798305854155297}
   _AttackRadius: 3
-  _AttackDamage: 1
+  _AttackDamage: 2
   _AttackInterval: 0
   _DarkColor: {r: 0.5764706, g: 0.44313726, b: 0.44313726, a: 1}
   _CoolingTime: 3

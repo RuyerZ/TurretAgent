@@ -69,7 +69,8 @@ MonoBehaviour:
   maxHP: 50
   Gold: 50
   DefeatToWin: 0
-  damageBlock: 0
+  damageBlock: 0.3
+  animator: {fileID: 0}
 --- !u!61 &5879959044718209286
 BoxCollider2D:
   m_ObjectHideFlags: 0
