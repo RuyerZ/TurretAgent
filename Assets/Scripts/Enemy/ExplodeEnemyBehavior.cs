@@ -45,6 +45,7 @@ public class ExplodeEnemyBehavior : MonoBehaviour
     private bool IsValid()
     {
         towerDistance = GetTowerDistance();
+        if (towerDistance > explosionRadius) return false;
         pathDistance = pathBehavior != null ? pathBehavior.PathDistance : 0;//防止被除数等于0；
 
         float ratio = k1 * Time.smoothDeltaTime * (float)System.Math.Tanh(k2 * towerDistance + k3 * pathDistance);
