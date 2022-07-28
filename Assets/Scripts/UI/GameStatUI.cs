@@ -34,7 +34,7 @@ public class GameStatUI : MonoBehaviour
 
         txt.text = msg;
     }
-    void onStartBtnClick() {
+    public void onStartBtnClick() {
         GameManager.sTheGlobalBehavior.StartWave();
     }
 }

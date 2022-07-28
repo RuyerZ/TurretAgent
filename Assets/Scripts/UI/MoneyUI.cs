@@ -16,4 +16,5 @@ public class MoneyUI : MonoBehaviour
     {
         gameObject.GetComponentInChildren<Text>().text = "$" + GameManager.sTheGlobalBehavior.GetGold().ToString();
     }
+    
 }
